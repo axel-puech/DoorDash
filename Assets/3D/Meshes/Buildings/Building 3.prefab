@@ -1,0 +1,92 @@
+- !<ObjectPrefab/b031ff9d-83a1-468a-8f30-92b634a744fb>
+  PackagePath: ""
+  objects:
+    - !<own> b761ea3e-1c5f-4d7c-b8e2-4b6e12d94285
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/b761ea3e-1c5f-4d7c-b8e2-4b6e12d94285>
+  PrefabRemaps:
+    []
+  Name: Building 3
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 3.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d335eae8-9967-453d-96cf-4003313b8fb7
+  Components:
+    - !<own> f0be46c6-51b1-4e5e-adc6-fd0cb1cfed83
+- !<SceneObject/d335eae8-9967-453d-96cf-4003313b8fb7>
+  PrefabRemaps:
+    []
+  Name: Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 15.000000, y: 15.000001, z: 15.000001}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f3a46ad3-ed0d-4b8f-b315-0a4aa43537b5
+- !<ScriptComponent/f0be46c6-51b1-4e5e-adc6-fd0cb1cfed83>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -1.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 3.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/f3a46ad3-ed0d-4b8f-b315-0a4aa43537b5>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 08790a3b-8543-4981-b522-6c997e50973a
+  Mesh: !<reference> b6b9f3d5-b367-4603-ba4c-45979010e5e2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

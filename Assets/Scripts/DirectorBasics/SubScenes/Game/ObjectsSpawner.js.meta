@@ -1,0 +1,67 @@
+- !<AssetImportMetadata/85d48a6f-e008-4de9-917b-bccbf650f00d>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 9e8092e1-1385-4399-a805-64d36925f879
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 9e8092e1-1385-4399-a805-64d36925f879
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> c0966cbb-9581-455c-a4db-523e2ab88706
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/c0966cbb-9581-455c-a4db-523e2ab88706>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 5d87c270-4267-4533-a356-097a4346864a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    delayBetweenSpawn: false
+    delayFirstSpawn: false
+    fullBehavior: false
+    instantiateOnStart: false
+    maxElements: false
+    objectPrefabs: false
+    objectProbabilities: false
+    parent: false
+    poolParent: false
+    prefabType: false
+    probablyHavingTwoElements: false
+    probablyToSpawn: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      poolParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectPrefabs: !<reference.ObjectPrefab[]>
+        []
+      objectProbabilities: !<float[]>
+        []
+      delayFirstSpawn: !<float> 0.000000
+      delayBetweenSpawn: !<float> 0.000000
+      probablyToSpawn: !<float> 0.000000
+      probablyHavingTwoElements: !<float> 0.000000
+      maxElements: 0
+      instantiateOnStart: false
+      fullBehavior: 0
+      prefabType: 0
+  ScriptTypes:
+    -
+      {}

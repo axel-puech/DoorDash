@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/0a413e8e-3af9-42dc-b97b-739d0c0f3ebb>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 7b701b8b-bd7d-4038-9ad8-6431a7105fe2
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 7b701b8b-bd7d-4038-9ad8-6431a7105fe2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 81ea5bee-b0f3-4de8-85bf-70b868f194db
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/2838f1d1-186c-4963-65c7-3956aa686fe0>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -3.000000
+      maximumZBeforeDeletion: !<float> 100.000000
+      scaleZ: !<float> 1.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/58b0cf7e-e7f5-41c2-4d63-73ffe53d4d04>
+  PrefabRemaps:
+    []
+  Name: Building 1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c1635948-07f0-48ac-636a-e48d40febad1
+  Components:
+    - !<own> 2838f1d1-186c-4963-65c7-3956aa686fe0
+- !<ObjectPrefabAssetData/81ea5bee-b0f3-4de8-85bf-70b868f194db>
+  Prototype: !<ObjectOwner/48aa7bfb-2e05-4189-8bd2-f93a1bee0c58>
+    PackagePath: ""
+    objects:
+      - !<own> 58b0cf7e-e7f5-41c2-4d63-73ffe53d4d04
+- !<RenderMeshVisual/840af41f-7239-4440-788c-c3e95c1e4d97>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6ecfa4f1-8b57-4b19-9c81-3bdde953819c
+  Mesh: !<reference> b6b9f3d5-b367-4603-ba4c-45979010e5e2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/c1635948-07f0-48ac-636a-e48d40febad1>
+  PrefabRemaps:
+    []
+  Name: Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 10.000001, z: 10.000001}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 840af41f-7239-4440-788c-c3e95c1e4d97

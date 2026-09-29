@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/4cdb7ae9-2fcc-4089-96b9-2ee04a3cbb27>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 29b3c7a8-574f-4d04-85ea-fd7081f874df
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 29b3c7a8-574f-4d04-85ea-fd7081f874df
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 66a1bf94-6076-41cf-84f3-c47f4a27682f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/66a1bf94-6076-41cf-84f3-c47f4a27682f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 237af6e5-0188-415b-84c7-5e858ab1d89e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    durationFade: false
+    gameDirection: false
+    parent: false
+    startOnAwake: false
+    transitionBG: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startOnAwake: false
+      transitionBG: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      durationFade: !<float> 0.000000
+      gameDirection: 0
+  ScriptTypes:
+    -
+      {}

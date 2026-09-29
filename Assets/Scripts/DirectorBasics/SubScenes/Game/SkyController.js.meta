@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/98326afa-147c-42aa-aa74-dcf577a56eca>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 3e8711f2-f5d2-499a-98ee-b44389c8e6e7
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 3e8711f2-f5d2-499a-98ee-b44389c8e6e7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 1485213a-07f4-4a9f-b628-23e1760ac042
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/1485213a-07f4-4a9f-b628-23e1760ac042>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9f1a80a8-cc17-4284-8b06-a21c230579bd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    parent: false
+    sky: false
+    strengthIntensityLight: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sky: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      strengthIntensityLight: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}

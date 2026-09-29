@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/ca8419fe-683b-4163-90f2-f1ccd71578aa>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 3f888fea-d036-473a-8243-572ff8c73864
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 3f888fea-d036-473a-8243-572ff8c73864
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 71a789b8-2020-4606-8d68-414560a0df43
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/71a789b8-2020-4606-8d68-414560a0df43>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: eb8010c7-8532-4d3e-829f-78aac924a9c3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    coefInclinaisonValue: false
+    materialsWithRound: false
+    parent: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      materialsWithRound: !<reference.Material[]>
+        []
+      coefInclinaisonValue: 0
+  ScriptTypes:
+    -
+      {}

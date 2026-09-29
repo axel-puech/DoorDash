@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/2fa03144-193f-45cc-95e3-8bfedda4f73a>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> d9dc4928-129b-4648-a69f-a013e05f7ae7
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> d9dc4928-129b-4648-a69f-a013e05f7ae7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 3b74db39-51f4-4911-a9b3-de16860f3e68
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/3b74db39-51f4-4911-a9b3-de16860f3e68>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7f8f8d61-7340-44f7-ab91-415fff6da877
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraPersp: false
+    headBinding: false
+    parent: false
+    userFaceMat: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      userFaceMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      headBinding: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cameraPersp: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

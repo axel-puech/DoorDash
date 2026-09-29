@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/66f1e11f-8f3f-497e-8d2c-0c7d5beeada9>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> db0a3c90-67b2-4865-a48b-cea477be828a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> db0a3c90-67b2-4865-a48b-cea477be828a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 5fc19e39-4ae3-46e8-8f3e-aa73707d5d10
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/5fc19e39-4ae3-46e8-8f3e-aa73707d5d10>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: de59730a-308b-43ce-9791-e1a578141cc2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    endDistanceValue: false
+    endPointValue: false
+    endTimeValue: false
+    hasDistanceEnd: false
+    hasLifeEnd: false
+    hasPointEnd: false
+    hasTimeEnd: false
+    isTimerAscending: false
+    parent: false
+    startLifeValue: false
+    textDistance: false
+    textLife: false
+    textPoint: false
+    textTime: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      textTime: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textDistance: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textPoint: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textLife: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      hasTimeEnd: false
+      isTimerAscending: false
+      endTimeValue: !<float> 0.000000
+      hasDistanceEnd: false
+      endDistanceValue: !<float> 0.000000
+      hasPointEnd: false
+      endPointValue: 0
+      hasLifeEnd: false
+      startLifeValue: 0
+  ScriptTypes:
+    -
+      {}

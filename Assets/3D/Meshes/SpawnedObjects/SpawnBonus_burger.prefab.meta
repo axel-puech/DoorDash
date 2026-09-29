@@ -1,0 +1,113 @@
+- !<AssetImportMetadata/7017e4e4-6874-4cbf-bf2d-f908b70dc17c>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 5037d776-c2a7-4452-8e1d-8b94217fccdd
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 5037d776-c2a7-4452-8e1d-8b94217fccdd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 555d903d-d1f5-4748-b460-b56fee60d815
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/555d903d-d1f5-4748-b460-b56fee60d815>
+  Prototype: !<ObjectOwner/448d1814-4976-49a8-a85d-f9001afb6dd1>
+    PackagePath: ""
+    objects:
+      - !<own> a8e9879d-6189-40ac-564b-cc6fdb3aaa3e
+- !<SceneObject/a8e9879d-6189-40ac-564b-cc6fdb3aaa3e>
+  PrefabRemaps:
+    []
+  Name: SpawnBonus_burger
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.000000, y: 2.000000, z: 2.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c64364c9-b2e3-4edb-5481-304675d0c987
+    - !<own> c9a80091-9d5a-4cb7-472f-798b54f056eb
+    - !<own> f659a3a4-99bc-4e73-448f-0285861f0d40
+- !<RenderMeshVisual/c64364c9-b2e3-4edb-5481-304675d0c987>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9d02af8c-b56f-4288-9b35-777040b2ac42
+  Mesh: !<reference> fa320dc0-1496-4065-9db1-daf85c6e2369
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ColliderComponent/c9a80091-9d5a-4cb7-472f-798b54f056eb>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<ScriptComponent/f659a3a4-99bc-4e73-448f-0285861f0d40>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectObstacle: true
+    effectObstaclePower: true
+    scaleZ: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: bonus
+      effectsObstacle:
+        []
+      effectsBonus:
+        - effect: setLifes
+          effectPower: !<float> 1.000000
+        - effect: setPoints
+          effectPower: !<float> 1.000000
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: setSpeed
+      effectBonusPower: 0.100000
+      offsetBaseY: !<float> 2.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}

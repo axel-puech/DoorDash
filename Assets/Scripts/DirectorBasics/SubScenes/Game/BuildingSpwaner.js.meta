@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/516e29ed-c313-4d10-b592-7e294eae40ea>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 5311851f-cb35-44d0-b8f8-19592b19aa4f
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 5311851f-cb35-44d0-b8f8-19592b19aa4f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 14c5aec2-c5af-4eff-a490-f0c1d1e1a3ec
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/14c5aec2-c5af-4eff-a490-f0c1d1e1a3ec>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 8a2614c0-d4fb-48e8-9a5a-cf5de349aa7f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buildingsPrefabs: false
+    buildingsProbabilities: false
+    fullBehavior: false
+    instantiateOnStart: false
+    maxElements: false
+    offsetBetweenBuildingZ: false
+    offsetBuildingX: false
+    parent: false
+    poolParent: false
+    prefabType: false
+    probablyToSpawn: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      poolParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buildingsPrefabs: !<reference.ObjectPrefab[]>
+        []
+      buildingsProbabilities: !<float[]>
+        []
+      offsetBuildingX: !<float> 0.000000
+      offsetBetweenBuildingZ: !<float> 0.000000
+      probablyToSpawn: !<float> 0.000000
+      maxElements: 0
+      instantiateOnStart: false
+      fullBehavior: 0
+      prefabType: 0
+  ScriptTypes:
+    -
+      {}

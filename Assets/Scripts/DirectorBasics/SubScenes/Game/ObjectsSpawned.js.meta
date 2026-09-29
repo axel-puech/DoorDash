@@ -1,0 +1,66 @@
+- !<AssetImportMetadata/4aef44c4-0e56-402c-ac17-ab68113ff7b4>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 2853e5a4-7373-4d01-afd4-c215f9fd9344
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/2853e5a4-7373-4d01-afd4-c215f9fd9344>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f6d0ecc1-0c95-4f22-ab8d-a137f9ee0708
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    AudioToPlayOnHit: false
+    AudioToPlayOnStart: false
+    effectBonus: false
+    effectBonusPower: false
+    effectObstacle: false
+    effectObstaclePower: false
+    effectsBonus: false
+    effectsObstacle: false
+    maximumZBeforeDeletion: false
+    offsetBaseY: false
+    scaleZ: false
+    typeSpawn: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - typeSpawn: ""
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> 0.000000
+      maximumZBeforeDeletion: !<float> 0.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/5bca9962-4ece-4961-9090-e08af43a884d>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> b031ff9d-83a1-468a-8f30-92b634a744fb
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> b031ff9d-83a1-468a-8f30-92b634a744fb
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 99a872a2-a903-4bfa-afb1-0ff7a5682bea
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/99a872a2-a903-4bfa-afb1-0ff7a5682bea>
+  Prototype: !<ObjectOwner/6dc4d994-d983-4d0d-8776-039d9ad9e5f1>
+    PackagePath: ""
+    objects:
+      - !<own> b761ea3e-1c5f-4d7c-471d-b491ed26bd7a
+- !<SceneObject/b761ea3e-1c5f-4d7c-471d-b491ed26bd7a>
+  PrefabRemaps:
+    []
+  Name: Building 3
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 3.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d335eae8-9967-453d-6930-bffccec47048
+  Components:
+    - !<own> f0be46c6-51b1-4e5e-5239-02f34e30127c
+- !<SceneObject/d335eae8-9967-453d-6930-bffccec47048>
+  PrefabRemaps:
+    []
+  Name: Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 15.000000, y: 15.000001, z: 15.000001}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f3a46ad3-ed0d-4b8f-4cea-f5b55bcac84a
+- !<ScriptComponent/f0be46c6-51b1-4e5e-5239-02f34e30127c>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -1.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 3.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/f3a46ad3-ed0d-4b8f-4cea-f5b55bcac84a>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 08790a3b-8543-4981-b522-6c997e50973a
+  Mesh: !<reference> b6b9f3d5-b367-4603-ba4c-45979010e5e2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

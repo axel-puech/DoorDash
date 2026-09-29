@@ -1,0 +1,49 @@
+- !<AssetImportMetadata/319e0b97-1382-4bdc-b4a4-5eb7016eaffc>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 0f4e1abe-ca3f-4f1d-9e27-d8ea68e8ac6e
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 0f4e1abe-ca3f-4f1d-9e27-d8ea68e8ac6e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 11ffce91-8076-4a83-b4bf-c838a1935ed2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/11ffce91-8076-4a83-b4bf-c838a1935ed2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 1a44d6e1-1f87-4f12-a694-fab4e411bb4c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    fadeSizeValue: false
+    materialsWithFade: false
+    parent: false
+    zThresholdValue: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      materialsWithFade: !<reference.Material[]>
+        []
+      zThresholdValue: !<float> 0.000000
+      fadeSizeValue: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}

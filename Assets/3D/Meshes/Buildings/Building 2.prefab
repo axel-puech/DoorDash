@@ -1,0 +1,92 @@
+- !<ObjectPrefab/bab06923-fdab-426e-a428-f10ab99f37f5>
+  PackagePath: ""
+  objects:
+    - !<own> b3141668-7e21-4395-940a-4808aaed1698
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/0196fdf6-393c-4bd0-a093-487bee47d58e>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -1.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 2.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/93077b8a-6037-42a1-9301-0ea15c479980>
+  PrefabRemaps:
+    []
+  Name: Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 15.000000, y: 15.000001, z: 15.000001}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c7104584-248c-41bc-94cb-e245c6fdb394
+- !<SceneObject/b3141668-7e21-4395-940a-4808aaed1698>
+  PrefabRemaps:
+    []
+  Name: Building 2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 2.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 93077b8a-6037-42a1-9301-0ea15c479980
+  Components:
+    - !<own> 0196fdf6-393c-4bd0-a093-487bee47d58e
+- !<RenderMeshVisual/c7104584-248c-41bc-94cb-e245c6fdb394>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0305cf1d-5c12-4b38-b1c3-30afc68c8e9f
+  Mesh: !<reference> b6b9f3d5-b367-4603-ba4c-45979010e5e2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
