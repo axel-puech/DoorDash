@@ -9,18 +9,6 @@
 
 //@input SceneObject parent
 
-//@ui {"widget":"group_start", "label":"Custom events"}
-//@ui {"widget":"label", "label":""}
-//@ui {"widget":"label", "label":"These are optional."}
-//@ui {"widget":"label", "label":"If you want to create a director caller event,"}
-//@ui {"widget":"label", "label":"when you hit a specific collider, you can add it here."}
-//@ui {"widget":"label", "label":""}
-//@ui {"widget":"label", "label":"You only create the caller here."}
-//@ui {"widget":"label", "label":"You must create the listener where you want then"}
-//@ui {"widget":"label", "label":""}
-//@input customEvent[] customEvents
-//@ui {"widget":"group_end"}
-
 script.subScene = new global.SubScene(script, script.parent);
 
 //////////////////
@@ -28,17 +16,21 @@ script.subScene = new global.SubScene(script, script.parent);
 //////////////////
 let listenerOnCollider = script.subScene.CreateListener("OnCollide", OnCollide, function () {});
 
-let callers = [];
-for (let i = 0; i < script.customEvents.length; i++) {
-  let newCaller = script.subScene.CreateCaller(script.customEvents[i].nameEvent);
-  callers.push(newCaller);
-}
+// when collec a bonus - speed increase
+let bonusCollisionCaller = script.subScene.CreateCaller("OnBonusCollision");
+
+// when hitting an obstacle
+let obstacleCollisionCaller = script.subScene.CreateCaller("OnObstacleCollision");
+
+// when collecting a burger / pizza / noodle
+let callerOnCollectObject = script.subScene.CreateCaller("OnCollectObject", null);
 
 //////////////////
 /////// Other
 //////////////////
 
 function OnCollide(e) {
+  print("collided");
   if (global.IsGameHasStopped()) {
     return;
   }
@@ -53,66 +45,35 @@ function OnCollide(e) {
     return;
   }
 
-  let typeCollider = scriptObj.GetTypeSpawn();
-  let effects = GetEffectsCollider(typeCollider, scriptObj);
-  for (let i = 0; i < effects.length; i++) {
-    ApplyEffectCollider(effects[i].effect, effects[i].effectPower);
-  }
-
   scriptObj.OnHit(true);
-
-  if (HasCustomEvent(nameCollider)) {
-    CallCustomEvent(nameCollider);
-  }
-
-  print("Has hit this object: " + nameCollider);
+  GetEffectsCollider(nameCollider);
 }
 
-function GetEffectsCollider(typeCollider, scriptObj) {
+function GetEffectsCollider(typeCollider) {
+  // collectObject();
   switch (typeCollider) {
-    case "obstacle":
-      return scriptObj.GetEffectObstacle();
-    case "bonus":
-      return scriptObj.GetEffectBonus();
+    case "SpawnBonus_pizza":
+      print("SpawnBonus_pizza");
+
+      // callerOnCollectObject.Call(0);
+      break;
+    case "SpawnBonus_noodle":
+      print("SpawnBonus_noodle");
+      // callerOnCollectObject.Call(1);
+
+      break;
+    case "SpawnBonus_burger":
+      print("SpawnBonus_burger");
+
+      // callerOnCollectObject.Call(2);
+      break;
+    case "SpawnObstacle":
+      print("SpawnObstacle");
+
+      // callerOnCollectObject.Call(3);
+      break;
     default:
       print("Wrong typeCollider : " + typeCollider);
       return null;
-  }
-}
-
-function ApplyEffectCollider(effect, power) {
-  switch (effect) {
-    case "setTime":
-      global.AddTime(power);
-      break;
-    case "setSpeed":
-      global.AddSpeed(power);
-      break;
-    case "setPoints":
-      global.AddPoints(power);
-      break;
-    case "setLifes":
-      global.AddLifes(power);
-      break;
-    default:
-      print("CollisionController : wrong effect name = " + effect);
-  }
-}
-
-function HasCustomEvent(nameCollider) {
-  for (let i = 0; i < script.customEvents.length; i++) {
-    if (script.customEvents[i].nameCollider === nameCollider) {
-      return true;
-    }
-  }
-  return false;
-}
-
-function CallCustomEvent(nameCollider) {
-  for (let i = 0; i < script.customEvents.length; i++) {
-    if (script.customEvents[i].nameCollider === nameCollider) {
-      callers[i].Call();
-      print("Call custom event : " + script.customEvents[i].nameEvent);
-    }
   }
 }

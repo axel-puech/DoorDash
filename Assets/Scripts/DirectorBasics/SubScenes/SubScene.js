@@ -18,3 +18,18 @@ function Stop() {}
 //___________________________Functions__________________________//
 
 //___________________________Animations_________________________//
+
+// INTRO
+// - add tilt hint
+// - add TEXT
+// - change feedback user
+// - add gray
+// - add bitmoji user
+
+// GAME
+//- flare when taking object
+//- vignette when taking obstacle
+//- fade in burger, pizza, noodle on end intro and timer
+//
+
+//

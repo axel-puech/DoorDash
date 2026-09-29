@@ -28,7 +28,10 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     beforeStartDelay: false
+    fadeDuration: false
+    introMaterials: false
     parent: false
+    whiteScreenMaterial: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,6 +43,10 @@
   DefaultScriptInputs:
     - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       beforeStartDelay: 0
+      introMaterials: !<reference.Material[]>
+        []
+      whiteScreenMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      fadeDuration: !<float> 0.000000
   ScriptTypes:
     -
       {}

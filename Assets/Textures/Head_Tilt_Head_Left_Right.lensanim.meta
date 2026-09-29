@@ -1,0 +1,29 @@
+- !<AssetImportMetadata/005b3f70-bdb6-9189-2351-ab429f55212d>
+  ImportedAssetIds:
+    AnimatedTexture: !<reference> 1d24ab61-abe5-4cc0-9460-492221262c20
+    Head_Tilt_head_Left_Right.png: !<reference> 4e2cf845-51c5-4cbf-99d9-d4272c73217d
+  ImporterName: LensAnimationImporter
+  PrimaryAsset: !<reference> 1d24ab61-abe5-4cc0-9460-492221262c20
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CannotBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    AnimatedTexture: !<own> 39125072-8b4a-4dec-9dfb-9a48d21b1fe0
+  DependentFiles:
+    - Head_Tilt_head_Left_Right.png
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<FileCompressionSettings>
+    {}
+- !<AnimatedTextureData/39125072-8b4a-4dec-9dfb-9a48d21b1fe0>
+  AutoPlay: false
+  Reversed: false
+  PingPong: false
+  CurrentSequence: FACE_LPD-7_Tilt_Head_v01
+  KeyFramesData:
+    FACE_LPD-7_Tilt_Head_v01:
+      - time: 0.000000
+        value: 0
+      - time: 3.400000
+        value: 51

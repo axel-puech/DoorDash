@@ -6,6 +6,13 @@
 //@input Component.Image transitionBG
 //@input float durationFade
 //@input int gameDirection {"widget":"combobox", "values":[{"label":"BackToFront", "value":0}, {"label":"FrontToBack", "value":1}]}
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"UI Settings"}
+//@input Asset.Material[] gameUIMaterials
+//@input Component.Text textTime
+//@input Component.Text textPizza
+//@input Component.Text textBurger
+//@input Component.Text textNoodles
 
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
@@ -69,7 +76,9 @@ function LateStart() {
   }
 }
 
-function Stop() {}
+function Stop() {
+  fadeGameUIElements.Reset();
+}
 
 function OnStopRun(hasWin) {
   print("END GAME. haswin = " + hasWin);
@@ -91,3 +100,18 @@ animFadeBG.OnEnd = function (ratio) {
     script.subScene.CallEnd(null);
   }
 };
+
+const fadeGameUIElements = new Animation(script.getSceneObject(), 0.5, (ratio) => {
+  script.gameUIMaterials.forEach((material) => {
+    material.mainPass.alphaRatio = ratio;
+  });
+
+  [script.textTime, script.textPizza, script.textBurger, script.textNoodles].forEach((text) => {
+    if (!text) {
+      return;
+    }
+
+    const color = text.textFill.color;
+    text.textFill.color = new vec4(color.x, color.y, color.z, ratio);
+  });
+});

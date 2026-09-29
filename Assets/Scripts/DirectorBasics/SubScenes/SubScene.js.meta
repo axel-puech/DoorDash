@@ -22,6 +22,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
+  VersionPrerelease: ""
   ComponentUid: fd2d4cf6-4759-7c52-5d71-6e076ac520b5
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked

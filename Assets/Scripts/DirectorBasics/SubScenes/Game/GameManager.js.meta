@@ -29,8 +29,13 @@
   ScriptInputsHidden:
     durationFade: false
     gameDirection: false
+    gameUIMaterials: false
     parent: false
     startOnAwake: false
+    textBurger: false
+    textNoodles: false
+    textPizza: false
+    textTime: false
     transitionBG: false
   ScriptTypesHidden:
     {}
@@ -46,6 +51,12 @@
       transitionBG: !<reference.Image> 00000000-0000-0000-0000-000000000000
       durationFade: !<float> 0.000000
       gameDirection: 0
+      gameUIMaterials: !<reference.Material[]>
+        []
+      textTime: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textPizza: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textBurger: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textNoodles: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
