@@ -1,0 +1,112 @@
+- !<AssetImportMetadata/c885044f-1bca-4708-9625-41ebd2374000>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> a421c127-c597-42af-83e3-bca58840f257
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> a421c127-c597-42af-83e3-bca58840f257
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 0eebf8d2-3f83-429a-938e-2aadd1854ad7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/0eebf8d2-3f83-429a-938e-2aadd1854ad7>
+  Prototype: !<ObjectOwner/57e42d22-bdea-4463-a3d1-7abfb8bab192>
+    PackagePath: ""
+    objects:
+      - !<own> b2d61987-e9be-43b6-5e4a-9692c24bda92
+- !<ScriptComponent/4129da13-517e-4270-74ee-f712c879d1c0>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    scaleZ: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: bonus
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> 2.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<Image/5e5b1358-88f6-4e8d-5ef3-ec61a83f93a5>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b9b5ba87-11ae-44ed-b814-21a3ff434b11
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/b2d61987-e9be-43b6-5e4a-9692c24bda92>
+  PrefabRemaps:
+    []
+  Name: CollectableNoodle
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5e5b1358-88f6-4e8d-5ef3-ec61a83f93a5
+    - !<own> e68edd27-9111-4a2b-4a23-196cfb314ce7
+    - !<own> 4129da13-517e-4270-74ee-f712c879d1c0
+- !<ColliderComponent/e68edd27-9111-4a2b-4a23-196cfb314ce7>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false

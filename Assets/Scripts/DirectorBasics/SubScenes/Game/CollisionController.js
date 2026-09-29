@@ -52,20 +52,24 @@ function OnCollide(e) {
 function GetEffectsCollider(typeCollider) {
   // collectObject();
   switch (typeCollider) {
-    case "SpawnBonus_pizza":
-      print("SpawnBonus_pizza");
+    case "CollectablePizza":
+      print("CollectablePizza");
 
-      // callerOnCollectObject.Call(0);
+      callerOnCollectObject.Call("CollectablePizza");
       break;
-    case "SpawnBonus_noodle":
-      print("SpawnBonus_noodle");
-      // callerOnCollectObject.Call(1);
+    case "CollectableNoodle":
+      print("CollectableNoodle");
+      callerOnCollectObject.Call("CollectableNoodle");
 
       break;
-    case "SpawnBonus_burger":
-      print("SpawnBonus_burger");
+    case "CollectableBurger":
+      print("CollectableBurger");
+      callerOnCollectObject.Call("CollectableBurger");
+      break;
+    case "SpawnObstacle":
+      print("SpawnObstacle");
 
-      // callerOnCollectObject.Call(2);
+      // callerOnCollectObject.Call(3);
       break;
     case "SpawnObstacle":
       print("SpawnObstacle");

@@ -7,7 +7,7 @@
   PackageType: LegacyPackage
   LegacyPackagePolicy: CannotBeUnpackedTransparent
   ExtraData:
-    {}
+    AssetLibraryId: 7ymsjbiEM9SkWEAdxARjm7
   AssetDataMap:
     AnimatedTexture: !<own> 39125072-8b4a-4dec-9dfb-9a48d21b1fe0
   DependentFiles:
@@ -17,7 +17,7 @@
   CompressionSettings: !<FileCompressionSettings>
     {}
 - !<AnimatedTextureData/39125072-8b4a-4dec-9dfb-9a48d21b1fe0>
-  AutoPlay: false
+  AutoPlay: true
   Reversed: false
   PingPong: false
   CurrentSequence: FACE_LPD-7_Tilt_Head_v01

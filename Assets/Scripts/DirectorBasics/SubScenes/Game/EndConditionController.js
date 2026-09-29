@@ -8,9 +8,11 @@
 //@ui {"widget":"separator"}
 //@ui {"widget":"group_start", "label":"Debug"}
 //@input Component.Text textTime
-//@input Component.Text textDistance
-//@input Component.Text textPoint
-//@input Component.Text textLife
+
+//@input Component.Text textPizza
+//@input Component.Text textBurger
+//@input Component.Text textNoodles
+
 //@ui {"widget":"group_end"}
 
 //@ui {"widget":"separator"}
@@ -110,6 +112,8 @@ function OnEndIntro() {
   print("Start counter");
 }
 
+let listenerCollectObject = script.subScene.CreateListener("OnCollectObject", OnCollectObject);
+
 //Param:
 //true = win
 //false = loose
@@ -118,16 +122,21 @@ let callerOnStopRun = script.subScene.CreateCaller("OnStopRun", false);
 //////////////////
 /////// Variables
 //////////////////
+
+const textPizza = script.textPizza;
+const textBurger = script.textBurger;
+const textNoodles = script.textNoodles;
+
 //Timer = the time displayed on the game that can be changed by malus/bonus
 let timer = 0;
 //Actual timer = the real time since the end of start of the run
 let actualTimer = 0;
-//distance walked
-let distance = 0;
+
 //point obtained
-let points = 0;
-//current life
-let life = 0;
+let points_pizza = 0;
+let points_burger = 0;
+let points_noodle = 0;
+
 // if the intro ended
 let introEnded = false;
 
@@ -139,8 +148,14 @@ function Start() {
   distance = 0;
   actualTimer = 0;
   points = 0;
+  points_pizza = 0;
+  points_burger = 0;
+  points_noodle = 0;
   life = script.startLifeValue;
   script.textTime.text = FormatTime(script.isTimerAscending ? 0 : script.endTimeValue);
+  UpdatePoints(textPizza, points_pizza);
+  UpdatePoints(textBurger, points_burger);
+  UpdatePoints(textNoodles, points_noodle);
 }
 
 function OnStartRun() {}
@@ -158,9 +173,21 @@ function Update() {
   if (!introEnded) return;
 
   UpdateTime();
-  UpdateDistance();
-  UpdatePoints();
-  UpdateLifes();
+}
+//////////////////
+/////// FUNCTION
+//////////////////
+function OnCollectObject(id) {
+  if (id === "CollectablePizza") {
+    points_pizza += 1;
+    UpdatePoints(textPizza, points_pizza);
+  } else if (id === "CollectableNoodle") {
+    points_noodle += 1;
+    UpdatePoints(textNoodles, points_noodle);
+  } else if (id === "CollectableBurger") {
+    points_burger += 1;
+    UpdatePoints(textBurger, points_burger);
+  }
 }
 
 //////////////////
@@ -200,38 +227,9 @@ function AddTime(timeToAdd) {
 }
 
 //////////////////
-/////// DISTANCE
-//////////////////
-function UpdateDistance() {
-  distance += getDeltaTime() * global.GetSpeed();
-  let distanceToDisplay = Math.floor(distance * 10) / 10;
-  script.textDistance.text = distanceToDisplay + "m";
-
-  //Win
-  if (script.hasDistanceEnd === true && distance >= script.endDistanceValue) {
-    callerOnStopRun.Call(true);
-  }
-}
-
-//////////////////
 /////// POINTS
 //////////////////
-function UpdatePoints() {
-  script.textPoint.text = points.toString();
-}
-function AddPoints(pointsToAdd) {
-  points += pointsToAdd;
-}
-
-//////////////////
-/////// LIFE
-//////////////////
-function UpdateLifes() {
-  script.textLife.text = life + " lifes";
-}
-function AddLifes(lifeToAdd) {
-  life += lifeToAdd;
-  if (life <= 0) {
-    callerOnStopRun.Call(false);
-  }
+function UpdatePoints(typeText, typePoints) {
+  typeText.text = typePoints.toString();
+  // script.textPoint.text = points.toString();
 }

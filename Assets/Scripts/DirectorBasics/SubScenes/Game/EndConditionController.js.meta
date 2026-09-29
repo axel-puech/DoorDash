@@ -37,9 +37,9 @@
     isTimerAscending: false
     parent: false
     startLifeValue: false
-    textDistance: false
-    textLife: false
-    textPoint: false
+    textBurger: false
+    textNoodles: false
+    textPizza: false
     textTime: false
   ScriptTypesHidden:
     {}
@@ -52,9 +52,9 @@
   DefaultScriptInputs:
     - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       textTime: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      textDistance: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      textPoint: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      textLife: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textPizza: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textBurger: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textNoodles: !<reference.Text> 00000000-0000-0000-0000-000000000000
       hasTimeEnd: false
       isTimerAscending: false
       endTimeValue: !<float> 0.000000

@@ -1,0 +1,112 @@
+- !<AssetImportMetadata/0814bd05-d0f1-4cf8-bf10-bdf4934fd9b1>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> f83591ad-2d94-49f0-9c3d-80be179c59ac
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> f83591ad-2d94-49f0-9c3d-80be179c59ac
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 4644e4f4-8353-4600-97ae-7a0aca7fdb27
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<Image/15788b18-4f4b-4f04-6667-bffabcc68df6>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4f3e9502-ed4d-412a-a9f9-d812890ecf66
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/4644e4f4-8353-4600-97ae-7a0aca7fdb27>
+  Prototype: !<ObjectOwner/0b7d358b-3fe9-43d0-9d95-68322d829c12>
+    PackagePath: ""
+    objects:
+      - !<own> 4f8bd4ac-2f70-46b7-604b-268b39a95415
+- !<SceneObject/4f8bd4ac-2f70-46b7-604b-268b39a95415>
+  PrefabRemaps:
+    []
+  Name: CollectablePizza
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 15788b18-4f4b-4f04-6667-bffabcc68df6
+    - !<own> 51d6f4b6-8bcd-453d-6513-4ea45a40a064
+    - !<own> e7685d8b-16e5-4240-6ab3-3ded70262fa8
+- !<ColliderComponent/51d6f4b6-8bcd-453d-6513-4ea45a40a064>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<ScriptComponent/e7685d8b-16e5-4240-6ab3-3ded70262fa8>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    scaleZ: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: bonus
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> 2.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}

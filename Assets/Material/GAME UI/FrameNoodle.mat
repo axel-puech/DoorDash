@@ -28,6 +28,21 @@
     - Port_GSplatScale_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Import_N073:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N036:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N085:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N036:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N072:
+        typeIdx: 1
+        value: 1.000000
     - Port_LODValue_N002:
         typeIdx: 1
         value: 0.000000
@@ -52,7 +67,16 @@
     - Port_Value3_N001:
         typeIdx: 1
         value: 0.000000
+    - Port_Value3_N078:
+        typeIdx: 1
+        value: 0.000000
     - Port_Value4_N001:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N078:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N093:
         typeIdx: 1
         value: 0.000000
     - Port_WorldNormal_N004:
@@ -64,6 +88,15 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N37:
+        typeIdx: 1
+        value: 1.000000
+    - Tweak_N75:
+        typeIdx: 1
+        value: 1.000000
+    - coefInclinaison:
+        typeIdx: 1
+        value: 1.000000
   DepthWrite: false
   DepthTest: false
   DepthFunction: LessEqual
@@ -88,13 +121,16 @@
     PreviewEnabled:
       typeIdx: 0
       value: 0
+    alphaRatio:
+      typeIdx: 1
+      value: 1.000000
     baseColor:
       typeIdx: 5
       value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     baseTex:
       typeIdx: 9
       value:
-        id: 3619f009-d0c0-4e4a-b4fc-8df1bf6f2690
+        id: 7b7b9f6a-fd73-4940-bb53-f762f4e428e1
         sampler:
           filteringMode: Trilinear
           wrapModeU: ClampToEdge
