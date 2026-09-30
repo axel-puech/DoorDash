@@ -32,4 +32,6 @@ function Stop() {}
 //- fade in burger, pizza, noodle on end intro and timer
 //
 
-//
+// Ce qu'il reste a faire
+// ajouter un countdown 3, 2, 1 dans le countdown manager
+// 
