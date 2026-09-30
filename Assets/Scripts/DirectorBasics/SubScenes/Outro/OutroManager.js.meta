@@ -22,6 +22,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
+  VersionPrerelease: ""
   ComponentUid: f9e31a6f-5bfa-4927-8217-09018d36a66d
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
@@ -29,7 +30,6 @@
     durationFade: false
     parent: false
     textOutro: false
-    textOutroHighScore: false
     transitionBG: false
   ScriptTypesHidden:
     {}
@@ -43,7 +43,6 @@
     - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       transitionBG: !<reference.Image> 00000000-0000-0000-0000-000000000000
       textOutro: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      textOutroHighScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
       durationFade: !<float> 0.000000
   ScriptTypes:
     -

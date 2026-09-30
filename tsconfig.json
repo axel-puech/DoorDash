@@ -24,6 +24,10 @@
       "Bitmoji Animation 3.lspkg/*": [
         "./Assets/Bitmoji Animation 3.lspkg/*",
         "./Cache/TypeScript/Src/Assets/Bitmoji Animation 3.lspkg/*"
+      ],
+      "Bitmoji Animation 4.lspkg/*": [
+        "./Assets/Bitmoji Animation 4.lspkg/*",
+        "./Cache/TypeScript/Src/Assets/Bitmoji Animation 4.lspkg/*"
       ]
     },
     "skipDefaultLibCheck": true,
@@ -38,6 +42,7 @@
     "./Assets/**/*.ts",
     "./Packages/**/*.ts",
     "./Cache/TypeScript/Src/Packages/**/*.ts",
+    "./Cache/TypeScript/Src/Assets/Bitmoji Animation 4.lspkg/**/*.ts",
     "./Cache/TypeScript/Src/Assets/Bitmoji Animation 3.lspkg/**/*.ts",
     "./Cache/TypeScript/Src/Assets/Bitmoji Animation 2.lspkg/**/*.ts",
     "./Cache/TypeScript/Src/Assets/Bitmoji 3D.lsc/**/*.ts"

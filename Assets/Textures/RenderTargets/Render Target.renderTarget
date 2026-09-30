@@ -1,6 +1,7 @@
 - !<RenderTarget/2d36dcc6-2403-42b7-9ce6-570c0f0006a6>
   PackagePath: ""
   UseScreenResolution: true
+  AllocateMips: false
   Resolution:
     x: 900
     y: 1600

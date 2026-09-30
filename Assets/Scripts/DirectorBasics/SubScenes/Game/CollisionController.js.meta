@@ -27,7 +27,14 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    bonusDuration: false
+    collectableDuration: false
+    flareMaterial: false
+    frameMaterials: false
+    obstacleDuration: false
     parent: false
+    speedVignetteMaterial: false
+    vignetteMaterial: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -38,6 +45,14 @@
     []
   DefaultScriptInputs:
     - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      flareMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      vignetteMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      speedVignetteMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      frameMaterials: !<reference.Material[]>
+        []
+      obstacleDuration: !<float> 0.000000
+      bonusDuration: !<float> 0.000000
+      collectableDuration: !<float> 0.000000
   ScriptTypes:
     -
       {}

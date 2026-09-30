@@ -27,7 +27,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 4f3e9502-ed4d-412a-a9f9-d812890ecf66
+    - !<reference> b9b5ba87-11ae-44ed-b814-21a3ff434b11
   FlipX: false
   FlipY: false
   RotationAngle: 0
@@ -60,9 +60,9 @@
     []
   Name: Physics Collider
   Enabled: true
-  Shape: !<Sphere>
+  Shape: !<Box>
     FitVisual: true
-    Radius: 6.000000
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000

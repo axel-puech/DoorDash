@@ -86,9 +86,9 @@
     []
   Name: Physics Collider
   Enabled: true
-  Shape: !<Sphere>
+  Shape: !<Box>
     FitVisual: true
-    Radius: 6.000000
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000

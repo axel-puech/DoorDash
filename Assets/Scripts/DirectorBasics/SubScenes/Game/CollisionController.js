@@ -8,8 +8,36 @@
 */
 
 //@input SceneObject parent
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"FX Materials"}
+//@input Asset.Material flareMaterial
+//@input Asset.Material vignetteMaterial
+//@input Asset.Material speedVignetteMaterial
+//@input Asset.Material[] frameMaterials
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"FX Anim duration"}
+//@input float obstacleDuration
+//@input float bonusDuration
+//@input float collectableDuration
 
 script.subScene = new global.SubScene(script, script.parent);
+script.subScene.OnStart = Start;
+script.subScene.OnStop = Stop;
+
+let activeFrame = null;
+
+let speedVignetteActive = false;
+let obstacleVignetteActive = false;
+let collectableFlareActive = false;
+
+function Start() {}
+
+function Stop() {
+  fadeFlare.Reset();
+  fadeVignette.Reset();
+  mixFrame.Reset();
+  fadeSpeedVignette.Reset();
+}
 
 //////////////////
 /////// Listeners/Callers
@@ -24,6 +52,22 @@ let obstacleCollisionCaller = script.subScene.CreateCaller("OnObstacleCollision"
 
 // when collecting a burger / pizza / noodle
 let callerOnCollectObject = script.subScene.CreateCaller("OnCollectObject", null);
+
+//____FadeImageDelay____//
+const fadeSpeedVignetteDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
+  fadeSpeedVignette.GoTo(0);
+  speedVignetteActive = false;
+});
+
+const fadeCollectableDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
+  fadeFlare.GoTo(0);
+  collectableFlareActive = false;
+});
+
+const fadeObstacleDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
+  fadeVignette.GoTo(0);
+  obstacleVignetteActive = false;
+});
 
 //////////////////
 /////// Other
@@ -54,30 +98,140 @@ function GetEffectsCollider(typeCollider) {
   switch (typeCollider) {
     case "CollectablePizza":
       print("CollectablePizza");
-
+      PlayCollectableFlare();
       callerOnCollectObject.Call("CollectablePizza");
+      activeFrame = script.frameMaterials[0];
+      mixFrame.Start(1);
       break;
     case "CollectableNoodle":
       print("CollectableNoodle");
+      PlayCollectableFlare();
+      activeFrame = script.frameMaterials[1];
+      mixFrame.Start(1);
+
       callerOnCollectObject.Call("CollectableNoodle");
 
       break;
     case "CollectableBurger":
       print("CollectableBurger");
+      activeFrame = script.frameMaterials[2];
+      mixFrame.Start(1);
+      PlayCollectableFlare();
+
       callerOnCollectObject.Call("CollectableBurger");
       break;
     case "SpawnObstacle":
       print("SpawnObstacle");
 
-      // callerOnCollectObject.Call(3);
-      break;
-    case "SpawnObstacle":
-      print("SpawnObstacle");
+      if (obstacleVignetteActive) {
+        fadeObstacleDelay.event.cancel();
+        fadeObstacleDelay.event.reset(script.obstacleDuration);
+      } else if (speedVignetteActive) {
+        fadeSpeedVignetteDelay.event.cancel();
+        fadeSpeedVignette.GoTo(0);
+        speedVignetteActive = false;
+
+        obstacleVignetteActive = true;
+        fadeVignette.GoTo(1);
+      } else {
+        obstacleVignetteActive = true;
+        fadeVignette.GoTo(1);
+      }
 
       // callerOnCollectObject.Call(3);
       break;
+    case "Bonus":
+      print("Bonus");
+      if (speedVignetteActive) {
+        fadeSpeedVignetteDelay.event.cancel();
+        fadeSpeedVignetteDelay.event.reset(script.bonusDuration);
+      } else if (obstacleVignetteActive) {
+        fadeObstacleDelay.event.cancel();
+        fadeVignette.GoTo(0);
+        speedVignetteActive = false;
+
+        speedVignetteActive = true;
+        fadeSpeedVignette.GoTo(1);
+      } else {
+        speedVignetteActive = true;
+        fadeSpeedVignette.GoTo(1);
+      }
+
+      // callerOnCollectObject.Call(3);
+      break;
+
     default:
       print("Wrong typeCollider : " + typeCollider);
       return null;
   }
 }
+
+function PlayCollectableFlare() {
+  if (collectableFlareActive) {
+    fadeCollectableDelay.event.cancel();
+    fadeCollectableDelay.event.reset(script.collectableDuration);
+  } else {
+    collectableFlareActive = true;
+    fadeFlare.GoTo(1);
+  }
+}
+
+function PlayObstacleVignette() {
+  if (obstacleVignetteActive) {
+    fadeObstacleDelay.event.cancel();
+    fadeObstacleDelay.event.reset(script.obstacleDuration);
+  } else {
+    obstacleVignetteActive = true;
+    fadeVignette.GoTo(1);
+  }
+}
+
+//___________________________Animations_________________________//
+
+const fadeFlare = new Animation(script.getSceneObject(), 0.7, (ratio) => {
+  script.flareMaterial.mainPass.flareRatio = ratio;
+});
+
+fadeFlare.Easing = QuadraticOut;
+
+fadeFlare.OnEnd = function (ratio) {
+  if (ratio === 1) {
+    fadeCollectableDelay.event.reset(script.collectableDuration);
+  }
+};
+
+const fadeVignette = new Animation(script.getSceneObject(), 0.7, (ratio) => {
+  script.vignetteMaterial.mainPass.alphaRatio = ratio;
+});
+
+fadeVignette.OnEnd = function (ratio) {
+  if (ratio === 1) {
+    fadeObstacleDelay.event.reset(script.obstacleDuration);
+  }
+};
+
+const fadeSpeedVignette = new Animation(script.getSceneObject(), 0.7, (ratio) => {
+  script.speedVignetteMaterial.mainPass.alphaRatio = ratio;
+});
+
+fadeSpeedVignette.OnEnd = function (ratio) {
+  if (ratio === 1) {
+    fadeSpeedVignetteDelay.event.reset(script.bonusDuration);
+  }
+};
+
+const mixFrame = new Animation(
+  script.getSceneObject(),
+  0.4,
+  (ratio) => {
+    if (!activeFrame) return;
+    activeFrame.mainPass.mixRatio = ratio;
+  },
+  RepeatMode.PingPong,
+);
+
+mixFrame.OnEnd = function (ratio) {
+  if (ratio === 0) {
+    activeFrame = null;
+  }
+};
