@@ -1,0 +1,81 @@
+- !<AssetImportMetadata/84c01edf-9a37-0f14-fa0a-54deada3737e>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> a611372d-a04f-41d9-8373-ee7c109812de
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> a611372d-a04f-41d9-8373-ee7c109812de
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 6jlL7Bbp1STnxHTIjW87MN
+  AssetDataMap:
+    JavaScriptAsset: !<own> e7d53564-db9d-4045-9876-bfa3413e5906
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/e7d53564-db9d-4045-9876-bfa3413e5906>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 9cbf6d47-cbc9-c517-7998-021b7dc69e96
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    advanced: false
+    brighten: false
+    brightening: false
+    colorContrast: false
+    colorCorrection: false
+    contrast: false
+    correction: false
+    edgeDetection: false
+    outline: false
+    shake: false
+    shakeAnimation: false
+    smooth: false
+    smoothing: false
+    style: false
+    styles: false
+    tone: false
+    tones: false
+    vhs: false
+    vhsOverlay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - colorCorrection: 0.500000
+      contrast: !<float> 0.000000
+      brightening: !<float> 0.000000
+      smoothing: false
+      tone: 0
+      style: 0
+      outline: false
+      vhsOverlay: false
+      shakeAnimation: false
+      advanced: false
+      correction: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      colorContrast: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      smooth: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      brighten: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tones: !<reference.SceneObject[]>
+        []
+      styles: !<reference.SceneObject[]>
+        []
+      edgeDetection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vhs: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      shake: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

@@ -1,0 +1,38 @@
+- !<NativePackageDescriptor/678db670-db78-4c88-a08a-42e75237b5b2>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 22
+    patch: 1
+    build: 26062503
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "The Motion Blur Post Effect is used to create a visual streaking or smearing effect as a result of the camera, the subject or both moving too quickly. Set the blur factor and angle, which define how much and at what angle the input image is softened using the motion blur technique. It is possible to add an opacity mask to the shader. motion • directional • image • blur • processing • distort • filter"
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 101
+  ExportUid: 1c1883d0-322e-4655-8e91-b9269e0edbd8
+  ComponentUid: 5acb0a4e-d92a-4330-8790-0aa750bc9ae6
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  VersionPrerelease: ""
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

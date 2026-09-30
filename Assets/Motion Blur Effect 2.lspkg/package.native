@@ -1,0 +1,38 @@
+- !<NativePackageDescriptor/fdae2c77-87a9-4b1f-b7a7-19aa54cd3d17>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 22
+    patch: 1
+    build: 26062503
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Motion Blur Effect Add this motion blur post process effect to enhance the filmic look of your lenses. Go crazy with the slider for some trippy vibes, Video Tutorial"
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 101
+  ExportUid: ff0585ad-e2ec-419d-9a74-3428e1432d77
+  ComponentUid: e9be4eb1-ac1b-4485-9f5c-4066c82dc323
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  VersionPrerelease: ""
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

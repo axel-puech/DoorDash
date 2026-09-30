@@ -14,18 +14,11 @@ function OnStart() {
 function OnSceneEnded(sceneName, params) {
   print("OnSceneEnded : " + sceneName);
   switch (sceneName) {
-    case "SceneIntro":
-      director.GoToScene("SceneGame", false, false);
-      break;
     case "SceneGame":
       director.GoToScene("SceneOutro", false, false);
       break;
     case "SceneOutro":
-      if (params === true) {
-        director.GoToScene("SceneIntro", false, false);
-      } else {
-        director.GoToScene("SceneGame", false, false);
-      }
+      director.GoToScene("SceneGame", false, false);
       break;
     default:
       print("Wrong scene name : " + sceneName);

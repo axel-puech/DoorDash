@@ -27,9 +27,13 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    buttonReplay: false
     durationFade: false
     parent: false
-    textOutro: false
+    textBurgerScore: false
+    textNoodlesScore: false
+    textPizzaScore: false
+    textTotalScore: false
     transitionBG: false
   ScriptTypesHidden:
     {}
@@ -42,7 +46,11 @@
   DefaultScriptInputs:
     - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       transitionBG: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      textOutro: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textTotalScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textPizzaScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textBurgerScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textNoodlesScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      buttonReplay: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       durationFade: !<float> 0.000000
   ScriptTypes:
     -

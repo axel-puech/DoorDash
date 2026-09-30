@@ -1,0 +1,116 @@
+- !<ObjectPrefab/4bf10dbe-dfdc-4b7e-9778-76ef4d6e39cd>
+  PackagePath: ""
+  objects:
+    - !<own> 1ceca46e-dcf7-46e7-87d2-a8ea309ccd9c
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/1ceca46e-dcf7-46e7-87d2-a8ea309ccd9c>
+  PrefabRemaps:
+    - 1ceca46e-dcf7-46e7-87d2-a8ea309ccd9c: 1ceca46e-dcf7-46e7-782d-5715cf633263
+    - 1d3ba55b-e0d4-424d-9506-de38b74309da: 1d3ba55b-e0d4-424d-6af9-21c748bcf625
+    - 314d4346-f242-49c3-add8-6e40703d2c17: 314d4346-f242-49c3-5227-91bf8fc2d3e8
+    - 32a44f4c-cc06-4083-880a-ce49a4fb1f5e: 32a44f4c-cc06-4083-77f5-31b65b04e0a1
+    - 59492393-b79c-4a42-86c4-d24a026ae389: 59492393-b79c-4a42-793b-2db5fd951c76
+    - d1d64189-7e68-47c4-8d06-713213721bc0: d1d64189-7e68-47c4-72f9-8ecdec8de43f
+  Name: Motion Blur Effect__PLACE_IN_SCENE
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1d3ba55b-e0d4-424d-9506-de38b74309da
+  Components:
+    - !<own> 32a44f4c-cc06-4083-880a-ce49a4fb1f5e
+- !<SceneObject/1d3ba55b-e0d4-424d-9506-de38b74309da>
+  PrefabRemaps:
+    []
+  Name: Motion Blur Camera
+  Enabled: true
+  Layers: 2
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d1d64189-7e68-47c4-8d06-713213721bc0
+  Components:
+    - !<own> 59492393-b79c-4a42-86c4-d24a026ae389
+- !<PostEffectVisual/314d4346-f242-49c3-add8-6e40703d2c17>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 1
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9f263971-45fe-403b-bad5-9a717c272694
+- !<PostEffectVisual/32a44f4c-cc06-4083-880a-ce49a4fb1f5e>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 67b756a0-127f-4b05-a68b-4ba5d4e4a1e5
+- !<Camera/59492393-b79c-4a42-86c4-d24a026ae389>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  renderLayer: 2
+  MipmapLevel: 0
+  RenderOrder: 0
+  Size: 20.000000
+  Near: 1.000000
+  Far: 1000.000000
+  Fov: 63.541019
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: None
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Orthographic
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> 5fafe218-dbcf-44c3-8e3b-ce0c8adf7071
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/d1d64189-7e68-47c4-8d06-713213721bc0>
+  PrefabRemaps:
+    []
+  Name: MotionBlur
+  Enabled: true
+  Layers: 2
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 314d4346-f242-49c3-add8-6e40703d2c17

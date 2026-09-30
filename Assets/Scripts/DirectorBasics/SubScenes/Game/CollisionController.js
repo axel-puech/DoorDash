@@ -19,6 +19,10 @@
 //@input float obstacleDuration
 //@input float bonusDuration
 //@input float collectableDuration
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"Post Effect"}
+//@input Component.PostEffectVisual postEffect
+//@input Component.PostEffectVisual zoomBlur
 
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
@@ -212,6 +216,8 @@ fadeVignette.OnEnd = function (ratio) {
 
 const fadeSpeedVignette = new Animation(script.getSceneObject(), 0.7, (ratio) => {
   script.speedVignetteMaterial.mainPass.alphaRatio = ratio;
+  script.postEffect.mainPass.alphaRatio = ratio * 0.2;
+  script.zoomBlur.mainPass.strength = ratio * 3;
 });
 
 fadeSpeedVignette.OnEnd = function (ratio) {

@@ -2,10 +2,13 @@
 
 //@ui {"widget":"separator"}
 //@input Component.Image transitionBG
-//@input Component.Text textOutro
-//@input Component.Text textOutro
-//@input Component.Text textOutro
-//@input Component.Text textOutro
+
+//@input Component.Text textTotalScore
+//@input Component.Text textPizzaScore
+//@input Component.Text textBurgerScore
+//@input Component.Text textNoodlesScore
+
+//@input SceneObject buttonReplay
 
 //@ui {"widget":"separator"}
 //@input float durationFade
@@ -17,9 +20,18 @@ script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
 //__________________________Variables_____________________________//
-// let tapEvent = script.subScene.CreateEvent("TapEvent", OnTap);
+
+const outroInteraction = script.buttonReplay.getComponent("Component.InteractionComponent");
+let totalScore = 0;
+let pizzaScore = 0;
+let burgerScore = 0;
+let noodlesScore = 0;
+
 let hasTapped = false;
 //________Caller________//
+
+const showBitmojiCaller = script.subScene.CreateCaller("showBitmojiEvent");
+const hideBitmojiCaller = script.subScene.CreateCaller("hideBitmojiEvent");
 //________Listener________//
 //________DelayEvent________//
 
@@ -30,46 +42,62 @@ function Start() {
   animFadeBG.JumpTo(1);
   // animFadeText.JumpTo(1);
 
-  // StoreScore();
+  totalScore = global.properties.getTotalScore();
+  pizzaScore = global.properties.getPizzaScore();
+  burgerScore = global.properties.getBurgerScore();
+  noodlesScore = global.properties.getNoodlesScore();
 }
+
 function OnLateStart() {
+  global.properties.firstTime = false;
   animFadeBG.GoTo(0);
+  showBitmojiCaller.Call();
+
+  script.textTotalScore.text = totalScore.toString();
+  script.textPizzaScore.text = pizzaScore.toString();
+  script.textBurgerScore.text = burgerScore.toString();
+  script.textNoodlesScore.text = noodlesScore.toString();
+  scaleReplayButton.Start(-1);
 }
 function Update() {}
-function Stop() {}
-//___________________________Functions__________________________//
-// function OnTap() {
-//   if (hasTapped) {
-//     return;
-//   }
-//   hasTapped = true;
-
-//   script.subScene.CallEnd(true);
-// }
-
-
-
-function StoreScore() {
-  let timer = global.GetTimer();
-  let distance = global.GetDistance();
-  let points = global.GetPoint();
-  let lifes = global.GetLife();
-
-  let scoreToSend = {
-    time: timer,
-    distance: distance,
-    points: points,
-    lifes: lifes,
-  };
-  global.OnNewScore(scoreToSend);
-  script.textOutroHighScore.text = "Highscore : " + Math.floor(global.GetHighScore() * 10) / 10;
+function Stop() {
+  hasTapped = false;
+  animFadeBG.Reset();
+  scaleReplayButton.Reset();
 }
+
+//___________________________Buttons__________________________//
+
+outroInteraction.onTouchStart.add(function () {
+  if (!hasTapped) {
+    hasTapped = true;
+    print("tap");
+    animFadeBG.GoTo(1);
+  }
+});
+
+//___________________________Functions__________________________//
 
 //___________________________Animations_________________________//
 let animFadeBG = new Animation(script.getSceneObject(), script.durationFade, UpdateFadeBG);
 function UpdateFadeBG(ratio) {
   script.transitionBG.mainPass.baseColor = new vec4(1, 1, 1, ratio);
 }
+animFadeBG.OnEnd = function (ratio) {
+  if (ratio === 1) {
+    hideBitmojiCaller.Call();
+    script.subScene.CallEnd(null);
+  }
+};
+
+const scaleReplayButton = new Animation(
+  script.getSceneObject(),
+  0.5,
+  (ratio) => {
+    script.buttonReplay.getTransform().setLocalScale(new vec3(1, 1, 1).uniformScale(1 + 0.1 * ratio));
+  },
+  RepeatMode.PingPong,
+);
 
 // let animFadeText = new Animation(script.getSceneObject(), script.durationFade, UpdateFadeText);
 // function UpdateFadeText(ratio) {

@@ -204,6 +204,10 @@ function UpdateTime() {
 
   //Loose
   if (script.hasTimeEnd === true && timer >= script.endTimeValue) {
+    global.properties.setNoodlesScore(points_noodle);
+    global.properties.setBurgerScore(points_burger);
+    global.properties.setPizzaScore(points_pizza);
+    
     callerOnStopRun.Call(false);
   }
 }

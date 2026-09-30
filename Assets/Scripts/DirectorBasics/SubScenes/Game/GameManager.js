@@ -66,12 +66,15 @@ let isGameWon = null;
 /////// INIT
 //////////////////
 function Start() {
+  global.properties.resetScores();
   isGameHasStarted = false;
   isGameHasStopped = false;
   isGameWon = null;
 
-  animFadeBG.JumpTo(1);
-  animFadeBG.GoTo(0);
+  if (global.properties.firstTime === false) {
+    animFadeBG.JumpTo(1);
+    animFadeBG.GoTo(0);
+  }
 }
 
 function LateStart() {

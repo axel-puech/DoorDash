@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/6a7315b0-0c15-1f1c-64f8-b54412b06221>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> a8b106a7-124e-4406-90a5-53fa58fb89ac
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> a8b106a7-124e-4406-90a5-53fa58fb89ac
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 2yoM5f9TuumhWWzHQ2STF1
+  AssetDataMap:
+    ObjectPrefab: !<own> e374fc4c-d8fc-4202-abc0-953ccdffb798
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/5fdb28ba-0230-4767-5a7a-e63b75460c25>
+  PrefabRemaps:
+    []
+  Name: MotionBlur__PLACE_IN_SCENE
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 92147826-6a08-48f7-59f0-5219a26ebd1a
+- !<PostEffectVisual/92147826-6a08-48f7-59f0-5219a26ebd1a>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> da642834-aeb2-4d68-a4c7-fb364517ae33
+- !<ObjectPrefabAssetData/e374fc4c-d8fc-4202-abc0-953ccdffb798>
+  Prototype: !<ObjectOwner/4f7a1a3d-1552-440f-a775-bcd3c8ef691d>
+    PackagePath: ""
+    objects:
+      - !<own> 5fdb28ba-0230-4767-5a7a-e63b75460c25

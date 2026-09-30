@@ -33,8 +33,10 @@
     frameMaterials: false
     obstacleDuration: false
     parent: false
+    postEffect: false
     speedVignetteMaterial: false
     vignetteMaterial: false
+    zoomBlur: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -53,6 +55,8 @@
       obstacleDuration: !<float> 0.000000
       bonusDuration: !<float> 0.000000
       collectableDuration: !<float> 0.000000
+      postEffect: !<reference.PostEffectVisual> 00000000-0000-0000-0000-000000000000
+      zoomBlur: !<reference.PostEffectVisual> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
