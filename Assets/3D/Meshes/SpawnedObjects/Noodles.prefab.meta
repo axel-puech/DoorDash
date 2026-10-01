@@ -1,0 +1,127 @@
+- !<AssetImportMetadata/38b9ed63-4270-4c05-ba2b-5fe4e25a8c32>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> d46beb88-7a62-40ca-acd9-7e56efed253d
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> d46beb88-7a62-40ca-acd9-7e56efed253d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 6bb914e0-0ec4-41b8-ab66-0fdd9f9038d4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/3a93123f-d00c-420a-5f56-739aaee0f08c>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    scaleZ: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: bonus
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> 3.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<ColliderComponent/5489cbf0-1d1f-4722-4c29-44eab74ffd52>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: false
+    Radius: 1.500000
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<SceneObject/591d1aca-766f-4bc6-5020-e061d61e2e70>
+  PrefabRemaps:
+    []
+  Name: Noodles
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 8e671d89-52c8-46a2-7b2f-eb45c8e30ed1
+  Components:
+    - !<own> 3a93123f-d00c-420a-5f56-739aaee0f08c
+    - !<own> 5489cbf0-1d1f-4722-4c29-44eab74ffd52
+- !<ObjectPrefabAssetData/6bb914e0-0ec4-41b8-ab66-0fdd9f9038d4>
+  Prototype: !<ObjectOwner/d19a4044-daf1-4d94-b317-b132097966bd>
+    PackagePath: ""
+    objects:
+      - !<own> 591d1aca-766f-4bc6-5020-e061d61e2e70
+- !<RenderMeshVisual/7cd545a8-9b43-42ea-41f5-2b69c293ee72>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4f3e9502-ed4d-412a-a9f9-d812890ecf66
+  Mesh: !<reference> d07bd12e-50e4-4936-b359-631cd5cad0fb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/8e671d89-52c8-46a2-7b2f-eb45c8e30ed1>
+  PrefabRemaps:
+    []
+  Name: Plane
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7cd545a8-9b43-42ea-41f5-2b69c293ee72

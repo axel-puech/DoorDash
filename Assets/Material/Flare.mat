@@ -4,9 +4,6 @@
     - !<own> d2abdef7-e236-4eb1-800b-6e0db3a26383
 - !<PassInfo/d2abdef7-e236-4eb1-800b-6e0db3a26383>
   CachedProperties:
-    - Port_Default_N204:
-        typeIdx: 1
-        value: 1.000000
     - Port_Default_N369:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -22,9 +19,6 @@
     - Port_FinalColor3_N004:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     - Port_GSplatPointSize_N004:
         typeIdx: 1
         value: 0.000000
@@ -34,67 +28,22 @@
     - Port_GSplatScale_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_Import_N166:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Import_N254:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Import_N255:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N003:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N005:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N008:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N009:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N013:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_Input0_N036:
+    - Port_Input0_N032:
         typeIdx: 1
         value: 1.000000
     - Port_Input0_N085:
         typeIdx: 1
         value: 1.000000
-    - Port_Input1_N003:
-        typeIdx: 1
-        value: 1.000000
-    - Port_Input1_N005:
-        typeIdx: 3
-        value: {x: 0.000000, y: 0.000000}
-    - Port_Input1_N008:
+    - Port_Input1_N032:
         typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input1_N009:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Input1_N013:
-        typeIdx: 1
-        value: 1.000000
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     - Port_Input1_N072:
         typeIdx: 1
         value: 1.000000
-    - Port_Input2_N008:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_LODValue_N000:
-        typeIdx: 1
-        value: 0.000000
     - Port_LODValue_N002:
         typeIdx: 1
         value: 0.000000
     - Port_LODValue_N003:
-        typeIdx: 1
-        value: 0.000000
-    - Port_LODValue_N014:
         typeIdx: 1
         value: 0.000000
     - Port_PrevWorldPosition_N004:
@@ -112,12 +61,6 @@
     - Port_Speed_N063:
         typeIdx: 1
         value: 1.000000
-    - Port_UVCoord_N000:
-        typeIdx: 3
-        value: {x: 0.000000, y: 0.000000}
-    - Port_Value1_N001:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
     - Port_Value3_N001:
         typeIdx: 1
         value: 0.000000
@@ -133,6 +76,15 @@
     - Port_Value4_N093:
         typeIdx: 1
         value: 0.000000
+    - Port_Value_N006:
+        typeIdx: 3
+        value: {x: 0.500000, y: 0.500000}
+    - Port_Value_N007:
+        typeIdx: 1
+        value: 0.010000
+    - Port_Value_N012:
+        typeIdx: 1
+        value: 0.490000
     - Port_WorldNormal_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -142,39 +94,21 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
-    - Tweak_N10:
-        typeIdx: 1
-        value: 0.530000
-    - Tweak_N37:
-        typeIdx: 1
-        value: 1.000000
-    - Tweak_N7:
-        typeIdx: 1
-        value: 1.230000
-    - Tweak_N75:
-        typeIdx: 1
-        value: 1.000000
-    - alphaRatio:
-        typeIdx: 1
-        value: 1.360000
-    - baseColor:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - baseTex:
+    - Tweak_N0:
         typeIdx: 9
         value:
-          id: 874cf330-b3be-47de-a9e7-dd972d557daf
+          id: 7375823f-e028-4cd1-a094-8888814dacc6
           sampler:
-            filteringMode: Trilinear
+            filteringMode: Bilinear
             wrapModeU: ClampToEdge
             wrapModeV: ClampToEdge
             wrapModeW: ClampToEdge
-            borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
             mipmaps: false
           type: Texture2D
-    - coefInclinaison:
+    - Tweak_N11:
         typeIdx: 1
-        value: 1.000000
+        value: 0.000000
   DepthWrite: false
   DepthTest: true
   DepthFunction: LessEqual
@@ -193,22 +127,34 @@
     - NODE_69_DROPLIST_ITEM 0
   BlendMode: Screen
   Properties:
-    Port_Value_N006:
-      typeIdx: 3
-      value: {x: 0.500000, y: 0.500000}
-    Port_Value_N007:
+    Port_Default_N204:
       typeIdx: 1
-      value: 0.010000
-    Port_Value_N012:
+      value: 1.000000
+    Port_Value_N095:
       typeIdx: 1
       value: 0.490000
+    Port_Value_N097:
+      typeIdx: 1
+      value: 0.010000
+    Port_Value_N101:
+      typeIdx: 3
+      value: {x: 0.500000, y: 0.500000}
     PreviewEnabled:
       typeIdx: 0
       value: 0
-    Tweak_N0:
+    Tweak_N99:
+      typeIdx: 1
+      value: 0.000000
+    alphaRatio:
+      typeIdx: 1
+      value: 1.000000
+    baseColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    baseTex:
       typeIdx: 9
       value:
-        id: 874cf330-b3be-47de-a9e7-dd972d557daf
+        id: 7375823f-e028-4cd1-a094-8888814dacc6
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
@@ -217,13 +163,10 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-    Tweak_N11:
-      typeIdx: 1
-      value: 0.000000
     flareRatio:
       typeIdx: 1
       value: 1.000000
     multiply:
       typeIdx: 1
-      value: 1.000000
-  Pass: !<reference> 422b886a-9644-4c62-9cab-bcae8bea5708
+      value: 0.000000
+  Pass: !<reference> b3076c9e-add0-4de8-8e24-73aaaf3cf69b

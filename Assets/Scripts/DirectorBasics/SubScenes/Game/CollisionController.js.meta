@@ -31,6 +31,7 @@
     collectableDuration: false
     flareMaterial: false
     frameMaterials: false
+    gliteringEffectMaterial: false
     obstacleDuration: false
     parent: false
     postEffect: false
@@ -50,6 +51,7 @@
       flareMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       vignetteMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       speedVignetteMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      gliteringEffectMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       frameMaterials: !<reference.Material[]>
         []
       obstacleDuration: !<float> 0.000000

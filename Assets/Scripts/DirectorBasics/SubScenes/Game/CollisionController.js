@@ -13,6 +13,8 @@
 //@input Asset.Material flareMaterial
 //@input Asset.Material vignetteMaterial
 //@input Asset.Material speedVignetteMaterial
+//@input Asset.Material gliteringEffectMaterial
+
 //@input Asset.Material[] frameMaterials
 //@ui {"widget":"separator"}
 //@ui {"widget":"label", "label":"FX Anim duration"}
@@ -33,6 +35,12 @@ let activeFrame = null;
 let speedVignetteActive = false;
 let obstacleVignetteActive = false;
 let collectableFlareActive = false;
+
+const fxSettings = {
+  zoomBlurFactor: 3,
+  vignetteAlphaFactor: 0.2,
+  flareMultiplyFactor: 0.2,
+};
 
 function Start() {}
 
@@ -100,29 +108,29 @@ function OnCollide(e) {
 function GetEffectsCollider(typeCollider) {
   // collectObject();
   switch (typeCollider) {
-    case "CollectablePizza":
-      print("CollectablePizza");
+    case "Pizza":
+      print("Pizza");
       PlayCollectableFlare();
-      callerOnCollectObject.Call("CollectablePizza");
+      callerOnCollectObject.Call("Pizza");
       activeFrame = script.frameMaterials[0];
       mixFrame.Start(1);
       break;
-    case "CollectableNoodle":
-      print("CollectableNoodle");
+    case "Noodles":
+      print("Noodles");
       PlayCollectableFlare();
       activeFrame = script.frameMaterials[1];
       mixFrame.Start(1);
 
-      callerOnCollectObject.Call("CollectableNoodle");
+      callerOnCollectObject.Call("Noodles");
 
       break;
-    case "CollectableBurger":
-      print("CollectableBurger");
+    case "Burger":
+      print("Burger");
       activeFrame = script.frameMaterials[2];
       mixFrame.Start(1);
       PlayCollectableFlare();
 
-      callerOnCollectObject.Call("CollectableBurger");
+      callerOnCollectObject.Call("Burger");
       break;
     case "SpawnObstacle":
       print("SpawnObstacle");
@@ -194,6 +202,7 @@ function PlayObstacleVignette() {
 
 const fadeFlare = new Animation(script.getSceneObject(), 0.7, (ratio) => {
   script.flareMaterial.mainPass.flareRatio = ratio;
+  script.flareMaterial.mainPass.multiply = 1 + fxSettings.flareMultiplyFactor * ratio;
 });
 
 fadeFlare.Easing = QuadraticOut;
@@ -216,8 +225,9 @@ fadeVignette.OnEnd = function (ratio) {
 
 const fadeSpeedVignette = new Animation(script.getSceneObject(), 0.7, (ratio) => {
   script.speedVignetteMaterial.mainPass.alphaRatio = ratio;
-  script.postEffect.mainPass.alphaRatio = ratio * 0.2;
-  script.zoomBlur.mainPass.strength = ratio * 3;
+  script.postEffect.mainPass.alphaRatio = ratio * fxSettings.vignetteAlphaFactor;
+  script.zoomBlur.mainPass.strength = ratio * fxSettings.zoomBlurFactor;
+  script.gliteringEffectMaterial.mainPass.alphaRatio = ratio;
 });
 
 fadeSpeedVignette.OnEnd = function (ratio) {

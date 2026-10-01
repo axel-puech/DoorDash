@@ -1,0 +1,117 @@
+- !<ObjectPrefab/3e442efd-219f-4b80-9dbe-0ba25a1bfb87>
+  PackagePath: ""
+  objects:
+    - !<own> f9a16bd8-de5d-4523-8274-12cea50f4c0f
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/35036f75-1465-4bb5-9bd5-5de8039e8a6d>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 75ee47fb-6bde-484e-b070-b9457279182e
+  Mesh: !<reference> d07bd12e-50e4-4936-b359-631cd5cad0fb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ColliderComponent/4bf87ede-d202-4e31-9016-e22abe3eb5fb>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: false
+    Radius: 1.500000
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<ScriptComponent/a1200601-4a11-4c5f-bcaa-9e6c733fe789>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    scaleZ: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: bonus
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> 3.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/c24f4060-29bc-4a75-aa91-925a83fb4062>
+  PrefabRemaps:
+    []
+  Name: Plane
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 35036f75-1465-4bb5-9bd5-5de8039e8a6d
+- !<SceneObject/f9a16bd8-de5d-4523-8274-12cea50f4c0f>
+  PrefabRemaps:
+    - 35036f75-1465-4bb5-9bd5-5de8039e8a6d: 35036f75-1465-4bb5-642a-a217fc617592
+    - 4bf87ede-d202-4e31-9016-e22abe3eb5fb: 4bf87ede-d202-4e31-6fe9-1dd541c14a04
+    - a1200601-4a11-4c5f-bcaa-9e6c733fe789: a1200601-4a11-4c5f-4355-61938cc01876
+    - c24f4060-29bc-4a75-aa91-925a83fb4062: c24f4060-29bc-4a75-556e-6da57c04bf9d
+    - f9a16bd8-de5d-4523-8274-12cea50f4c0f: f9a16bd8-de5d-4523-7d8b-ed315af0b3f0
+  Name: Burger
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c24f4060-29bc-4a75-aa91-925a83fb4062
+  Components:
+    - !<own> a1200601-4a11-4c5f-bcaa-9e6c733fe789
+    - !<own> 4bf87ede-d202-4e31-9016-e22abe3eb5fb

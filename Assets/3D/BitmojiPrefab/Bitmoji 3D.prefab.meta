@@ -26,10 +26,7 @@
   Enabled: true
   ScriptAsset: !<reference> 7a558f6c-e4f7-4c4b-a17e-5b9fb2621793
   ScriptInputsDefault:
-    bitmoji3dComponent: true
-    animationPlayer: true
-    animationAsset: true
-    heavyAnimationAsset: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:

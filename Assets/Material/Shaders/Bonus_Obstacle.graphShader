@@ -22,7 +22,9 @@ Nodes:
         SortIndex:
           Variable: 0
         Tooltip:
-          String: "Specifies the base color (albedo) of the material if the 'Base Textre' is disabled. \nMultiplied with the 'Base Texture' otherwise."
+          String: |-
+            Specifies the base color (albedo) of the material if the 'Base Textre' is disabled. 
+            Multiplied with the 'Base Texture' otherwise.
         UniqueID:
           String: Base Color
       PositionX: 1924
@@ -202,7 +204,9 @@ Nodes:
         Title:
           String: Offset
         Tooltip:
-          String: "Allows shifting of textures, or controls the speed of scrolling if animation is enabled. \nIf animation is enabled, the speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second."
+          String: |-
+            Allows shifting of textures, or controls the speed of scrolling if animation is enabled. 
+            If animation is enabled, the speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second.
       PositionX: 1052
       PositionY: 325
       TemplateID: nodes_inputs_parameters_float
@@ -232,7 +236,9 @@ Nodes:
         Static:
           Variable: true
         Tooltip:
-          String: "If this is enabled, the UV's will scroll. In this case the Offset specifies the speed of scrolling. \nThe speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second."
+          String: |-
+            If this is enabled, the UV's will scroll. In this case the Offset specifies the speed of scrolling. 
+            The speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second.
         UniqueID:
           String: Animation
       PositionX: 1053
@@ -1279,7 +1285,10 @@ Nodes:
         Static:
           Variable: true
         Tooltip:
-          String: "Normally, the Base Texture's alpha is taken as opacity. Enabling this allows you to define a separate greyscale opacity texture. \nThe 'Opacity Texture' value will be multiplied with the Base Texture's alpha (which is 1 for textures without alpha) and 'Opacity Multiplier' to get the final opacity. \n'Opacity Texture' is only available if 'Blend Mode' is not 'Disabled'."
+          String: |-
+            Normally, the Base Texture's alpha is taken as opacity. Enabling this allows you to define a separate greyscale opacity texture. 
+            The 'Opacity Texture' value will be multiplied with the Base Texture's alpha (which is 1 for textures without alpha) and 'Opacity Multiplier' to get the final opacity. 
+            'Opacity Texture' is only available if 'Blend Mode' is not 'Disabled'.
         UniqueID:
           String: Opacity Texture
       PositionX: 2401
@@ -3442,7 +3451,9 @@ Nodes:
         Title:
           String: Offset
         Tooltip:
-          String: "Allows shifting of textures, or controls the speed of scrolling if animation is enabled. \nIf animation is enabled, the speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second."
+          String: |-
+            Allows shifting of textures, or controls the speed of scrolling if animation is enabled. 
+            If animation is enabled, the speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second.
       PositionX: 1040
       PositionY: -308
       TemplateID: nodes_inputs_parameters_float
@@ -3472,7 +3483,9 @@ Nodes:
         Static:
           Variable: true
         Tooltip:
-          String: "If this is enabled, the UV's will scroll. In this case the Offset specifies the speed of scrolling. \nThe speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second."
+          String: |-
+            If this is enabled, the UV's will scroll. In this case the Offset specifies the speed of scrolling. 
+            The speed is 'Offset' UVs per second. So if 'Offset' is 2, the texture will scroll through two complete times per second.
         UniqueID:
           String: Animation
       PositionX: 1040
