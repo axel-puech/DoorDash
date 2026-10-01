@@ -28,9 +28,12 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     beforeStartDelay: false
+    changeNumberDelay: false
+    countdownGroup: false
     fadeDuration: false
     introMaterials: false
     parent: false
+    scaleFactor: false
     whiteScreenMaterial: false
   ScriptTypesHidden:
     {}
@@ -47,6 +50,10 @@
         []
       whiteScreenMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       fadeDuration: !<float> 0.000000
+      countdownGroup: !<reference.SceneObject[]>
+        []
+      scaleFactor: !<float> 0.000000
+      changeNumberDelay: !<float> 0.000000
   ScriptTypes:
     -
       {}
