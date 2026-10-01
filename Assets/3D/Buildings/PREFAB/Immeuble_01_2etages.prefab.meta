@@ -1,0 +1,122 @@
+- !<AssetImportMetadata/0df812c5-135e-4d45-bd5b-ff25decf077e>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> fb488e53-0bc6-4232-bf3e-21d9ee40fb9a
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> fb488e53-0bc6-4232-bf3e-21d9ee40fb9a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> b2f614fa-7dff-4a37-9e84-c3ae2b7aaeb5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/2d29a449-5f4c-443d-6c7b-08612760c5be>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_01_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e6f2709c-0c86-4810-509e-d441638c3f94
+  Components:
+    []
+- !<ObjectPrefabAssetData/b2f614fa-7dff-4a37-9e84-c3ae2b7aaeb5>
+  Prototype: !<ObjectOwner/2e6608fb-807a-47f5-9446-c0e038b7611f>
+    PackagePath: ""
+    objects:
+      - !<own> cbe46d80-5efe-4d72-4953-c94a56cd1ffa
+- !<ScriptComponent/cadaedf2-e119-46c7-8e97-25def0a0d3a7>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -1.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 1.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/cbe46d80-5efe-4d72-4953-c94a56cd1ffa>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2d29a449-5f4c-443d-6c7b-08612760c5be
+  Components:
+    - !<own> cadaedf2-e119-46c7-8e97-25def0a0d3a7
+- !<RenderMeshVisual/dd90807c-fe7a-4b5e-6786-332cf7f25043>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6ecfa4f1-8b57-4b19-9c81-3bdde953819c
+  Mesh: !<reference> 0e18b26b-9cc2-48c0-83db-f2ba3ebd7f56
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/e6f2709c-0c86-4810-509e-d441638c3f94>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> dd90807c-fe7a-4b5e-6786-332cf7f25043

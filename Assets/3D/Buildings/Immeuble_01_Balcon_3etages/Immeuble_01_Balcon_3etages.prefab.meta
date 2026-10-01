@@ -1,0 +1,86 @@
+- !<AssetImportMetadata/3d35f469-1946-46d0-8899-fb557c188166>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> dd9563cd-c51e-40ce-97c6-21fbf9d37b32
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> dd9563cd-c51e-40ce-97c6-21fbf9d37b32
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> c4b8c29c-0cf1-4f36-b4fb-d1a298009b44
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/0bb5a8ad-1f0a-4055-4223-0073c91b47b1>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a5cbb37d-9ede-4cf7-9595-424c56bbce4c
+  Mesh: !<reference> 72493cfa-675b-47f4-82c6-a3b7d97d107b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/62875163-6bc7-4925-7b9d-f343d60c7dc2>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_01_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 93b0f65d-60dd-4b78-5b55-618957c9f5dc
+  Components:
+    []
+- !<SceneObject/643508b2-dba2-4d75-6822-a48e3b07a47a>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 62875163-6bc7-4925-7b9d-f343d60c7dc2
+  Components:
+    []
+- !<SceneObject/93b0f65d-60dd-4b78-5b55-618957c9f5dc>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0bb5a8ad-1f0a-4055-4223-0073c91b47b1
+- !<ObjectPrefabAssetData/c4b8c29c-0cf1-4f36-b4fb-d1a298009b44>
+  Prototype: !<ObjectOwner/bbe396b1-1ebb-4eaf-bc91-f82e757410c6>
+    PackagePath: ""
+    objects:
+      - !<own> 643508b2-dba2-4d75-6822-a48e3b07a47a

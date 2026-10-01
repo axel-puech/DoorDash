@@ -154,6 +154,26 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<RenderMeshVisual/03af2207-bd16-49e4-a8ca-afd92cbe8e39>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6ecfa4f1-8b57-4b19-9c81-3bdde953819c
+  Mesh: !<reference> 0e18b26b-9cc2-48c0-83db-f2ba3ebd7f56
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScriptComponent/047f6c89-2d70-4914-991e-dfaef6e15df7>
   PrefabRemaps:
     []
@@ -291,6 +311,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/07c1ec88-1602-4e45-8125-6cbe8183cc3a>
+  PrefabRemaps:
+    []
+  Name: Immeuble_02_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0ad8ce79-a80a-4de7-b726-3a646f0edd73
 - !<ScreenTransform/08e95d93-0e0a-42ef-9883-77dbc34e515d>
   PrefabRemaps:
     []
@@ -378,6 +413,26 @@
   ScriptTypes:
     "":
       {}
+- !<RenderMeshVisual/0ad8ce79-a80a-4de7-b726-3a646f0edd73>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6ecfa4f1-8b57-4b19-9c81-3bdde953819c
+  Mesh: !<reference> 42b1aa8e-2d57-4baa-8c42-22eadc871d08
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/0b9bd386-39a5-4079-b453-538213fa64c8>
   PrefabRemaps:
     []
@@ -517,6 +572,21 @@
     - !<own> 2b541f39-a1b2-45ab-9452-c148a9f5cd47
     - !<own> fc05a3c2-ec90-4040-9e85-859402a204de
     - !<own> 570c58c8-8ad7-498a-8cd6-dcaa799249c9
+  Components:
+    []
+- !<SceneObject/0c35fb7e-e8f8-41c1-9fbf-5f71c86b3267>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_01_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 992e08b6-fc5b-4e35-b28a-96cda9944e8e
   Components:
     []
 - !<SceneObject/0ce5d113-efce-41ae-8805-e220c64e6595>
@@ -1141,6 +1211,26 @@
     []
   Components:
     - !<own> 7c2aad66-a471-4a96-97c9-be9f3540c013
+- !<RenderMeshVisual/25ceccde-2916-4411-8620-0c7b4096931d>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3b66340e-4fc2-42e8-a0ef-97d53569979b
+  Mesh: !<reference> 1faa765c-4162-49d4-b9a4-0c02155da8f9
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScreenTransform/27fca708-2eef-4fda-83db-d723b53e83db>
   PrefabRemaps:
     []
@@ -1606,6 +1696,24 @@
     []
   Components:
     - !<own> ea637370-39cb-4943-905f-64c8fb83156a
+- !<SceneObject/37512b88-c3c2-4136-acea-16cddbb3be22>
+  PrefabRemaps:
+    - 37512b88-c3c2-4136-acea-16cddbb3be22: dfe919cd-a472-4743-43ce-727fcd9fb152
+    - 4ea99c95-eb86-4678-a46e-9d264e4733e3: 81667f5c-6eb3-4a87-7a31-bb7a4f8f973b
+    - 5933cc52-600c-4fb5-975e-014ec2d39776: fca79d28-0eb3-4436-5112-6e2cd54e0fe2
+    - c965b591-76dd-4115-910f-7ffe6ea1013d: 1780ac9b-3972-4f4a-7196-4a71ee5ebfbd
+  Name: Immeuble_01_Balcon_2etages
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5933cc52-600c-4fb5-975e-014ec2d39776
+  Components:
+    []
 - !<SceneObject/37696c93-c49e-4828-a239-a83c0c20eaa5>
   PrefabRemaps:
     []
@@ -2115,6 +2223,21 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<SceneObject/4c0596f9-128f-475d-a33a-9e1e99575dce>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_01_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5a1177a7-385d-4cc6-bbcd-948439aab198
+  Components:
+    []
 - !<SceneObject/4cd7f418-5027-4521-8ec8-c496e97932a7>
   PrefabRemaps:
     []
@@ -2182,6 +2305,26 @@
   Components:
     - !<own> 32d4c21c-5697-488e-9aba-ec1686bc3f23
     - !<own> 24245692-3294-421b-bcc5-cf4aad6b23d6
+- !<RenderMeshVisual/4ea99c95-eb86-4678-a46e-9d264e4733e3>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 5ac8e4bc-cd51-4956-a372-d2db73670915
+  Mesh: !<reference> 67837b47-1d68-48bb-b53c-e20919b16153
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<RenderMeshVisual/4ea9ab1a-0419-46cd-8db2-06739816ab37>
   PrefabRemaps:
     []
@@ -2646,6 +2789,42 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/56b2cfb4-28b5-4c17-97af-66e964000df3>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -1.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 1.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/570c58c8-8ad7-498a-8cd6-dcaa799249c9>
   PrefabRemaps:
     []
@@ -2748,6 +2927,36 @@
   MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
   RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
   DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/5933cc52-600c-4fb5-975e-014ec2d39776>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_01_Balcon_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c965b591-76dd-4115-910f-7ffe6ea1013d
+  Components:
+    []
+- !<SceneObject/5a1177a7-385d-4cc6-bbcd-948439aab198>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9c07757b-e5c0-4f00-b255-eb2192c491e3
 - !<SceneObject/5b6e4c9c-998e-4bff-991a-a50a307c030e>
   PrefabRemaps:
     []
@@ -2991,6 +3200,21 @@
   Components:
     - !<own> 0c099be3-ae56-445c-b347-27124b9c8e00
     - !<own> 7505b1b2-7cc1-4923-87f8-98bfae75f3c2
+- !<SceneObject/63fafe73-964f-4973-9eb1-a1dfc53705e1>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_02_Balcon_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 07c1ec88-1602-4e45-8125-6cbe8183cc3a
+  Components:
+    []
 - !<ScreenTransform/642ff0fa-2f65-419d-8127-e355b1df86e2>
   PrefabRemaps:
     []
@@ -4394,6 +4618,25 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/85238f4b-b8fd-4a7b-940e-a0612394a11e>
+  PrefabRemaps:
+    - 07c1ec88-1602-4e45-8125-6cbe8183cc3a: bb33d7ea-0a90-468f-62bf-8d1f45b1b40f
+    - 0ad8ce79-a80a-4de7-b726-3a646f0edd73: 2ce84fcf-9b82-43fd-526d-ba7968bafdd7
+    - 63fafe73-964f-4973-9eb1-a1dfc53705e1: 802e7daf-ccf2-4c4e-5a96-070eb7f41596
+    - 85238f4b-b8fd-4a7b-940e-a0612394a11e: ed9a0b57-4077-4b6f-7d08-fad355f2a406
+    - dd3babe3-4ff3-45cf-b5db-66d4a769ec69: 70434031-6d91-402d-9f17-c1e35f8e5169
+  Name: Immeuble_02_Balcon_3etages
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 63fafe73-964f-4973-9eb1-a1dfc53705e1
+  Components:
+    - !<own> dd3babe3-4ff3-45cf-b5db-66d4a769ec69
 - !<ScreenTransform/85341800-f7d8-4640-927d-82940d2423a9>
   PrefabRemaps:
     []
@@ -5167,6 +5410,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/992e08b6-fc5b-4e35-b28a-96cda9944e8e>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 25ceccde-2916-4411-8620-0c7b4096931d
 - !<ScreenTransform/9b044408-bbee-4a1b-bae6-a6305a8f63da>
   PrefabRemaps:
     []
@@ -5222,7 +5480,11 @@
     - !<own> c5be7241-3c4c-4fee-83fe-491ae3f0de39
     - !<own> 91f09b20-9394-4ec0-81a2-adeba5ee97e1
     - !<own> 0c2ceefc-cd7e-44e6-86c1-0f1567a39ea5
-    - !<own> f936823b-169f-4912-985e-473a9b17c51b
+    - !<own> c7da7d36-afb3-49c6-a4e0-6a1ab763b532
+    - !<own> 85238f4b-b8fd-4a7b-940e-a0612394a11e
+    - !<own> d3b739a8-572d-481a-9d80-cf766fcbe780
+    - !<own> 9fbb29a8-f512-4c0f-8bed-8b69517d986b
+    - !<own> 37512b88-c3c2-4136-acea-16cddbb3be22
   Components:
     []
 - !<Image/9b7dc483-fb39-4a6d-8056-44687a9c63ff>
@@ -5244,6 +5506,26 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/9c07757b-e5c0-4f00-b255-eb2192c491e3>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a5cbb37d-9ede-4cf7-9595-424c56bbce4c
+  Mesh: !<reference> 72493cfa-675b-47f4-82c6-a3b7d97d107b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/9c1ccb23-59de-4937-b0a5-bbe2b05df6b3>
   PrefabRemaps:
     []
@@ -5344,6 +5626,24 @@
     []
   Components:
     - !<own> ee08e7f8-9996-457c-8636-37168397ff22
+- !<SceneObject/9fbb29a8-f512-4c0f-8bed-8b69517d986b>
+  PrefabRemaps:
+    - 0c35fb7e-e8f8-41c1-9fbf-5f71c86b3267: 71f5e49f-34c0-469f-4f78-4ed8724d6f94
+    - 25ceccde-2916-4411-8620-0c7b4096931d: 907c0cea-db6e-4026-4dd3-527a6d13ed3f
+    - 992e08b6-fc5b-4e35-b28a-96cda9944e8e: 9e11a106-b354-4a28-7c1d-95dc6d51f547
+    - 9fbb29a8-f512-4c0f-8bed-8b69517d986b: cb865a42-6a8b-4389-56af-cacfba603c02
+  Name: Immeuble_01_3etages
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0c35fb7e-e8f8-41c1-9fbf-5f71c86b3267
+  Components:
+    []
 - !<ScriptComponent/9fff1394-3854-4b37-a05f-ea51f54c050b>
   PrefabRemaps:
     []
@@ -5581,6 +5881,21 @@
     - !<own> cc1c6099-5bfe-4211-8520-1dbd3f0b2963
   Components:
     - !<own> 3b68f981-0218-460f-845e-400ec65cc886
+- !<SceneObject/aa7080fe-9df1-4d24-9b15-e4561fdbd097>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 03af2207-bd16-49e4-a8ca-afd92cbe8e39
 - !<AnimationPlayer/ab8db3db-3524-4174-bbb6-0f65bea39c37>
   PrefabRemaps:
     []
@@ -6060,6 +6375,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/bb8d9b60-dd21-44b4-8880-c573bfd219ec>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_01_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> aa7080fe-9df1-4d24-9b15-e4561fdbd097
+  Components:
+    []
 - !<SceneObject/bb96c9b8-c200-4286-ab00-d5eb409d0bd5>
   PrefabRemaps:
     []
@@ -6756,6 +7086,25 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/c7da7d36-afb3-49c6-a4e0-6a1ab763b532>
+  PrefabRemaps:
+    - 03af2207-bd16-49e4-a8ca-afd92cbe8e39: dd90807c-fe7a-4b5e-6786-332cf7f25043
+    - 56b2cfb4-28b5-4c17-97af-66e964000df3: cadaedf2-e119-46c7-8e97-25def0a0d3a7
+    - aa7080fe-9df1-4d24-9b15-e4561fdbd097: e6f2709c-0c86-4810-509e-d441638c3f94
+    - bb8d9b60-dd21-44b4-8880-c573bfd219ec: 2d29a449-5f4c-443d-6c7b-08612760c5be
+    - c7da7d36-afb3-49c6-a4e0-6a1ab763b532: cbe46d80-5efe-4d72-4953-c94a56cd1ffa
+  Name: Immeuble_01_2etages
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> bb8d9b60-dd21-44b4-8880-c573bfd219ec
+  Components:
+    - !<own> 56b2cfb4-28b5-4c17-97af-66e964000df3
 - !<SceneObject/c7f0e62d-07be-4fcd-bb96-d6617877953f>
   PrefabRemaps:
     []
@@ -6788,6 +7137,21 @@
     []
   Components:
     []
+- !<SceneObject/c965b591-76dd-4115-910f-7ffe6ea1013d>
+  PrefabRemaps:
+    []
+  Name: Immeuble_01_Balcon_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4ea99c95-eb86-4678-a46e-9d264e4733e3
 - !<SceneObject/c9910149-d4ff-4399-a0cd-e449328c55de>
   PrefabRemaps:
     []
@@ -7079,6 +7443,24 @@
   Enabled: true
   ScreenRegionType: FullFrame
   ResizeWithKeyboard: false
+- !<SceneObject/d3b739a8-572d-481a-9d80-cf766fcbe780>
+  PrefabRemaps:
+    - 4c0596f9-128f-475d-a33a-9e1e99575dce: 62875163-6bc7-4925-7b9d-f343d60c7dc2
+    - 5a1177a7-385d-4cc6-bbcd-948439aab198: 93b0f65d-60dd-4b78-5b55-618957c9f5dc
+    - 9c07757b-e5c0-4f00-b255-eb2192c491e3: 0bb5a8ad-1f0a-4055-4223-0073c91b47b1
+    - d3b739a8-572d-481a-9d80-cf766fcbe780: 643508b2-dba2-4d75-6822-a48e3b07a47a
+  Name: Immeuble_01_Balcon_3etages
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4c0596f9-128f-475d-a33a-9e1e99575dce
+  Components:
+    []
 - !<SceneObject/d4646560-1eab-426a-993d-7abadff9e68b>
   PrefabRemaps:
     []
@@ -7184,8 +7566,8 @@
       isCharacterFloating: true
       mvtHeadType: rotationZ
       rotationThreshold: !<float> 20.000000
-      positionThreshold: !<float> 4.000000
-      delayBetweenHeadMvts: 0.500000
+      positionThreshold: !<float> 5.000000
+      delayBetweenHeadMvts: 0.250000
       multiplierMovementHead: 0.400000
       gyroTracking: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       isCharacterFloatingTilt: false
@@ -7363,10 +7745,46 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/dd3babe3-4ff3-45cf-b5db-66d4a769ec69>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: building
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> -1.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 1.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/dd6610ae-46b0-468e-bb73-2bad89efab44>
   PrefabRemaps:
     []
-  Name: vignette
+  Name: RED_Effect
   Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
@@ -7956,9 +8374,11 @@
       parent: !<reference.SceneObject> c89d4bbf-6657-4660-bbf4-4c7f6daac09f
       poolParent: !<reference.SceneObject> c89d4bbf-6657-4660-bbf4-4c7f6daac09f
       buildingsPrefabs: !<reference.ObjectPrefab[]>
-        - !<reference> 7b701b8b-bd7d-4038-9ad8-6431a7105fe2
+        - !<reference> fb488e53-0bc6-4232-bf3e-21d9ee40fb9a
+        - !<reference> 2e4b104a-a566-4942-9126-431f58e16444
       buildingsProbabilities: !<float[]>
-        - 1.000000
+        - 0.500000
+        - 0.500000
       offsetBuildingX: !<float> 18.000000
       offsetBetweenBuildingZ: !<float> 18.000000
       probablyToSpawn: !<float> 1.000000
@@ -8313,21 +8733,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/f936823b-169f-4912-985e-473a9b17c51b>
-  PrefabRemaps:
-    []
-  Name: Building_temp
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    []
 - !<ScreenTransform/f99d890e-04d8-4da6-9f9a-f53dfe3f44a8>
   PrefabRemaps:
     []

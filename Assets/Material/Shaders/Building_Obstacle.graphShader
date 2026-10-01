@@ -119,8 +119,8 @@ Nodes:
           String: coefInclinaison
         Tooltip:
           String: ""
-      PositionX: 3251
-      PositionY: -308
+      PositionX: 3417
+      PositionY: -274
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: coefInclinaison
@@ -540,8 +540,8 @@ Nodes:
           Variable: [0.0, 0.0, 0.0, 0.0]
         Title1:
           String: Line To Circle
-      PositionX: 3545
-      PositionY: -485
+      PositionX: 3747
+      PositionY: -357
       TemplateID: nodes_main_subgraph
       Title1: Line To Circle
     Node12:
@@ -837,8 +837,8 @@ Nodes:
           String: ZThreshold
         Tooltip:
           String: ""
-      PositionX: 3251
-      PositionY: -483
+      PositionX: 2929
+      PositionY: -381
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: ZThreshold
@@ -876,8 +876,8 @@ Nodes:
           String: fadeSize
         Tooltip:
           String: ""
-      PositionX: 3254
-      PositionY: -394
+      PositionX: 3026
+      PositionY: -204
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: fadeSize
@@ -1393,8 +1393,8 @@ Nodes:
           Variable: [0.0, 0.0, 0.0, 0.0]
         Title1:
           String: FadeByDepth
-      PositionX: 3544
-      PositionY: -631
+      PositionX: 3366
+      PositionY: -625
       TemplateID: nodes_main_subgraph
       Title1: FadeByDepth
   IsSubGraph0: true

@@ -178,13 +178,13 @@ function Update() {
 /////// FUNCTION
 //////////////////
 function OnCollectObject(id) {
-  if (id === "CollectablePizza") {
+  if (id === "Pizza") {
     points_pizza += 1;
     UpdatePoints(textPizza, points_pizza);
-  } else if (id === "CollectableNoodle") {
+  } else if (id === "Noodles") {
     points_noodle += 1;
     UpdatePoints(textNoodles, points_noodle);
-  } else if (id === "CollectableBurger") {
+  } else if (id === "Burger") {
     points_burger += 1;
     UpdatePoints(textBurger, points_burger);
   }
@@ -207,7 +207,7 @@ function UpdateTime() {
     global.properties.setNoodlesScore(points_noodle);
     global.properties.setBurgerScore(points_burger);
     global.properties.setPizzaScore(points_pizza);
-    
+
     callerOnStopRun.Call(false);
   }
 }
