@@ -18,12 +18,16 @@ script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
 //__________________________Variables_____________________________//
 let groundMat = script.groundObj.getComponent("Component.RenderMeshVisual").mainPass;
-
+let speedIncrement = 1;
 //________Caller________//
 
 //________Listener________//
 let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
 let listenerStopRun = script.subScene.CreateListener("OnStopRun", OnStopRun, function () {});
+
+let listenerOnSpeedChange = script.subScene.CreateListener("OnSpeedChange", function (eventData) {
+  speedIncrement = eventData.speedIncrement;
+});
 //________DelayEvent________//
 
 //_________________________Director_Functions_____________________//
@@ -33,7 +37,10 @@ function Start() {
 }
 function OnLateStart() {}
 function Update() {
-  groundMat.uv2Offset = new vec2(1, groundMat.uv2Offset.y + currentSpeed * getDeltaTime() * script.speedMultiplier);
+  groundMat.uv2Offset = new vec2(
+    1,
+    groundMat.uv2Offset.y + currentSpeed * getDeltaTime() * script.speedMultiplier * speedIncrement,
+  );
 }
 function Stop() {}
 //___________________________Functions__________________________//

@@ -21,7 +21,7 @@ script.subScene.SetUpdate(Update);
 var currentNumberDisplayed = 0; // used to know which number of the countdown is currently displayed
 var sceneObjectsArray = []; // store all the number elements with their animations
 var timePassed = 0;
-var isCountingDown = true;
+var isCountingDown = false;
 
 //________Caller________//
 const endIntroCaller = script.subScene.CreateCaller("OnEndIntro");
@@ -59,6 +59,7 @@ function Update() {
       sceneObjectsArray[currentNumberDisplayed].fadeInAnim.GoTo(1);
     } else {
       isCountingDown = false;
+      endIntroCaller.Call();
     }
     currentNumberDisplayed += 1;
   }
@@ -66,12 +67,16 @@ function Update() {
 function Stop() {
   fadeIntroElements.Reset();
   fadeWhiteScreen.Reset();
-  fadeIntroElements.JumpTo(1);
-  fadeWhiteScreen.JumpTo(1);
+  if (global.properties.firstTime) {
+    fadeIntroElements.JumpTo(1);
+    fadeWhiteScreen.JumpTo(1);
+  }
 }
 //___________________________Functions__________________________//
 
 function OnStartDelay() {
+  isCountingDown = true;
+
   fadeIntroElements.GoTo(0);
   fadeWhiteScreen.GoTo(0);
 }
@@ -87,7 +92,7 @@ const fadeIntroElements = new Animation(script.getSceneObject(), script.fadeDura
 fadeIntroElements.OnEnd = function (ratio) {
   if (ratio === 0) {
     print("end");
-    endIntroCaller.Call();
+    // endIntroCaller.Call();
   }
 };
 

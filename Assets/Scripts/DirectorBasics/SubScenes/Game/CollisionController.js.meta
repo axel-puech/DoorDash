@@ -28,11 +28,13 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     bonusDuration: false
+    bonusSpeedIncrement: false
     collectableDuration: false
     flareMaterial: false
     frameMaterials: false
     gliteringEffectMaterial: false
     obstacleDuration: false
+    obstacleSpeedIncrement: false
     parent: false
     postEffect: false
     speedVignetteMaterial: false
@@ -59,6 +61,8 @@
       collectableDuration: !<float> 0.000000
       postEffect: !<reference.PostEffectVisual> 00000000-0000-0000-0000-000000000000
       zoomBlur: !<reference.PostEffectVisual> 00000000-0000-0000-0000-000000000000
+      bonusSpeedIncrement: !<float> 0.000000
+      obstacleSpeedIncrement: !<float> 0.000000
   ScriptTypes:
     -
       {}

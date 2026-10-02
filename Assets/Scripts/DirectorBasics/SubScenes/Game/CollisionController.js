@@ -25,6 +25,10 @@
 //@ui {"widget":"label", "label":"Post Effect"}
 //@input Component.PostEffectVisual postEffect
 //@input Component.PostEffectVisual zoomBlur
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"Obstacle/Bonus Speed Change"}
+//@input float bonusSpeedIncrement
+//@input float obstacleSpeedIncrement
 
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
@@ -35,6 +39,8 @@ let activeFrame = null;
 let speedVignetteActive = false;
 let obstacleVignetteActive = false;
 let collectableFlareActive = false;
+
+let defaultSpeed = 0.2;
 
 const fxSettings = {
   zoomBlurFactor: 3,
@@ -65,10 +71,14 @@ let obstacleCollisionCaller = script.subScene.CreateCaller("OnObstacleCollision"
 // when collecting a burger / pizza / noodle
 let callerOnCollectObject = script.subScene.CreateCaller("OnCollectObject", null);
 
+let callerOnSpeedChange = script.subScene.CreateCaller("OnSpeedChange", null);
+
 //____FadeImageDelay____//
 const fadeSpeedVignetteDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeSpeedVignette.GoTo(0);
   speedVignetteActive = false;
+  callerOnSpeedChange.Call({ speedIncrement: 1 });
+  global.SetSpeed(defaultSpeed);
 });
 
 const fadeCollectableDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
@@ -79,6 +89,8 @@ const fadeCollectableDelay = script.subScene.CreateEvent("DelayedCallbackEvent",
 const fadeObstacleDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeVignette.GoTo(0);
   obstacleVignetteActive = false;
+  callerOnSpeedChange.Call({ speedIncrement: 1 });
+  global.SetSpeed(defaultSpeed);
 });
 
 //////////////////
@@ -134,6 +146,8 @@ function GetEffectsCollider(typeCollider) {
       break;
     case "SpawnObstacle":
       print("SpawnObstacle");
+      global.SetSpeed(global.GetSpeed() * script.obstacleSpeedIncrement);
+      callerOnSpeedChange.Call({ speedIncrement: script.obstacleSpeedIncrement });
 
       if (obstacleVignetteActive) {
         fadeObstacleDelay.event.cancel();
@@ -154,6 +168,11 @@ function GetEffectsCollider(typeCollider) {
       break;
     case "Bonus":
       print("Bonus");
+      PlayCollectableFlare();
+      global.SetSpeed(global.GetSpeed() * script.bonusSpeedIncrement);
+
+      callerOnSpeedChange.Call({ speedIncrement: script.bonusSpeedIncrement });
+
       if (speedVignetteActive) {
         fadeSpeedVignetteDelay.event.cancel();
         fadeSpeedVignetteDelay.event.reset(script.bonusDuration);
