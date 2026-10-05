@@ -80,11 +80,12 @@ const fadeSpeedVignetteDelay = script.subScene.CreateEvent("DelayedCallbackEvent
   speedVignetteActive = false;
   callerOnSpeedChange.Call({ speedIncrement: 1 });
   global.SetSpeed(global.GetDefaultSpeed());
-  script.sparkles.asset.properties["killRatio"] = 1;
+  // script.sparkles.asset.properties["killRatio"] = 1;
 });
 
 const fadeFlareDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeFlare.GoTo(0);
+  killParticlesAnim.GoTo(0);
 });
 
 const fadeObstacleDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
@@ -110,7 +111,8 @@ function Stop() {
   fadeVignette.Reset();
   fadeSpeedVignette.Reset();
   framePointsArray.forEach((framePoint) => framePoint.Reset());
-  script.sparkles.asset.properties["killRatio"] = 1;
+  // script.sparkles.asset.properties["killRatio"] = 1;
+  killParticlesAnim.Reset();
 }
 function Update() {}
 
@@ -164,7 +166,8 @@ function GetEffectsCollider(typeCollider) {
         fadeObstacleDelay.event.cancel();
         fadeObstacleDelay.event.reset(script.obstacleDuration);
       } else if (speedVignetteActive) {
-        script.sparkles.asset.properties["killRatio"] = 1;
+        // script.sparkles.asset.properties["killRatio"] = 1;
+        killParticlesAnim.GoTo(0);
         fadeSpeedVignetteDelay.event.cancel();
         fadeSpeedVignette.GoTo(0);
         speedVignetteActive = false;
@@ -183,7 +186,8 @@ function GetEffectsCollider(typeCollider) {
       global.SetSpeed(global.GetDefaultSpeed() * script.bonusSpeedIncrement);
 
       callerOnSpeedChange.Call({ speedIncrement: script.bonusSpeedIncrement });
-      script.sparkles.asset.properties["killRatio"] = 0;
+      // script.sparkles.asset.properties["killRatio"] = 0;
+      killParticlesAnim.GoTo(1);
 
       if (speedVignetteActive) {
         fadeSpeedVignetteDelay.event.cancel();
@@ -246,6 +250,10 @@ function PlayObstacleVignette() {
 }
 
 //___________________________Animations_________________________//
+
+const killParticlesAnim = new Animation(script.getSceneObject(), 0.5, (ratio) => {
+  script.sparkles.asset.properties["killRatio"] = 1 - ratio;
+});
 
 // A single animation owns the material, preventing collectable and bonus flares
 // from writing conflicting values during the same frame.

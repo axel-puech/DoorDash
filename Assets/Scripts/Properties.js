@@ -6,7 +6,9 @@ class ExperienceProperties {
     this.pizzaScore = 0;
     this.noodlesScore = 0;
 
+    // Kept for compatibility with the existing scripts.
     this.firstTime = true;
+    this.hasExperienceBeenPlayed = false;
   }
 
   setNoodlesScore(score) {
@@ -37,6 +39,11 @@ class ExperienceProperties {
     this.burgerScore = 0;
     this.pizzaScore = 0;
     this.noodlesScore = 0;
+  }
+
+  markExperienceAsPlayed() {
+    this.hasExperienceBeenPlayed = true;
+    this.firstTime = false;
   }
 }
 

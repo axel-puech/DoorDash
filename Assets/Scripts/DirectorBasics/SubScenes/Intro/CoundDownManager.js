@@ -17,9 +17,10 @@ script.subScene.OnStart = Start;
 script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
+
 //__________________________Variables_____________________________//
-var currentNumberDisplayed = 0; // used to know which number of the countdown is currently displayed
 var sceneObjectsArray = []; // store all the number elements with their animations
+var currentNumberDisplayed = 0; // used to know which number of the countdown is currently displayed
 var timePassed = 0;
 var isCountingDown = false;
 var countdownStarted = false;
@@ -36,18 +37,23 @@ const StartDelay = script.subScene.CreateEvent("DelayedCallbackEvent", OnStartDe
 
 //_________________________Director_Functions_____________________//
 function Start() {
-  Instantiation();
+  // NumberElement owns animation instances and must only be created once.
+  // Recreating them on every replay used to append another 3, 2, 1, GO
+  // sequence and made the countdown play twice.
+  if (sceneObjectsArray.length === 0) {
+    Instantiation();
+  }
 }
 function OnLateStart() {
-  StartDelay.event.reset(script.beforeStartDelay);
+  if (global.properties.hasExperienceBeenPlayed) {
+    // On replay, skip the initial intro wait and only play 3, 2, 1, GO.
+    fadeIntroElements.JumpTo(0);
+    fadeWhiteScreen.JumpTo(0);
+    OnStartDelay();
+    return;
+  }
 
-  sceneObjectsArray.forEach((numberElement) => {
-    numberElement.fadeInAnim.AddTimeCodeEvent(1, function () {
-      //print("Fade In Animation Ended for element ");
-      numberElement.fadeOutAnim.JumpTo(1);
-      numberElement.fadeOutAnim.GoTo(0);
-    });
-  });
+  StartDelay.event.reset(script.beforeStartDelay);
 }
 function Update() {
   if (!isCountingDown) return;
@@ -62,11 +68,13 @@ function Update() {
     timePassed = 0;
     //print("new animation");
     if (currentNumberDisplayed < sceneObjectsArray.length) {
-      sceneObjectsArray[currentNumberDisplayed].scaleAnim.GoTo(0);
-      sceneObjectsArray[currentNumberDisplayed].fadeInAnim.GoTo(1);
+      sceneObjectsArray[currentNumberDisplayed].play();
+      if (currentNumberDisplayed === sceneObjectsArray.length - 1) {
+        // calling a bit before to have obstacles spawn earlier
+        endIntroCaller.Call();
+      }
     } else {
       isCountingDown = false;
-      endIntroCaller.Call();
     }
     currentNumberDisplayed += 1;
   }
@@ -78,6 +86,15 @@ function Stop() {
     fadeIntroElements.JumpTo(1);
     fadeWhiteScreen.JumpTo(1);
   }
+  if (sceneObjectsArray) {
+    sceneObjectsArray.forEach((countdownElement, index) => {
+      countdownElement.reset();
+    });
+  }
+  currentNumberDisplayed = 0;
+  timePassed = 0;
+  isCountingDown = false;
+  countdownStarted = false;
 }
 //___________________________Functions__________________________//
 
@@ -133,12 +150,33 @@ class NumberElement {
     this.fadeOutAnim = new Animation(script.getSceneObject(), 0.2, (ratio) => {
       this._obj.getComponent("Component.Image").mainPass.baseColor = new vec4(1, 1, 1, ratio);
     });
+
+    this.fadeInAnim.OnEnd = (ratio) => {
+      if (ratio !== 1) {
+        return;
+      }
+
+      this.fadeOutAnim.JumpTo(1);
+      this.fadeOutAnim.GoTo(0);
+    };
+  }
+
+  prepare() {
+    // Every play must begin from the same state. Reset() would put the scale
+    // animation at ratio 0, so a following GoTo(0) would have nothing to do.
+    this.scaleAnim.JumpTo(0.5);
+    this.fadeInAnim.JumpTo(0);
+    this.fadeOutAnim.JumpTo(0);
+  }
+
+  play() {
+    this.prepare();
+    this.scaleAnim.GoTo(0);
+    this.fadeInAnim.GoTo(1);
   }
 
   reset() {
-    this.scaleAnim.Reset();
-    this.fadeInAnim.Reset();
-    this.fadeOutAnim.Reset();
+    this.prepare();
   }
 }
 
@@ -150,9 +188,6 @@ function Instantiation() {
   script.countdownGroup.forEach((countdownElement, index) => {
     sceneObjectsArray.push(new NumberElement(countdownElement, index));
     sceneObjectsArray[index].reset();
-    sceneObjectsArray[index].scaleAnim.JumpTo(0.5);
-    sceneObjectsArray[index].fadeInAnim.JumpTo(0);
-    sceneObjectsArray[index].fadeOutAnim.JumpTo(0);
 
     // sceneObjectsArray[index].scaleAnim.OnEnd = function () {
     //   OnAnimationEnd();

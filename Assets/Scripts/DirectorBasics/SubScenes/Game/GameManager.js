@@ -56,6 +56,7 @@ let callerStartRun = script.subScene.CreateCaller("OnStartRun");
 let listenerStopRun = script.subScene.CreateListener("OnStopRun", OnStopRun, function () {});
 let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
 let listenerStartCountdown = script.subScene.CreateListener("OnStartCountdown", function () {
+  fadeTimeElements.Reset();
   fadeTimeElements.GoTo(1);
 });
 

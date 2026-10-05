@@ -42,3 +42,12 @@ function Stop() {}
 // ajouter les particules quand on choppe un bonus
 // supprimer le flare quand on prend un collectable
 
+// TODO du lundi 5 mais l'aprem
+// neige tombe pas au bout
+// bouton play again + gros
+// score frames a allonger + replacer
+// palais un peu stretch
+// camera et timer a ajuster
+// pour les collectavles -> faire partir l'anim de 20%
+// prendre idle animation mixamo
+// grossir les collectables et bonus

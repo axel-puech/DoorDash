@@ -4,9 +4,13 @@
     - !<own> b761ea3e-1c5f-4d7c-b8e2-4b6e12d94285
   LazyLoading: false
   RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/b761ea3e-1c5f-4d7c-b8e2-4b6e12d94285>
   PrefabRemaps:
-    []
+    - b761ea3e-1c5f-4d7c-b8e2-4b6e12d94285: b761ea3e-1c5f-4d7c-471d-b491ed26bd7a
+    - d335eae8-9967-453d-96cf-4003313b8fb7: d335eae8-9967-453d-6930-bffccec47048
+    - f0be46c6-51b1-4e5e-adc6-fd0cb1cfed83: f0be46c6-51b1-4e5e-5239-02f34e30127c
+    - f3a46ad3-ed0d-4b8f-b315-0a4aa43537b5: f3a46ad3-ed0d-4b8f-4cea-f5b55bcac84a
   Name: Building 3
   Enabled: true
   Layers: 1

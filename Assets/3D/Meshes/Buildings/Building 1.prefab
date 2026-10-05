@@ -4,6 +4,7 @@
     - !<own> 58b0cf7e-e7f5-41c2-b29c-8c001ac2b2fb
   LazyLoading: false
   RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScriptComponent/2838f1d1-186c-4963-9a38-c6a95597901f>
   PrefabRemaps:
     []
@@ -42,7 +43,10 @@
       {}
 - !<SceneObject/58b0cf7e-e7f5-41c2-b29c-8c001ac2b2fb>
   PrefabRemaps:
-    []
+    - 2838f1d1-186c-4963-9a38-c6a95597901f: 2838f1d1-186c-4963-65c7-3956aa686fe0
+    - 58b0cf7e-e7f5-41c2-b29c-8c001ac2b2fb: 58b0cf7e-e7f5-41c2-4d63-73ffe53d4d04
+    - 840af41f-7239-4440-8773-3c16a3e1b268: 840af41f-7239-4440-788c-c3e95c1e4d97
+    - c1635948-07f0-48ac-9c95-1b72bf01452e: c1635948-07f0-48ac-636a-e48d40febad1
   Name: Building 1
   Enabled: true
   Layers: 1

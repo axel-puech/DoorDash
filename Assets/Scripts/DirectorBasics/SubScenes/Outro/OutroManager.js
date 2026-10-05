@@ -49,7 +49,7 @@ function Start() {
 }
 
 function OnLateStart() {
-  global.properties.firstTime = false;
+  global.properties.markExperienceAsPlayed();
   animFadeBG.GoTo(0);
   showBitmojiCaller.Call();
 

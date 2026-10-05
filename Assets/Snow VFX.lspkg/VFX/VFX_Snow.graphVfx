@@ -45,7 +45,7 @@ Nodes:
         SizeInheritsParentScale:
           Variable: false
         Space:
-          ItemIndex: 0
+          ItemIndex: 1
           ItemList: "World : Local"
         SpawnAmount:
           Variable: 1000
@@ -69,7 +69,7 @@ Nodes:
       PositionX: -154
       PositionY: 423
       TemplateID: nodes_particle_spawn_begin
-      Title1: Spawn Particle ( World Space )
+      Title1: Spawn Particle ( Local Space )
     Node1:
       ChildNodes:
         Node0:
@@ -3200,13 +3200,13 @@ Nodes:
         Simulate:
           Variable: true
         Space:
-          ItemIndex: 0
+          ItemIndex: 1
           ItemList: "World : Local"
       PositionX: -156
       PositionY: 788
       TemplateID: nodes_particle_update_begin
       Title1: Update Particle
-      Title2: World Space
+      Title2: Local Space
     Node6:
       ChildNodes:
         Node0:

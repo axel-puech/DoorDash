@@ -160,7 +160,9 @@ function Start() {
 
 function OnStartRun() {}
 
-function Stop() {}
+function Stop() {
+  introEnded = false;
+}
 
 function Update() {
   if (!global.IsGameHasStarted()) {
