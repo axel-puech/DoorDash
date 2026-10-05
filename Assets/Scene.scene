@@ -2370,7 +2370,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 2.000000, z: -2.000000}
+    Position: {x: 0.000000, y: 2.000000, z: 1.000000}
     Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -3583,7 +3583,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 1.739128, z: -0.237651}
+    Position: {x: 0.000000, y: 1.739128, z: 0.500000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 6.000000, y: 6.000000, z: 6.000000}
     HasSegmentScaleCompensation: false
@@ -6072,7 +6072,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: 0.000000, z: 1.000000}
     Rotation: {x: 0.000000, y: 180.000000, z: 0.000000}
     Scale: {x: 0.025000, y: 0.025000, z: 0.025000}
     HasSegmentScaleCompensation: false
@@ -8799,7 +8799,7 @@
     - dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53: 8cc8bc63-7d28-49cc-7f60-2265eedd721c
     - f8f7bdbf-cad4-462a-9bae-fb204d9ed8e7: f4e415e2-ab5a-430e-4dcc-fbd673f563ef
   Name: Bitmoji 3D
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}

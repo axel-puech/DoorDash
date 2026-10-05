@@ -91,7 +91,7 @@ Nodes:
         RangeMin:
           Variable: [-10.0, -10.0, -10.0, -10.0]
         Value:
-          Variable: [0.800000011920929, 0.0, 0.0, 1.0]
+          Variable: [1.0, 0.0, 0.0, 1.0]
         ValueMatrix:
           ClassType1: MATRIX
           Variable: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]

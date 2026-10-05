@@ -63,6 +63,7 @@ let framePointsArray = [];
 const fxSettings = {
   zoomBlurFactor: 3,
   vignetteAlphaFactor: 0.2,
+  particlesVisibleDuration: 1,
 };
 
 //________Caller________//
@@ -85,7 +86,10 @@ const fadeSpeedVignetteDelay = script.subScene.CreateEvent("DelayedCallbackEvent
 
 const fadeFlareDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeFlare.GoTo(0);
-  killParticlesAnim.GoTo(0);
+});
+
+const killParticlesDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
+  StopBonusParticles();
 });
 
 const fadeObstacleDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
@@ -166,8 +170,7 @@ function GetEffectsCollider(typeCollider) {
         fadeObstacleDelay.event.cancel();
         fadeObstacleDelay.event.reset(script.obstacleDuration);
       } else if (speedVignetteActive) {
-        // script.sparkles.asset.properties["killRatio"] = 1;
-        killParticlesAnim.GoTo(0);
+        StopBonusParticles();
         fadeSpeedVignetteDelay.event.cancel();
         fadeSpeedVignette.GoTo(0);
         speedVignetteActive = false;
@@ -186,8 +189,7 @@ function GetEffectsCollider(typeCollider) {
       global.SetSpeed(global.GetDefaultSpeed() * script.bonusSpeedIncrement);
 
       callerOnSpeedChange.Call({ speedIncrement: script.bonusSpeedIncrement });
-      // script.sparkles.asset.properties["killRatio"] = 0;
-      killParticlesAnim.GoTo(1);
+      PlayBonusParticles();
 
       if (speedVignetteActive) {
         fadeSpeedVignetteDelay.event.cancel();
@@ -249,9 +251,21 @@ function PlayObstacleVignette() {
   }
 }
 
+function PlayBonusParticles() {
+  // A second bonus refreshes the full one-second visibility window.
+  killParticlesDelay.event.cancel();
+  killParticlesAnim.JumpTo(1);
+  killParticlesDelay.event.reset(fxSettings.particlesVisibleDuration);
+}
+
+function StopBonusParticles() {
+  killParticlesDelay.event.cancel();
+  killParticlesAnim.GoTo(0);
+}
+
 //___________________________Animations_________________________//
 
-const killParticlesAnim = new Animation(script.getSceneObject(), 0.5, (ratio) => {
+const killParticlesAnim = new Animation(script.getSceneObject(), 1, (ratio) => {
   script.sparkles.asset.properties["killRatio"] = 1 - ratio;
 });
 
@@ -262,7 +276,7 @@ function UpdateFlareMaterial(ratio) {
   script.flareMaterial.mainPass.multiply = 1 + flareMultiplyFactor * ratio;
 }
 
-const fadeFlare = new Animation(script.getSceneObject(), 0.7, UpdateFlareMaterial);
+const fadeFlare = new Animation(script.getSceneObject(), 0.3, UpdateFlareMaterial);
 
 fadeFlare.Easing = QuadraticOut;
 
