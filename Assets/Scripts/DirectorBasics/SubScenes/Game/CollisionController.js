@@ -15,12 +15,19 @@
 //@input Asset.Material speedVignetteMaterial
 //@input Asset.Material gliteringEffectMaterial
 
-//@input Asset.Material[] frameMaterials
+//@input SceneObject[] framePoints
+//@input Component.VFXComponent sparkles
+
 //@ui {"widget":"separator"}
 //@ui {"widget":"label", "label":"FX Anim duration"}
 //@input float obstacleDuration
 //@input float bonusDuration
-//@input float collectableDuration
+//@input float flareDuration = 0.2
+//@input float frameflareDuration = 0.2
+//@ui {"widget":"label", "label":"Flare intensity"}
+//@input float collectableFlareIntensity = 0.7 {"widget":"slider", "min":0, "max":1, "step":0.05}
+//@input float bonusFlareIntensity = 1.0 {"widget":"slider", "min":0, "max":1, "step":0.05}
+//@input float bonusFlareMultiply = 0.35 {"widget":"slider", "min":0, "max":1, "step":0.05}
 //@ui {"widget":"separator"}
 //@ui {"widget":"label", "label":"Post Effect"}
 //@input Component.PostEffectVisual postEffect
@@ -29,73 +36,85 @@
 //@ui {"widget":"label", "label":"Obstacle/Bonus Speed Change"}
 //@input float bonusSpeedIncrement
 //@input float obstacleSpeedIncrement
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"UI animations"}
+//@input vec2 offsetFrame
+
+//_________________________Director Setup_________________________//
 
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
+script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
+script.subScene.SetUpdate(Update);
 
-let activeFrame = null;
+//__________________________Variables_____________________________//
 
 let speedVignetteActive = false;
 let obstacleVignetteActive = false;
-let collectableFlareActive = false;
+let bonusFlareActive = false;
+let flareIntensity = 0;
+let flareMultiplyFactor = 0;
 
-let defaultSpeed = 0.2;
+let framePointsArray = [];
+
+//__________________________Constants_____________________________//
 
 const fxSettings = {
   zoomBlurFactor: 3,
   vignetteAlphaFactor: 0.2,
-  flareMultiplyFactor: 0.2,
 };
 
-function Start() {}
-
-function Stop() {
-  fadeFlare.Reset();
-  fadeVignette.Reset();
-  mixFrame.Reset();
-  fadeSpeedVignette.Reset();
-}
-
-//////////////////
-/////// Listeners/Callers
-//////////////////
-let listenerOnCollider = script.subScene.CreateListener("OnCollide", OnCollide, function () {});
-
-// when collec a bonus - speed increase
+//________Caller________//
 let bonusCollisionCaller = script.subScene.CreateCaller("OnBonusCollision");
-
-// when hitting an obstacle
 let obstacleCollisionCaller = script.subScene.CreateCaller("OnObstacleCollision");
-
-// when collecting a burger / pizza / noodle
 let callerOnCollectObject = script.subScene.CreateCaller("OnCollectObject", null);
-
 let callerOnSpeedChange = script.subScene.CreateCaller("OnSpeedChange", null);
 
-//____FadeImageDelay____//
+//________Listener________//
+let listenerOnCollider = script.subScene.CreateListener("OnCollide", OnCollide, function () {});
+
+//________DelayEvent________//
 const fadeSpeedVignetteDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeSpeedVignette.GoTo(0);
   speedVignetteActive = false;
   callerOnSpeedChange.Call({ speedIncrement: 1 });
-  global.SetSpeed(defaultSpeed);
+  global.SetSpeed(global.GetDefaultSpeed());
+  script.sparkles.asset.properties["killRatio"] = 1;
 });
 
-const fadeCollectableDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
+const fadeFlareDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeFlare.GoTo(0);
-  collectableFlareActive = false;
 });
 
 const fadeObstacleDelay = script.subScene.CreateEvent("DelayedCallbackEvent", function () {
   fadeVignette.GoTo(0);
   obstacleVignetteActive = false;
   callerOnSpeedChange.Call({ speedIncrement: 1 });
-  global.SetSpeed(defaultSpeed);
+  global.SetSpeed(global.GetDefaultSpeed());
 });
 
-//////////////////
-/////// Other
-//////////////////
+//_________________________Director_Functions_____________________//
+
+function Start() {}
+
+function OnLateStart() {
+  Instantiation();
+}
+
+function Stop() {
+  fadeFlare.Reset();
+  bonusFlareActive = false;
+  flareIntensity = 0;
+  flareMultiplyFactor = 0;
+  fadeVignette.Reset();
+  fadeSpeedVignette.Reset();
+  framePointsArray.forEach((framePoint) => framePoint.Reset());
+  script.sparkles.asset.properties["killRatio"] = 1;
+}
+function Update() {}
+
+//___________________________Functions__________________________//
 
 function OnCollide(e) {
   print("collided");
@@ -121,38 +140,31 @@ function GetEffectsCollider(typeCollider) {
   // collectObject();
   switch (typeCollider) {
     case "Pizza":
-      print("Pizza");
-      PlayCollectableFlare();
       callerOnCollectObject.Call("Pizza");
-      activeFrame = script.frameMaterials[0];
-      mixFrame.Start(1);
+      PlayCollectableFlare();
+      framePointsArray[0].Activate();
       break;
     case "Noodles":
-      print("Noodles");
+      framePointsArray[1].Activate();
       PlayCollectableFlare();
-      activeFrame = script.frameMaterials[1];
-      mixFrame.Start(1);
-
       callerOnCollectObject.Call("Noodles");
 
       break;
     case "Burger":
-      print("Burger");
-      activeFrame = script.frameMaterials[2];
-      mixFrame.Start(1);
+      framePointsArray[2].Activate();
       PlayCollectableFlare();
-
       callerOnCollectObject.Call("Burger");
       break;
+
     case "SpawnObstacle":
-      print("SpawnObstacle");
-      global.SetSpeed(global.GetSpeed() * script.obstacleSpeedIncrement);
+      global.SetSpeed(global.GetDefaultSpeed() * script.obstacleSpeedIncrement);
       callerOnSpeedChange.Call({ speedIncrement: script.obstacleSpeedIncrement });
 
       if (obstacleVignetteActive) {
         fadeObstacleDelay.event.cancel();
         fadeObstacleDelay.event.reset(script.obstacleDuration);
       } else if (speedVignetteActive) {
+        script.sparkles.asset.properties["killRatio"] = 1;
         fadeSpeedVignetteDelay.event.cancel();
         fadeSpeedVignette.GoTo(0);
         speedVignetteActive = false;
@@ -167,11 +179,11 @@ function GetEffectsCollider(typeCollider) {
       // callerOnCollectObject.Call(3);
       break;
     case "Bonus":
-      print("Bonus");
-      PlayCollectableFlare();
-      global.SetSpeed(global.GetSpeed() * script.bonusSpeedIncrement);
+      PlayBonusFlare();
+      global.SetSpeed(global.GetDefaultSpeed() * script.bonusSpeedIncrement);
 
       callerOnSpeedChange.Call({ speedIncrement: script.bonusSpeedIncrement });
+      script.sparkles.asset.properties["killRatio"] = 0;
 
       if (speedVignetteActive) {
         fadeSpeedVignetteDelay.event.cancel();
@@ -179,7 +191,7 @@ function GetEffectsCollider(typeCollider) {
       } else if (obstacleVignetteActive) {
         fadeObstacleDelay.event.cancel();
         fadeVignette.GoTo(0);
-        speedVignetteActive = false;
+        obstacleVignetteActive = false;
 
         speedVignetteActive = true;
         fadeSpeedVignette.GoTo(1);
@@ -198,13 +210,29 @@ function GetEffectsCollider(typeCollider) {
 }
 
 function PlayCollectableFlare() {
-  if (collectableFlareActive) {
-    fadeCollectableDelay.event.cancel();
-    fadeCollectableDelay.event.reset(script.collectableDuration);
-  } else {
-    collectableFlareActive = true;
-    fadeFlare.GoTo(1);
+  // Do not weaken a bonus flare that is still visible.
+  if (!bonusFlareActive) {
+    SetFlareStrength(script.collectableFlareIntensity, 0);
   }
+
+  RestartFlare();
+}
+
+function PlayBonusFlare() {
+  bonusFlareActive = true;
+  SetFlareStrength(script.bonusFlareIntensity, script.bonusFlareMultiply);
+  RestartFlare();
+}
+
+function SetFlareStrength(intensity, multiplyFactor) {
+  flareIntensity = intensity;
+  flareMultiplyFactor = multiplyFactor;
+  UpdateFlareMaterial(fadeFlare.GetRatio());
+}
+
+function RestartFlare() {
+  fadeFlareDelay.event.cancel();
+  fadeFlare.GoTo(1);
 }
 
 function PlayObstacleVignette() {
@@ -219,16 +247,25 @@ function PlayObstacleVignette() {
 
 //___________________________Animations_________________________//
 
-const fadeFlare = new Animation(script.getSceneObject(), 0.7, (ratio) => {
-  script.flareMaterial.mainPass.flareRatio = ratio;
-  script.flareMaterial.mainPass.multiply = 1 + fxSettings.flareMultiplyFactor * ratio;
-});
+// A single animation owns the material, preventing collectable and bonus flares
+// from writing conflicting values during the same frame.
+function UpdateFlareMaterial(ratio) {
+  script.flareMaterial.mainPass.flareRatio = ratio * flareIntensity;
+  script.flareMaterial.mainPass.multiply = 1 + flareMultiplyFactor * ratio;
+}
+
+const fadeFlare = new Animation(script.getSceneObject(), 0.7, UpdateFlareMaterial);
 
 fadeFlare.Easing = QuadraticOut;
 
 fadeFlare.OnEnd = function (ratio) {
   if (ratio === 1) {
-    fadeCollectableDelay.event.reset(script.collectableDuration);
+    fadeFlareDelay.event.reset(script.flareDuration);
+  } else if (ratio === 0) {
+    fadeFlare.Reset();
+    bonusFlareActive = false;
+    flareIntensity = 0;
+    flareMultiplyFactor = 0;
   }
 };
 
@@ -243,7 +280,7 @@ fadeVignette.OnEnd = function (ratio) {
 };
 
 const fadeSpeedVignette = new Animation(script.getSceneObject(), 0.7, (ratio) => {
-  script.speedVignetteMaterial.mainPass.alphaRatio = ratio;
+  script.speedVignetteMaterial.mainPass.alphaRatio = ratio * 0.5;
   script.postEffect.mainPass.alphaRatio = ratio * fxSettings.vignetteAlphaFactor;
   script.zoomBlur.mainPass.strength = ratio * fxSettings.zoomBlurFactor;
   script.gliteringEffectMaterial.mainPass.alphaRatio = ratio;
@@ -255,18 +292,79 @@ fadeSpeedVignette.OnEnd = function (ratio) {
   }
 };
 
-const mixFrame = new Animation(
-  script.getSceneObject(),
-  0.4,
-  (ratio) => {
-    if (!activeFrame) return;
-    activeFrame.mainPass.mixRatio = ratio;
-  },
-  RepeatMode.PingPong,
-);
+//__________________________Classes_____________________________//
+class FramePoints {
+  constructor(obj, id) {
+    this._obj = obj;
+    this._id = id;
+    this._transform = this._obj.getComponent("Component.ScreenTransform");
+    this._baseCenter = this._transform.anchors.getCenter();
+    this._targetCenter = new vec2(this._baseCenter.x + script.offsetFrame.x, this._baseCenter.y + script.offsetFrame.y);
+    this._image = this._obj.getComponent("Component.Image");
 
-mixFrame.OnEnd = function (ratio) {
-  if (ratio === 0) {
-    activeFrame = null;
+    this._active = false;
+
+    this._mixFrameDelay = script.subScene.CreateEvent("DelayedCallbackEvent", this.resetFrame.bind(this));
+
+    this._anims = {
+      fade: null,
+      mix: null,
+      translate: null,
+    };
+
+    this.initAnimations();
   }
-};
+
+  resetFrame() {
+    this._anims.mix.GoTo(0);
+    this._anims.translate.GoTo(0);
+    this._active = false;
+  }
+
+  initAnimations() {
+    this._anims.fade = new Animation(script.getSceneObject(), 0.5, (ratio) => {
+      this._image.mainPass.alphaRatio = ratio;
+    });
+    // this._anims.fade.Easing = QuadraticInOut;
+    this._anims.mix = new Animation(script.getSceneObject(), 0.3, (ratio) => {
+      this._image.mainPass.mixRatio = ratio;
+    });
+    this._anims.mix.Easing = QuadraticInOut;
+    this._anims.mix.OnEnd = (ratio) => {
+      if (ratio === 1) {
+        this._mixFrameDelay.event.reset(script.frameflareDuration);
+      }
+    };
+    this._anims.translate = new Animation(script.getSceneObject(), 0.3, (ratio) => {
+      const animationProgress = ratio;
+      const currentCenter = vec2.lerp(this._baseCenter, this._targetCenter, animationProgress);
+      this._transform.anchors.setCenter(currentCenter);
+    });
+    this._anims.translate.Easing = QuadraticInOut;
+  }
+
+  Activate() {
+    if (this._active) {
+      this._mixFrameDelay.event.cancel();
+      this._mixFrameDelay.event.reset(script.frameflareDuration);
+    } else {
+      this._active = true;
+      this._anims.mix.GoTo(1);
+      this._anims.translate.GoTo(1);
+    }
+  }
+
+  Reset() {
+    this._anims.fade.Reset();
+    this._anims.mix.Reset();
+    this._anims.translate.Reset();
+  }
+}
+
+function Instantiation() {
+  framePointsArray = [];
+  script.framePoints.forEach((point, index) => {
+    let framePoint = new FramePoints(point, index);
+    framePointsArray.push(framePoint);
+  });
+}

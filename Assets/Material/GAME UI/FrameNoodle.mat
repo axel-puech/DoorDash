@@ -154,7 +154,7 @@
     activeFrame:
       typeIdx: 9
       value:
-        id: f7a999a7-7139-4d79-977b-530dda8a0e40
+        id: 7ea9a516-5579-4433-bb12-4d1b7d421550
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
@@ -178,7 +178,7 @@
     normalFrame:
       typeIdx: 9
       value:
-        id: 7b7b9f6a-fd73-4940-bb53-f762f4e428e1
+        id: 057d3035-56d0-4744-9be0-381d4c203fdb
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge

@@ -36,6 +36,7 @@
     textNoodles: false
     textPizza: false
     textTime: false
+    timeMaterial: false
     transitionBG: false
   ScriptTypesHidden:
     {}
@@ -53,10 +54,11 @@
       gameDirection: 0
       gameUIMaterials: !<reference.Material[]>
         []
-      textTime: !<reference.Text> 00000000-0000-0000-0000-000000000000
       textPizza: !<reference.Text> 00000000-0000-0000-0000-000000000000
       textBurger: !<reference.Text> 00000000-0000-0000-0000-000000000000
       textNoodles: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      timeMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      textTime: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

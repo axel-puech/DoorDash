@@ -34,4 +34,11 @@ function Stop() {}
 
 // Ce qu'il reste a faire
 // ajouter un countdown 3, 2, 1 dans le countdown manager
-// 
+
+// TODO du lundi 5 octobre 2026
+// integrer les compteurs de points in game
+// quand un compteur est activé, alors le faire decaler avec une anim sur la droite
+// Ajouter les collectables sur l'ecran d'intro du jeux
+// ajouter les particules quand on choppe un bonus
+// supprimer le flare quand on prend un collectable
+

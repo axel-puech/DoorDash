@@ -22,9 +22,12 @@ var currentNumberDisplayed = 0; // used to know which number of the countdown is
 var sceneObjectsArray = []; // store all the number elements with their animations
 var timePassed = 0;
 var isCountingDown = false;
+var countdownStarted = false;
 
 //________Caller________//
 const endIntroCaller = script.subScene.CreateCaller("OnEndIntro");
+const startCountdown = script.subScene.CreateCaller("OnStartCountdown");
+
 //________Listener________//
 
 const StartDelay = script.subScene.CreateEvent("DelayedCallbackEvent", OnStartDelay);
@@ -48,6 +51,10 @@ function OnLateStart() {
 }
 function Update() {
   if (!isCountingDown) return;
+  if (!countdownStarted) {
+    countdownStarted = true;
+    startCountdown.Call();
+  }
   var deltaTime = getDeltaTime();
   timePassed += deltaTime;
 
