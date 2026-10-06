@@ -6,6 +6,7 @@
     - !<own> e68e3e55-7cef-4ccf-8b4f-23700ab17a80
     - !<own> b8b57e1a-5043-47f0-9fbf-1d4a89d24599
     - !<own> b34df1a6-3010-4a98-b60a-cd35ebe0de12
+    - !<own> 01e9f6e7-a0cd-4bcb-a238-b812ddf72e8b
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -41,25 +42,6 @@
     - !<own> d55278e5-e9c4-4322-bde2-5c42f1428e52
   Components:
     - !<own> e98c2046-2c34-40a4-bf5a-f28a8ad88e5b
-- !<ScriptComponent/01ae37d5-9124-4c33-94f0-35e3ccacdb8c>
-  PrefabRemaps:
-    []
-  Name: BitmojiAnimationController
-  Enabled: true
-  ScriptAsset: !<reference> 7a558f6c-e4f7-4c4b-a17e-5b9fb2621793
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      bitmoji3dComponent: !<reference.ScriptComponent> dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53
-      animationPlayer: !<reference.AnimationPlayer> ab8db3db-3524-4174-bbb6-0f65bea39c37
-      animationAsset: !<reference.AnimationAsset> 84a39c26-bed6-4743-901a-c285a5039ec9
-      heavyAnimationAsset: !<reference.AnimationAsset> 2ec7cc81-e0d0-4426-96a5-d0e341badfcf
-  ScriptTypes:
-    "":
-      {}
 - !<RenderMeshVisual/01cc94b9-c8a7-48f4-9948-15d4e86ad093>
   PrefabRemaps:
     []
@@ -80,6 +62,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/01e9f6e7-a0cd-4bcb-a238-b812ddf72e8b>
+  PrefabRemaps:
+    []
+  Name: GPU_Particles_Effects_Pack
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> a3089e0d-e411-4660-8639-4a0449e58ae9
+  Components:
+    []
 - !<AnimationPlayer/021951fc-39aa-4fcf-ae5d-9d4e4292c934>
   PrefabRemaps:
     []
@@ -398,7 +395,7 @@
         - 0.050000
       delayFirstSpawn: !<float> 0.000000
       delayBetweenSpawn: !<float> 1.000000
-      probablyToSpawn: 0.600000
+      probablyToSpawn: !<float> 1.000000
       probablyHavingTwoElements: 0.410000
       maxElements: 10
       instantiateOnStart: false
@@ -565,21 +562,6 @@
     - !<own> 992e08b6-fc5b-4e35-b28a-96cda9944e8e
   Components:
     []
-- !<SceneObject/0ce5d113-efce-41ae-8805-e220c64e6595>
-  PrefabRemaps:
-    []
-  Name: SnowVFX
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 9.529225, z: -241.599365}
-    Rotation: {x: 3.932786, y: -0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 5f8fd893-1adf-429f-b4e0-c4f9bce3e6e8
-  Components:
-    []
 - !<Image/0f14a892-a9dd-498c-a0a4-f21115217050>
   PrefabRemaps:
     []
@@ -730,7 +712,6 @@
     - !<own> 281670fc-139c-4cd9-a3d2-a8c7b8de3030
     - !<own> 2a362114-aa8d-4450-accd-482e5a3bb2a9
     - !<own> f47f432b-9770-4d23-8486-2242f3908194
-    - !<own> 0ce5d113-efce-41ae-8805-e220c64e6595
   Components:
     - !<own> c68ea811-b87c-48f2-a8aa-842b5812cb08
 - !<SceneObject/140fca58-9e6f-4007-8400-f7476e6ac648>
@@ -1380,7 +1361,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> f8f7bdbf-cad4-462a-9bae-fb204d9ed8e7
+    []
   Components:
     []
 - !<SceneObject/2dc2d726-be03-49ab-a704-2c3408baeee9>
@@ -1727,7 +1708,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    Scale: {x: 5.000000, y: 4.000000, z: 4.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2371,7 +2352,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.000000, z: 1.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -2464,8 +2445,8 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 64d20f27-3db1-4f5f-ba7c-c5f4fcaeb7a9
     - !<own> 940539fa-bff0-4769-9c37-6928034f7917
+    - !<own> 64d20f27-3db1-4f5f-ba7c-c5f4fcaeb7a9
   Components:
     []
 - !<Text/51497821-c9fb-494d-8013-9fe693173abb>
@@ -2744,7 +2725,7 @@
   PrefabRemaps:
     []
   Name: WhiteScreen
-  Enabled: false
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2999,9 +2980,9 @@
   EnableDebugRender: false
   Anchor:
     left: 0.000000
-    bottom: -0.650000
+    bottom: -0.620000
     right: 0.000000
-    top: -0.650000
+    top: -0.620000
   Offset:
     left: -5.625000
     bottom: -10.000000
@@ -3016,7 +2997,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    Scale: {x: 5.000000, y: 5.000000, z: 5.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -3224,27 +3205,12 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    Scale: {x: 5.000000, y: 5.000000, z: 5.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
   Components:
     - !<own> 6fb123c5-ebf5-4c90-a175-bedd2dbba5b8
-- !<SceneObject/5f8fd893-1adf-429f-b4e0-c4f9bce3e6e8>
-  PrefabRemaps:
-    []
-  Name: Snow
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 98.194031}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 97c995f9-f51f-4452-af59-09b54cc89d45
 - !<SceneObject/60de6c6d-583c-4c0c-8bf2-fd8b1452c65b>
   PrefabRemaps:
     []
@@ -3552,9 +3518,9 @@
   Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.086957, y: 1.086957, z: 1.086957}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> eb35a670-3ada-4189-9601-17248e5cc2b3
@@ -4023,9 +3989,9 @@
   EnableDebugRender: false
   Anchor:
     left: 0.000000
-    bottom: -0.600000
+    bottom: -0.477000
     right: 0.000000
-    top: -0.600000
+    top: -0.477000
   Offset:
     left: -2.000000
     bottom: -10.000000
@@ -5557,25 +5523,6 @@
     []
   Components:
     - !<own> 8afae890-8d7b-42bf-96d6-fa481ee4aeb9
-- !<VFXComponent/97c995f9-f51f-4452-af59-09b54cc89d45>
-  PrefabRemaps:
-    []
-  Name: VFX Component
-  Enabled: true
-  RenderOrder: 999
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  VFXAsset: !<reference> 5587752d-68cd-4695-b1a2-d30d7592a8c1
-  SystemRenderLayerInfoMap:
-    0: !<VFXSystemRenderLayerInfo>
-      RenderLayerInfoMap:
-        render_0_0: !<VFXRenderLayerInfo>
-          Enabled: false
-          RenderLayers: 1
 - !<ScriptComponent/98a3bf32-29d0-41fc-97bc-ab041afef858>
   PrefabRemaps:
     []
@@ -5763,6 +5710,26 @@
   Components:
     - !<own> 81e9de77-dd71-4d3d-9b51-099c2b293207
     - !<own> 8ba0e52a-00c8-457a-b689-378571885ace
+- !<RenderMeshVisual/9c6be058-272b-41a1-ab3d-4985bfa7cbc2>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 11
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Caster
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 0.170000
+  Materials:
+    - !<reference> 556200fc-db90-46fb-8c45-2b13b2e8b7ea
+  Mesh: !<reference> 5dfab5df-e9f1-4806-9b4b-7efdebef0cd1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<Image/9da71c15-19d9-4134-8f6e-17f0bdd154ba>
   PrefabRemaps:
     []
@@ -5946,6 +5913,21 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/a3089e0d-e411-4660-8639-4a0449e58ae9>
+  PrefabRemaps:
+    []
+  Name: Snow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e938693e-9b77-499f-974b-33563ad07e57
+  Components:
+    - !<own> fba93bda-eb4f-4eed-9bc0-1a4dec6aae19
 - !<Image/a49810f9-f886-446d-95ef-b12228d086d3>
   PrefabRemaps:
     []
@@ -6081,7 +6063,6 @@
   Components:
     - !<own> a0c03d0b-e006-4788-b9cd-15982edba5e3
     - !<own> 021951fc-39aa-4fcf-ae5d-9d4e4292c934
-    - !<own> e0c361fd-073a-433a-9931-cb2e3ef0dc47
 - !<SceneObject/a99635e3-cecc-4050-b0d9-3c0940b3ab34>
   PrefabRemaps:
     - 01cc94b9-c8a7-48f4-9948-15d4e86ad093: f3a46ad3-ed0d-4b8f-4cea-f5b55bcac84a
@@ -6115,27 +6096,6 @@
     []
   Components:
     - !<own> 03af2207-bd16-49e4-a8ca-afd92cbe8e39
-- !<AnimationPlayer/ab8db3db-3524-4174-bbb6-0f65bea39c37>
-  PrefabRemaps:
-    []
-  Name: Animation Player
-  Enabled: true
-  Autoplay: true
-  ClipRangeType: Frames
-  AnimationClips:
-    - !<AnimationClip>
-      AnimationAsset: !<reference> 84a39c26-bed6-4743-901a-c285a5039ec9
-      Name: Clip 0
-      Weight: 1.000000
-      PlaybackSpeed: 1.000000
-      Begin: 0.066667
-      End: 5.333333
-      Offset: 0.000000
-      Reversed: false
-      Disabled: false
-      BlendMode: Default
-      ScaleMode: Multiply
-      PlaybackMode: Loop
 - !<ScreenTransform/ae1b201e-15cd-4034-85eb-633c05cb33de>
   PrefabRemaps:
     []
@@ -6723,7 +6683,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 6.500000, y: 5.500000, z: 5.500000}
+    Scale: {x: 7.000000, y: 5.923077, z: 5.923077}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -7787,51 +7747,6 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
-- !<ScriptComponent/dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53>
-  PrefabRemaps:
-    []
-  Name: Bitmoji 3D
-  Enabled: true
-  ScriptAsset: !<reference> 7a3c78c1-4ff4-41a1-9f38-a2b9e6360f03
-  ScriptInputsDefault:
-    bitmojiType: true
-    friendsComponent: true
-    friendIndex: true
-    privacyType: true
-    autoDownload: true
-    renderOrder: true
-    castShadow: true
-    meshQuality: true
-    textureQuality: true
-    autoMention: true
-    printDebug: true
-    printWarnings: true
-    printErrors: true
-    materialHolder: true
-    loaderPrefab: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      bitmojiType: !<float> 0.000000
-      friendsComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
-      friendIndex: 0
-      privacyType: 1
-      autoDownload: true
-      mixamoAnimation: false
-      renderOrder: 0
-      castShadow: true
-      meshQuality: 0.500000
-      textureQuality: 0.500000
-      autoMention: true
-      printDebug: false
-      printWarnings: true
-      printErrors: true
-      materialHolder: !<reference.Material> 40b3147b-e211-4919-9ba0-bedd05c60132
-      loaderPrefab: !<reference.ObjectPrefab> 3642f110-de5e-4fcd-9cf9-bdd9164d8108
-  ScriptTypes:
-    "":
-      {}
 - !<PostEffectVisual/dbec928a-15d3-4916-98af-9b7fafeaac61>
   PrefabRemaps:
     []
@@ -7863,6 +7778,7 @@
   Enabled: true
   ScriptAsset: !<reference> 928e94e9-ed8d-45ba-9e50-95a731b04040
   ScriptInputsDefault:
+    collectableFlareDuration: true
     bonusFlareIntensity: true
     bonusFlareMultiply: true
   ScriptTypesDefault:
@@ -7881,9 +7797,10 @@
       sparkles: !<reference.VFXComponent> 330b5f89-1ef6-4c50-b85d-ff7179917f77
       obstacleDuration: !<float> 1.000000
       bonusDuration: !<float> 2.000000
-      flareDuration: 0.200000
+      collectableFlareDuration: 0.200000
+      bonusFlareDuration: !<float> 1.000000
       frameflareDuration: 0.200000
-      collectableFlareIntensity: !<float> 1.000000
+      collectableFlareIntensity: 0.550000
       bonusFlareIntensity: !<float> 1.000000
       bonusFlareMultiply: 0.350000
       postEffect: !<reference.PostEffectVisual> dbec928a-15d3-4916-98af-9b7fafeaac61
@@ -8037,26 +7954,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ScriptComponent/e0c361fd-073a-433a-9931-cb2e3ef0dc47>
-  PrefabRemaps:
-    []
-  Name: BitmojiAnimationController
-  Enabled: true
-  ScriptAsset: !<reference> 8f8e3b92-f071-43e8-bd20-661683dbb20f
-  ScriptInputsDefault:
-    bitmoji3dComponent: true
-    animationPlayer: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      bitmoji3dComponent: !<reference.ScriptComponent> a0c03d0b-e006-4788-b9cd-15982edba5e3
-      animationPlayer: !<reference.AnimationPlayer> 021951fc-39aa-4fcf-ae5d-9d4e4292c934
-      animationAsset: !<reference.AnimationAsset> e9a997be-b428-4258-8078-0cd145327139
-      heavyAnimationAsset: !<reference.AnimationAsset> e9a997be-b428-4258-8078-0cd145327139
-  ScriptTypes:
-    "":
-      {}
 - !<ScreenTransform/e1688b1a-7eb3-4b97-8356-1e79cf0293f7>
   PrefabRemaps:
     []
@@ -8221,6 +8118,21 @@
     - !<own> 3770df1f-f9ba-455a-9b2e-c2a0eba00127
   Components:
     []
+- !<SceneObject/e938693e-9b77-499f-974b-33563ad07e57>
+  PrefabRemaps:
+    []
+  Name: Particle_Preset_Snow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9c6be058-272b-41a1-ab3d-4985bfa7cbc2
 - !<SceneObject/e9611291-1759-4188-8786-6727356c6386>
   PrefabRemaps:
     []
@@ -8792,26 +8704,6 @@
     []
   Components:
     - !<own> 702ebc00-6b7b-4839-a994-6d2a1f2f5c92
-- !<SceneObject/f8f7bdbf-cad4-462a-9bae-fb204d9ed8e7>
-  PrefabRemaps:
-    - 01ae37d5-9124-4c33-94f0-35e3ccacdb8c: 672859a2-2469-47f5-5761-2d77f845215b
-    - ab8db3db-3524-4174-bbb6-0f65bea39c37: cefd5bed-0bfd-44f5-7137-0924b4ee6c4f
-    - dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53: 8cc8bc63-7d28-49cc-7f60-2265eedd721c
-    - f8f7bdbf-cad4-462a-9bae-fb204d9ed8e7: f4e415e2-ab5a-430e-4dcc-fbd673f563ef
-  Name: Bitmoji 3D
-  Enabled: false
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.800000, y: 0.800000, z: 0.800000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53
-    - !<own> ab8db3db-3524-4174-bbb6-0f65bea39c37
-    - !<own> 01ae37d5-9124-4c33-94f0-35e3ccacdb8c
 - !<ScriptComponent/f9286d29-b4ac-4b03-a0f1-ea18979d4a17>
   PrefabRemaps:
     []
@@ -8913,6 +8805,29 @@
   Components:
     - !<own> 5098dc04-2827-49fb-98fd-3b2795befc6f
     - !<own> f232c269-caa3-4e65-9140-b2aa04c09994
+- !<ScriptComponent/fba93bda-eb4f-4eed-9bc0-1a4dec6aae19>
+  PrefabRemaps:
+    []
+  Name: Simple GPU Particles Controller
+  Enabled: true
+  ScriptAsset: !<reference> 7a6dbb6c-8c91-480f-b18f-229d929f4d6d
+  ScriptInputsDefault:
+    advanced: true
+    minParticles: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      particles: !<reference.RenderMeshVisual[]>
+        - !<reference> 9c6be058-272b-41a1-ab3d-4985bfa7cbc2
+        - !<reference> 41d4a437-f9a6-48fc-b49b-eb327d3dcc9a
+      particlesIntensity: 0.540000
+      advanced: false
+      minParticles: 0
+      maxParticles: 10000
+  ScriptTypes:
+    "":
+      {}
 - !<ColliderComponent/fdf93098-63f9-4a5c-bbc7-50f80934f5a8>
   PrefabRemaps:
     []

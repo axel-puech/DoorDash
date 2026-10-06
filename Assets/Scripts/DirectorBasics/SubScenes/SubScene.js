@@ -43,11 +43,11 @@ function Stop() {}
 // supprimer le flare quand on prend un collectable
 
 // TODO du lundi 5 mais l'aprem
-// neige tombe pas au bout
-// bouton play again + gros
+// neige tombe pas au bout v
+// bouton play again + gros v
 // score frames a allonger + replacer
-// palais un peu stretch
-// camera et timer a ajuster
-// pour les collectavles -> faire partir l'anim de 20%
+// palais un peu stretch v
+// camera et timer a ajuster v
+// pour les collectavles -> faire partir l'anim de 20% v
 // prendre idle animation mixamo
 // grossir les collectables et bonus

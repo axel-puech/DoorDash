@@ -28,11 +28,12 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     bonusDuration: false
+    bonusFlareDuration: false
     bonusFlareIntensity: false
     bonusFlareMultiply: false
     bonusSpeedIncrement: false
+    collectableFlareDuration: false
     collectableFlareIntensity: false
-    flareDuration: false
     flareMaterial: false
     framePoints: false
     frameflareDuration: false
@@ -65,7 +66,8 @@
       sparkles: !<reference.VFXComponent> 00000000-0000-0000-0000-000000000000
       obstacleDuration: !<float> 0.000000
       bonusDuration: !<float> 0.000000
-      flareDuration: !<float> 0.000000
+      collectableFlareDuration: 0.200000
+      bonusFlareDuration: 0.200000
       frameflareDuration: !<float> 0.000000
       collectableFlareIntensity: 0.700000
       bonusFlareIntensity: !<float> 1.000000

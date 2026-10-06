@@ -34,7 +34,7 @@
     "./Assets/**/*.ts",
     "./Packages/**/*.ts",
     "./Cache/TypeScript/Src/Packages/**/*.ts",
-    "./Cache/TypeScript/Src/Assets/Bitmoji Animation 4.lspkg/**/*.ts",
-    "./Cache/TypeScript/Src/Assets/Bitmoji 3D.lsc/**/*.ts"
+    "./Cache/TypeScript/Src/Assets/Bitmoji 3D.lsc/**/*.ts",
+    "./Cache/TypeScript/Src/Assets/Bitmoji Animation 4.lspkg/**/*.ts"
   ]
 }

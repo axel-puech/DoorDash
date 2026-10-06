@@ -22,7 +22,8 @@
 //@ui {"widget":"label", "label":"FX Anim duration"}
 //@input float obstacleDuration
 //@input float bonusDuration
-//@input float flareDuration = 0.2
+//@input float collectableFlareDuration = 0.2
+//@input float bonusFlareDuration = 0.2
 //@input float frameflareDuration = 0.2
 //@ui {"widget":"label", "label":"Flare intensity"}
 //@input float collectableFlareIntensity = 0.7 {"widget":"slider", "min":0, "max":1, "step":0.05}
@@ -55,6 +56,7 @@ let obstacleVignetteActive = false;
 let bonusFlareActive = false;
 let flareIntensity = 0;
 let flareMultiplyFactor = 0;
+let flareHoldDuration = 0;
 
 let framePointsArray = [];
 
@@ -112,6 +114,7 @@ function Stop() {
   bonusFlareActive = false;
   flareIntensity = 0;
   flareMultiplyFactor = 0;
+  flareHoldDuration = 0;
   fadeVignette.Reset();
   fadeSpeedVignette.Reset();
   framePointsArray.forEach((framePoint) => framePoint.Reset());
@@ -221,13 +224,13 @@ function PlayCollectableFlare() {
     SetFlareStrength(script.collectableFlareIntensity, 0);
   }
 
-  RestartFlare();
+  RestartFlare(bonusFlareActive ? script.bonusFlareDuration : script.collectableFlareDuration);
 }
 
 function PlayBonusFlare() {
   bonusFlareActive = true;
   SetFlareStrength(script.bonusFlareIntensity, script.bonusFlareMultiply);
-  RestartFlare();
+  RestartFlare(script.bonusFlareDuration);
 }
 
 function SetFlareStrength(intensity, multiplyFactor) {
@@ -236,8 +239,9 @@ function SetFlareStrength(intensity, multiplyFactor) {
   UpdateFlareMaterial(fadeFlare.GetRatio());
 }
 
-function RestartFlare() {
+function RestartFlare(duration) {
   fadeFlareDelay.event.cancel();
+  flareHoldDuration = duration;
   fadeFlare.GoTo(1);
 }
 
@@ -282,7 +286,7 @@ fadeFlare.Easing = QuadraticOut;
 
 fadeFlare.OnEnd = function (ratio) {
   if (ratio === 1) {
-    fadeFlareDelay.event.reset(script.flareDuration);
+    fadeFlareDelay.event.reset(flareHoldDuration);
   } else if (ratio === 0) {
     fadeFlare.Reset();
     bonusFlareActive = false;

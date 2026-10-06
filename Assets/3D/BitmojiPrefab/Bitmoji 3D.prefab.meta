@@ -19,25 +19,6 @@
     PackagePath: ""
     objects:
       - !<own> f4e415e2-ab5a-430e-4dcc-fbd673f563ef
-- !<ScriptComponent/672859a2-2469-47f5-5761-2d77f845215b>
-  PrefabRemaps:
-    []
-  Name: BitmojiAnimationController
-  Enabled: true
-  ScriptAsset: !<reference> 7a558f6c-e4f7-4c4b-a17e-5b9fb2621793
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      bitmoji3dComponent: !<reference.ScriptComponent> dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53
-      animationPlayer: !<reference.AnimationPlayer> ab8db3db-3524-4174-bbb6-0f65bea39c37
-      animationAsset: !<reference.AnimationAsset> 84a39c26-bed6-4743-901a-c285a5039ec9
-      heavyAnimationAsset: !<reference.AnimationAsset> 2ec7cc81-e0d0-4426-96a5-d0e341badfcf
-  ScriptTypes:
-    "":
-      {}
 - !<ScriptComponent/8cc8bc63-7d28-49cc-7f60-2265eedd721c>
   PrefabRemaps:
     []
@@ -50,6 +31,7 @@
     friendIndex: true
     privacyType: true
     autoDownload: true
+    mixamoAnimation: true
     renderOrder: true
     castShadow: true
     meshQuality: true
@@ -69,7 +51,7 @@
       friendIndex: 0
       privacyType: 1
       autoDownload: true
-      mixamoAnimation: false
+      mixamoAnimation: true
       renderOrder: 0
       castShadow: true
       meshQuality: 0.500000
@@ -83,7 +65,7 @@
   ScriptTypes:
     "":
       {}
-- !<AnimationPlayer/cefd5bed-0bfd-44f5-7137-0924b4ee6c4f>
+- !<AnimationPlayer/a3bf10c7-c569-4fa4-bb4b-1354f4ba5596>
   PrefabRemaps:
     []
   Name: Animation Player
@@ -92,12 +74,12 @@
   ClipRangeType: Frames
   AnimationClips:
     - !<AnimationClip>
-      AnimationAsset: !<reference> 84a39c26-bed6-4743-901a-c285a5039ec9
-      Name: Clip 0
+      AnimationAsset: !<reference> 9bb85f4e-ac71-4d8c-9a50-9a89dce5cc38
+      Name: Layer0
       Weight: 1.000000
       PlaybackSpeed: 1.000000
       Begin: 0.000000
-      End: 5.466667
+      End: 6.000000
       Offset: 0.000000
       Reversed: false
       Disabled: false
@@ -119,5 +101,4 @@
     []
   Components:
     - !<own> 8cc8bc63-7d28-49cc-7f60-2265eedd721c
-    - !<own> cefd5bed-0bfd-44f5-7137-0924b4ee6c4f
-    - !<own> 672859a2-2469-47f5-5761-2d77f845215b
+    - !<own> a3bf10c7-c569-4fa4-bb4b-1354f4ba5596

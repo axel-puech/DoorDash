@@ -5,25 +5,27 @@
   LazyLoading: false
   RetainAssets: true
   PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/672859a2-2469-47f5-a89e-d28807badea4>
+- !<AnimationPlayer/74e466d8-e710-4daa-b90f-c8437256d376>
   PrefabRemaps:
     []
-  Name: BitmojiAnimationController
+  Name: Animation Player
   Enabled: true
-  ScriptAsset: !<reference> 7a558f6c-e4f7-4c4b-a17e-5b9fb2621793
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      bitmoji3dComponent: !<reference.ScriptComponent> dbdccc2b-49e7-4d0e-8c1a-fb1ffee96c53
-      animationPlayer: !<reference.AnimationPlayer> ab8db3db-3524-4174-bbb6-0f65bea39c37
-      animationAsset: !<reference.AnimationAsset> 84a39c26-bed6-4743-901a-c285a5039ec9
-      heavyAnimationAsset: !<reference.AnimationAsset> 2ec7cc81-e0d0-4426-96a5-d0e341badfcf
-  ScriptTypes:
-    "":
-      {}
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 9bb85f4e-ac71-4d8c-9a50-9a89dce5cc38
+      Name: Layer0
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 6.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
 - !<ScriptComponent/8cc8bc63-7d28-49cc-809f-dd9a11228de3>
   PrefabRemaps:
     []
@@ -36,6 +38,7 @@
     friendIndex: true
     privacyType: true
     autoDownload: true
+    mixamoAnimation: true
     renderOrder: true
     castShadow: true
     meshQuality: true
@@ -55,7 +58,7 @@
       friendIndex: 0
       privacyType: 1
       autoDownload: true
-      mixamoAnimation: false
+      mixamoAnimation: true
       renderOrder: 0
       castShadow: true
       meshQuality: 0.500000
@@ -69,32 +72,10 @@
   ScriptTypes:
     "":
       {}
-- !<AnimationPlayer/cefd5bed-0bfd-44f5-8ec8-f6db4b1193b0>
-  PrefabRemaps:
-    []
-  Name: Animation Player
-  Enabled: true
-  Autoplay: true
-  ClipRangeType: Frames
-  AnimationClips:
-    - !<AnimationClip>
-      AnimationAsset: !<reference> 84a39c26-bed6-4743-901a-c285a5039ec9
-      Name: Clip 0
-      Weight: 1.000000
-      PlaybackSpeed: 1.000000
-      Begin: 0.000000
-      End: 5.466667
-      Offset: 0.000000
-      Reversed: false
-      Disabled: false
-      BlendMode: Default
-      ScaleMode: Multiply
-      PlaybackMode: Loop
 - !<SceneObject/f4e415e2-ab5a-430e-b233-04298c0a9c10>
   PrefabRemaps:
-    - 672859a2-2469-47f5-a89e-d28807badea4: 672859a2-2469-47f5-5761-2d77f845215b
+    - 74e466d8-e710-4daa-b90f-c8437256d376: a3bf10c7-c569-4fa4-bb4b-1354f4ba5596
     - 8cc8bc63-7d28-49cc-809f-dd9a11228de3: 8cc8bc63-7d28-49cc-7f60-2265eedd721c
-    - cefd5bed-0bfd-44f5-8ec8-f6db4b1193b0: cefd5bed-0bfd-44f5-7137-0924b4ee6c4f
     - f4e415e2-ab5a-430e-b233-04298c0a9c10: f4e415e2-ab5a-430e-4dcc-fbd673f563ef
   Name: Bitmoji 3D
   Enabled: true
@@ -108,5 +89,4 @@
     []
   Components:
     - !<own> 8cc8bc63-7d28-49cc-809f-dd9a11228de3
-    - !<own> cefd5bed-0bfd-44f5-8ec8-f6db4b1193b0
-    - !<own> 672859a2-2469-47f5-a89e-d28807badea4
+    - !<own> 74e466d8-e710-4daa-b90f-c8437256d376
