@@ -49,5 +49,5 @@ function Stop() {}
 // palais un peu stretch v
 // camera et timer a ajuster v
 // pour les collectavles -> faire partir l'anim de 20% v
-// prendre idle animation mixamo
-// grossir les collectables et bonus
+// prendre idle animation mixamo v
+// grossir les collectables et bonus v

@@ -1,11 +1,11 @@
-- !<ObjectPrefab/80bc4a6e-f653-47a0-8821-3482d02bcd21>
+- !<ObjectPrefab/906c4d6b-e8be-417c-81e7-99e4239ec02d>
   PackagePath: ""
   objects:
-    - !<own> 42427bc5-1918-4b46-953b-0fd06a9f7cae
+    - !<own> 21215bf2-ee22-4182-af1d-6dc5acf1bdc9
   LazyLoading: false
   RetainAssets: true
   PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
-- !<RenderMeshVisual/2f10363c-dcd7-43c0-9005-93de9865a55c>
+- !<RenderMeshVisual/1ec8a7cd-cf07-487a-adbd-3ab44d48c9ad>
   PrefabRemaps:
     []
   Name: component_0
@@ -19,47 +19,13 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> d6780f14-0f62-4d85-90c3-a8f28116d021
-  Mesh: !<reference> 1c5f7f6f-8720-4aff-9874-d0a35b029633
+  Mesh: !<reference> 87d88a86-bb96-4512-b576-b6fe25103db1
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/42427bc5-1918-4b46-953b-0fd06a9f7cae>
-  PrefabRemaps:
-    - 2f10363c-dcd7-43c0-9005-93de9865a55c: 2f10363c-dcd7-43c0-6ffa-6c21679a5aa3
-    - 42427bc5-1918-4b46-953b-0fd06a9f7cae: 42427bc5-1918-4b46-6ac4-f02f95608351
-    - 69c597e2-6269-4de2-9dc9-8407d57faa3f: 69c597e2-6269-4de2-6236-7bf82a8055c0
-    - a576b583-6bcf-4eb6-a8c6-7632e2667426: a576b583-6bcf-4eb6-5739-89cd1d998bd9
-    - f5a0c8b4-e981-49ad-9b9d-069c9d48585e: f5a0c8b4-e981-49ad-6462-f96362b7a7a1
-  Name: Immeuble_02_Balcon_3etages
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 69c597e2-6269-4de2-9dc9-8407d57faa3f
-  Components:
-    - !<own> a576b583-6bcf-4eb6-a8c6-7632e2667426
-- !<SceneObject/69c597e2-6269-4de2-9dc9-8407d57faa3f>
-  PrefabRemaps:
-    []
-  Name: Ctrl_Immeuble_02_Balcon_3etages
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> f5a0c8b4-e981-49ad-9b9d-069c9d48585e
-  Components:
-    []
-- !<ScriptComponent/a576b583-6bcf-4eb6-a8c6-7632e2667426>
+- !<ScriptComponent/207ff8fe-86c9-45fe-a316-7fc8abf89f18>
   PrefabRemaps:
     []
   Name: ObjectsSpawned
@@ -95,10 +61,29 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/f5a0c8b4-e981-49ad-9b9d-069c9d48585e>
+- !<SceneObject/21215bf2-ee22-4182-af1d-6dc5acf1bdc9>
+  PrefabRemaps:
+    - 1ec8a7cd-cf07-487a-adbd-3ab44d48c9ad: 1ec8a7cd-cf07-487a-5242-c54bb2b73652
+    - 207ff8fe-86c9-45fe-a316-7fc8abf89f18: 207ff8fe-86c9-45fe-5ce9-8037540760e7
+    - 21215bf2-ee22-4182-af1d-6dc5acf1bdc9: 21215bf2-ee22-4182-50e2-923a530e4236
+    - 23d3c355-ddf9-4bff-9047-6608977659e5: 23d3c355-ddf9-4bff-6fb8-99f76889a61a
+    - b313b939-b3b6-4c0c-84f5-1b0ad3a01e53: b313b939-b3b6-4c0c-7b0a-e4f52c5fe1ac
+  Name: Immeuble_02_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b313b939-b3b6-4c0c-84f5-1b0ad3a01e53
+  Components:
+    - !<own> 207ff8fe-86c9-45fe-a316-7fc8abf89f18
+- !<SceneObject/23d3c355-ddf9-4bff-9047-6608977659e5>
   PrefabRemaps:
     []
-  Name: Immeuble_02_Balcon_3etages
+  Name: Immeuble_02_3etages
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -109,4 +94,19 @@
   Children:
     []
   Components:
-    - !<own> 2f10363c-dcd7-43c0-9005-93de9865a55c
+    - !<own> 1ec8a7cd-cf07-487a-adbd-3ab44d48c9ad
+- !<SceneObject/b313b939-b3b6-4c0c-84f5-1b0ad3a01e53>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Immeuble_02_3etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 180.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 23d3c355-ddf9-4bff-9047-6608977659e5
+  Components:
+    []

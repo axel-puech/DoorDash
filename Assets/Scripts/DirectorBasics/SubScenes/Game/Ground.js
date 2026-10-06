@@ -23,6 +23,8 @@ let speedIncrement = 1;
 
 //________Listener________//
 let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
+let listenerOnStartSpeed = script.subScene.CreateListener("OnStartSpeed", OnStartSpeed, function () {});
+
 let listenerStopRun = script.subScene.CreateListener("OnStopRun", OnStopRun, function () {});
 
 let listenerOnSpeedChange = script.subScene.CreateListener("OnSpeedChange", function (eventData) {
@@ -46,6 +48,10 @@ function Stop() {}
 //___________________________Functions__________________________//
 
 function OnStartRun() {
+  // animFadeSpeedGround.GoTo(1);
+}
+
+function OnStartSpeed() {
   animFadeSpeedGround.GoTo(1);
 }
 
@@ -62,5 +68,6 @@ let animFadeSpeedGround = new Animation(
   RepeatMode.None,
 );
 function UpdateSpeedGround(ratio) {
+  global.SetSpeed(global.GetDefaultSpeed() * ratio);
   currentSpeed = global.GetDefaultSpeed() * ratio;
 }

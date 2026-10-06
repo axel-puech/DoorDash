@@ -1,7 +1,3 @@
-// Bonus : Zoom blur
-// bonus lut glowy
-// systeme libre
-
 //@input SceneObject parent
 //@input int beforeStartDelay
 //@input Asset.Material[] introMaterials
@@ -10,6 +6,11 @@
 // @input SceneObject[] countdownGroup
 //@input float scaleFactor
 //@input float changeNumberDelay
+
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"Start animation bitmoji"}
+//@input SceneObject parentBitmoji
+//@input vec3 offsetPositionBitmoji
 
 //_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
@@ -25,9 +26,12 @@ var timePassed = 0;
 var isCountingDown = false;
 var countdownStarted = false;
 
+const transformBitmoji = script.parentBitmoji.getTransform();
+
 //________Caller________//
 const endIntroCaller = script.subScene.CreateCaller("OnEndIntro");
 const startCountdown = script.subScene.CreateCaller("OnStartCountdown");
+const startSpeedCaller = script.subScene.CreateCaller("OnStartSpeed");
 
 //________Listener________//
 
@@ -72,9 +76,11 @@ function Update() {
       if (currentNumberDisplayed === sceneObjectsArray.length - 1) {
         // calling a bit before to have obstacles spawn earlier
         endIntroCaller.Call();
+        translateAnimInit.GoTo(1);
       }
     } else {
       isCountingDown = false;
+      startSpeedCaller.Call();
     }
     currentNumberDisplayed += 1;
   }
@@ -95,6 +101,8 @@ function Stop() {
   timePassed = 0;
   isCountingDown = false;
   countdownStarted = false;
+
+  translateAnimInit.Reset();
 }
 //___________________________Functions__________________________//
 
@@ -124,6 +132,20 @@ const fadeWhiteScreen = new Animation(script.getSceneObject(), script.fadeDurati
   script.whiteScreenMaterial.mainPass.alphaRatio = ratio;
 });
 
+var basePos = new vec3(0, 0, 0);
+var offsetPosition = new vec3(
+  basePos.x + script.offsetPositionBitmoji.x,
+  basePos.y + script.offsetPositionBitmoji.y,
+  basePos.z + script.offsetPositionBitmoji.z,
+);
+
+const translateAnimInit = new Animation(script.getSceneObject(), 1.5, (ratio) => {
+  var positionUpdate = vec3.lerp(basePos, offsetPosition, 1 - ratio);
+  transformBitmoji.setLocalPosition(positionUpdate);
+});
+
+translateAnimInit.Easing = QuadraticInOut;
+
 //___________________________Classes_________________________//
 
 class NumberElement {
@@ -147,7 +169,7 @@ class NumberElement {
       this._obj.getComponent("Component.Image").mainPass.baseColor = new vec4(1, 1, 1, ratio);
     });
 
-    this.fadeOutAnim = new Animation(script.getSceneObject(), 0.2, (ratio) => {
+    this.fadeOutAnim = new Animation(script.getSceneObject(), 0.4, (ratio) => {
       this._obj.getComponent("Component.Image").mainPass.baseColor = new vec4(1, 1, 1, ratio);
     });
 

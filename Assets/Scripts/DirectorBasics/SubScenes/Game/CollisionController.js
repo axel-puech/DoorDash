@@ -112,6 +112,8 @@ function OnLateStart() {
 function Stop() {
   fadeFlare.Reset();
   bonusFlareActive = false;
+  speedVignetteActive = false;
+  obstacleVignetteActive = false;
   flareIntensity = 0;
   flareMultiplyFactor = 0;
   flareHoldDuration = 0;
@@ -138,6 +140,12 @@ function OnCollide(e) {
     print(
       "Collide an object that should be collided. The object must contain the 'ObjectsSpawned' script. " + nameCollider,
     );
+    return;
+  }
+
+  // The speed bonus also grants immunity to obstacles for its full duration.
+  // Ignore the collision before playing the hit sound or removing the obstacle.
+  if (speedVignetteActive && scriptObj.GetTypeSpawn() === "obstacle") {
     return;
   }
 

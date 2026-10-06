@@ -32,7 +32,9 @@
     countdownGroup: false
     fadeDuration: false
     introMaterials: false
+    offsetPositionBitmoji: false
     parent: false
+    parentBitmoji: false
     scaleFactor: false
     whiteScreenMaterial: false
   ScriptTypesHidden:
@@ -54,6 +56,8 @@
         []
       scaleFactor: !<float> 0.000000
       changeNumberDelay: !<float> 0.000000
+      parentBitmoji: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      offsetPositionBitmoji: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
   ScriptTypes:
     -
       {}

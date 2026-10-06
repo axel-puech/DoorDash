@@ -1,43 +1,28 @@
-- !<AssetImportMetadata/2b961b41-b279-4bd1-bcba-206be2b2d243>
+- !<AssetImportMetadata/90666eff-bc38-418d-85f8-310723773267>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 40da3886-3142-4f4d-b232-ee9a1a25e2b8
+    ObjectPrefab: !<reference> bc7e42ef-bc6f-4465-b883-39d7f56147fe
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 40da3886-3142-4f4d-b232-ee9a1a25e2b8
+  PrimaryAsset: !<reference> bc7e42ef-bc6f-4465-b883-39d7f56147fe
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    ObjectPrefab: !<own> 15df67c0-5b41-4ea9-92d6-dd86ade8b9a1
+    ObjectPrefab: !<own> 4d10a314-7608-4756-8b39-2a16b15f0a77
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefabAssetData/15df67c0-5b41-4ea9-92d6-dd86ade8b9a1>
-  Prototype: !<ObjectOwner/f7b05359-5202-45a5-a1d0-486bc43ffcbd>
+- !<ObjectPrefabAssetData/4d10a314-7608-4756-8b39-2a16b15f0a77>
+  Prototype: !<ObjectOwner/7260451c-1a04-4bf9-9ea9-847d26caf09d>
     PackagePath: ""
     objects:
-      - !<own> 1a74982d-0c5e-4f31-66d3-d1bad3a7f48b
-- !<SceneObject/1a74982d-0c5e-4f31-66d3-d1bad3a7f48b>
+      - !<own> b3e2b9fa-c566-45a9-425a-24197f7f0335
+- !<SceneObject/5085de52-b146-45a9-5b7a-1792d730bfae>
   PrefabRemaps:
     []
-  Name: Immeuble_01_2etages
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 388f13ae-4a97-4441-5bfa-ea40dc6d484e
-  Components:
-    - !<own> 79abf6c1-82a7-4fc3-737a-492166b49203
-- !<SceneObject/388f13ae-4a97-4441-5bfa-ea40dc6d484e>
-  PrefabRemaps:
-    []
-  Name: Ctrl_Immeuble_01_2etages
+  Name: Ctrl_Immeuble_02_2etages
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -46,13 +31,13 @@
     Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 5202e157-da90-4cd5-5862-6bb32ba0cd80
+    - !<own> 509132df-4cf3-447b-7be4-a3d6657d8455
   Components:
     []
-- !<SceneObject/5202e157-da90-4cd5-5862-6bb32ba0cd80>
+- !<SceneObject/509132df-4cf3-447b-7be4-a3d6657d8455>
   PrefabRemaps:
     []
-  Name: Immeuble_01_2etages
+  Name: Immeuble_02_2etages
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -63,8 +48,23 @@
   Children:
     []
   Components:
-    - !<own> 601f1c3b-64cd-412d-5402-aa5557ca4d61
-- !<RenderMeshVisual/601f1c3b-64cd-412d-5402-aa5557ca4d61>
+    - !<own> d0ad7468-b8cc-4cf6-5f32-4c8950d8edbe
+- !<SceneObject/b3e2b9fa-c566-45a9-425a-24197f7f0335>
+  PrefabRemaps:
+    []
+  Name: Immeuble_02_2etages
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.040000, y: 0.040000, z: 0.040000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5085de52-b146-45a9-5b7a-1792d730bfae
+  Components:
+    - !<own> e2c20352-bf11-4b53-5126-bdfe60cbdb33
+- !<RenderMeshVisual/d0ad7468-b8cc-4cf6-5f32-4c8950d8edbe>
   PrefabRemaps:
     []
   Name: component_0
@@ -77,14 +77,14 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 9c901e16-ad2c-455a-b1ff-02a76f4750d9
-  Mesh: !<reference> 27798316-e906-4548-90cc-6557030b61fa
+    - !<reference> d6780f14-0f62-4d85-90c3-a8f28116d021
+  Mesh: !<reference> f9994f03-d442-4033-97c4-dc613bb25c3e
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<ScriptComponent/79abf6c1-82a7-4fc3-737a-492166b49203>
+- !<ScriptComponent/e2c20352-bf11-4b53-5126-bdfe60cbdb33>
   PrefabRemaps:
     []
   Name: ObjectsSpawned
