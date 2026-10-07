@@ -51,3 +51,14 @@ function Stop() {}
 // pour les collectavles -> faire partir l'anim de 20% v
 // prendre idle animation mixamo v
 // grossir les collectables et bonus v
+
+
+// Vibration quand on prend un obstacle
+// remonter timer et camera
+// hitbox des objets
+// collectables sont strechs
+// assombrir la scene
+// grandir sac a dos
+// grossir ingrédient et palais
+// premiere instance d'objet se fait deux fois
+// sac en derniere frame

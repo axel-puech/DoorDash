@@ -161,7 +161,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: cd5f875e-0e87-41eb-9e83-e5cc1e066ea7
+        id: 0362a461-4df6-4515-8177-7dfe10bec374
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -178,11 +178,11 @@
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
     coefInclinaison:
       typeIdx: 1
-      value: 500.000000
+      value: 800.000000
     materialParams:
       typeIdx: 9
       value:
-        id: 91f7a40e-1f8e-4c97-ba80-349de376f162
+        id: cf22bf2e-06cf-446d-85de-720c6c50aa84
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -200,7 +200,7 @@
     normalTex:
       typeIdx: 9
       value:
-        id: ce2f03dc-c951-4a0e-a503-951b3afc0507
+        id: 65177433-8c7a-49e4-9492-27e4c9782030
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat

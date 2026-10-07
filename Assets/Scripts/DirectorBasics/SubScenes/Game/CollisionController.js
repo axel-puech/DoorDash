@@ -175,9 +175,8 @@ function GetEffectsCollider(typeCollider) {
       break;
 
     case "SpawnObstacle":
-
-    Cage_Hokey
-
+    case "Cage_Hokey":
+    case "Plot_01":
       global.SetSpeed(global.GetDefaultSpeed() * script.obstacleSpeedIncrement);
       callerOnSpeedChange.Call({ speedIncrement: script.obstacleSpeedIncrement });
 

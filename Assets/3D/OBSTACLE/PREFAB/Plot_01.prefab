@@ -1,0 +1,118 @@
+- !<ObjectPrefab/5640eb79-4290-4c6f-9d22-26ea1ef12c97>
+  PackagePath: ""
+  objects:
+    - !<own> 5beb5198-0020-4370-a823-b015a4dea9ef
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/26e9cc17-528d-4e63-b50d-039b0dd2e9ba>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 10
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> d31e6521-33a1-44da-973b-00c90356f535
+  Mesh: !<reference> 68af4acf-556a-4d02-b4b9-3317db1bdc38
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ColliderComponent/2c5fb0f3-b3a6-4822-a14a-6772f4c7a0d0>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: false
+    Size: {x: 30.000000, y: 70.000000, z: 15.000000}
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<ScriptComponent/4a7d37ac-d306-4c94-8877-9b2a522fd437>
+  PrefabRemaps:
+    []
+  Name: ObjectsSpawned
+  Enabled: true
+  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
+  ScriptInputsDefault:
+    effectsObstacle: true
+    effectsBonus: true
+    effectObstacle: true
+    effectObstaclePower: true
+    effectBonus: true
+    effectBonusPower: true
+    offsetBaseY: true
+    scaleZ: true
+    AudioToPlayOnStart: true
+    AudioToPlayOnHit: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      typeSpawn: obstacle
+      effectsObstacle:
+        []
+      effectsBonus:
+        []
+      effectObstacle: ""
+      effectObstaclePower: !<float> 0.000000
+      effectBonus: ""
+      effectBonusPower: !<float> 0.000000
+      offsetBaseY: !<float> 0.000000
+      maximumZBeforeDeletion: !<float> 50.000000
+      scaleZ: !<float> 0.000000
+      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/5beb5198-0020-4370-a823-b015a4dea9ef>
+  PrefabRemaps:
+    - 26e9cc17-528d-4e63-b50d-039b0dd2e9ba: 26e9cc17-528d-4e63-4af2-fc64f22d1645
+    - 2c5fb0f3-b3a6-4822-a14a-6772f4c7a0d0: 2c5fb0f3-b3a6-4822-5eb5-988d0b385f2f
+    - 4a7d37ac-d306-4c94-8877-9b2a522fd437: 4a7d37ac-d306-4c94-7788-64d5add02bc8
+    - 5beb5198-0020-4370-a823-b015a4dea9ef: 5beb5198-0020-4370-57dc-4fea5b215610
+    - ac49b54e-f914-4d2a-a217-298c78fe7fa3: ac49b54e-f914-4d2a-5de8-d6738701805c
+  Name: Plot_01
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.100000, y: 0.100000, z: 0.100000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ac49b54e-f914-4d2a-a217-298c78fe7fa3
+  Components:
+    - !<own> 2c5fb0f3-b3a6-4822-a14a-6772f4c7a0d0
+    - !<own> 4a7d37ac-d306-4c94-8877-9b2a522fd437
+- !<SceneObject/ac49b54e-f914-4d2a-a217-298c78fe7fa3>
+  PrefabRemaps:
+    []
+  Name: Plot
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 60.000000, y: 60.000004, z: 60.000004}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 26e9cc17-528d-4e63-b50d-039b0dd2e9ba

@@ -1,20 +1,38 @@
-- !<AssetImportMetadata/38b9ed63-4270-4c05-ba2b-5fe4e25a8c32>
+- !<AssetImportMetadata/5d1448d5-c9f1-4dd0-acd0-ebf92ddf9296>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> d46beb88-7a62-40ca-acd9-7e56efed253d
+    ObjectPrefab: !<reference> d4cda36d-9dea-41cd-8ac3-96db6b192107
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> d46beb88-7a62-40ca-acd9-7e56efed253d
+  PrimaryAsset: !<reference> d4cda36d-9dea-41cd-8ac3-96db6b192107
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    ObjectPrefab: !<own> 6bb914e0-0ec4-41b8-ab66-0fdd9f9038d4
+    ObjectPrefab: !<own> 99343668-5e23-4095-a41e-d4add7a35d0e
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/3a93123f-d00c-420a-5f56-739aaee0f08c>
+- !<ColliderComponent/1fd4091c-eb21-4e0f-62c4-d8a5e61c42ae>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: false
+    Size: {x: 40.000000, y: 70.000000, z: 15.000000}
+  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<ScriptComponent/68f4d0cc-664b-4298-7c56-ffa23aef3e7c>
   PrefabRemaps:
     []
   Name: ObjectsSpawned
@@ -34,7 +52,7 @@
     {}
   ScriptInputs:
     "":
-      typeSpawn: bonus
+      typeSpawn: obstacle
       effectsObstacle:
         []
       effectsBonus:
@@ -43,7 +61,7 @@
       effectObstaclePower: !<float> 0.000000
       effectBonus: ""
       effectBonusPower: !<float> 0.000000
-      offsetBaseY: !<float> 3.000000
+      offsetBaseY: 1.300000
       maximumZBeforeDeletion: !<float> 50.000000
       scaleZ: !<float> 0.000000
       AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
@@ -51,49 +69,31 @@
   ScriptTypes:
     "":
       {}
-- !<ColliderComponent/5489cbf0-1d1f-4722-4c29-44eab74ffd52>
+- !<SceneObject/729825b3-b7c3-4ad2-7386-fd5843fa8375>
   PrefabRemaps:
     []
-  Name: Physics Collider
-  Enabled: true
-  Shape: !<Sphere>
-    FitVisual: false
-    Radius: 1.500000
-  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-- !<SceneObject/591d1aca-766f-4bc6-5020-e061d61e2e70>
-  PrefabRemaps:
-    []
-  Name: Noodles
+  Name: Cage_Hokey
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    Scale: {x: 0.100000, y: 0.100000, z: 0.100000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 8e671d89-52c8-46a2-7b2f-eb45c8e30ed1
+    - !<own> f15abae4-6669-4f85-7ebf-4dacb7fef6cd
   Components:
-    - !<own> 3a93123f-d00c-420a-5f56-739aaee0f08c
-    - !<own> 5489cbf0-1d1f-4722-4c29-44eab74ffd52
-- !<ObjectPrefabAssetData/6bb914e0-0ec4-41b8-ab66-0fdd9f9038d4>
-  Prototype: !<ObjectOwner/d19a4044-daf1-4d94-b317-b132097966bd>
+    - !<own> 1fd4091c-eb21-4e0f-62c4-d8a5e61c42ae
+    - !<own> 68f4d0cc-664b-4298-7c56-ffa23aef3e7c
+- !<ObjectPrefabAssetData/99343668-5e23-4095-a41e-d4add7a35d0e>
+  Prototype: !<ObjectOwner/10712aec-571b-4a03-a17e-61eb78b503d4>
     PackagePath: ""
     objects:
-      - !<own> 591d1aca-766f-4bc6-5020-e061d61e2e70
-- !<RenderMeshVisual/7cd545a8-9b43-42ea-41f5-2b69c293ee72>
+      - !<own> 729825b3-b7c3-4ad2-7386-fd5843fa8375
+- !<RenderMeshVisual/9c8f5159-2009-48c5-5d1c-9250bc4c131f>
   PrefabRemaps:
     []
-  Name: Render Mesh Visual
+  Name: component_0
   Enabled: true
   RenderOrder: 10
   StretchMode: Stretch
@@ -103,25 +103,25 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 4f3e9502-ed4d-412a-a9f9-d812890ecf66
-  Mesh: !<reference> d07bd12e-50e4-4936-b359-631cd5cad0fb
+    - !<reference> 9bc23aa4-395b-4030-9eca-99585e571518
+  Mesh: !<reference> 837bb0d5-d46d-4cc3-a1a2-5f95607a87e8
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/8e671d89-52c8-46a2-7b2f-eb45c8e30ed1>
+- !<SceneObject/f15abae4-6669-4f85-7ebf-4dacb7fef6cd>
   PrefabRemaps:
     []
-  Name: Plane
+  Name: Cage_hokey
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 60.000000, y: 60.000000, z: 60.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 7cd545a8-9b43-42ea-41f5-2b69c293ee72
+    - !<own> 9c8f5159-2009-48c5-5d1c-9250bc4c131f

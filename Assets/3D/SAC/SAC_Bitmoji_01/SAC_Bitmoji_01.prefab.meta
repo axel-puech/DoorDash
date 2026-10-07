@@ -1,0 +1,122 @@
+- !<AssetImportMetadata/d8954ab6-025c-4b07-964f-f0d79d2c609c>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 7d9512c1-4525-434a-90ea-3e6c5b53a022
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 7d9512c1-4525-434a-90ea-3e6c5b53a022
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> f522107c-8b73-40fd-804d-3e0c861e5b8d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/4cc96750-bf96-4def-6b0a-4f790b64af2c>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> bcd5b23e-e4a8-4e99-be5f-31845e44e7dd
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/79bb8431-e2a3-4222-7f53-4505e4b0fd69>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 1310d9f1-bd97-4c10-aad9-1ef363ca0cc1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/b116c16b-df1d-4cea-5c65-4f670815525a>
+  PrefabRemaps:
+    []
+  Name: Sac
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.331144, z: 0.723134}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4cc96750-bf96-4def-6b0a-4f790b64af2c
+- !<SceneObject/c090e35c-bab1-457b-5198-22825ac4ab04>
+  PrefabRemaps:
+    []
+  Name: Anse
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.331144, z: 0.723134}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 79bb8431-e2a3-4222-7f53-4505e4b0fd69
+- !<SceneObject/d42cec31-de27-4911-6247-a64ee405a806>
+  PrefabRemaps:
+    []
+  Name: SAC_Bitmoji_01
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e1d7afb2-2f3c-4308-59de-6c041f4b41f9
+  Components:
+    []
+- !<SceneObject/e1d7afb2-2f3c-4308-59de-6c041f4b41f9>
+  PrefabRemaps:
+    []
+  Name: Ctrl_Sac
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c090e35c-bab1-457b-5198-22825ac4ab04
+    - !<own> b116c16b-df1d-4cea-5c65-4f670815525a
+  Components:
+    []
+- !<ObjectPrefabAssetData/f522107c-8b73-40fd-804d-3e0c861e5b8d>
+  Prototype: !<ObjectOwner/46cc2fd8-e641-4e36-88d9-424d1e6b5107>
+    PackagePath: ""
+    objects:
+      - !<own> d42cec31-de27-4911-6247-a64ee405a806

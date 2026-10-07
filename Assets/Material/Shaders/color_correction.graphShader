@@ -64,7 +64,6 @@ Nodes:
           String: ""
       PositionX: 817
       PositionY: -573
-      Selected: true
       TemplateID: nodes_inputs_parameters_texture2d_object
       Title1: Texture 2D Object Parameter
       Title2: Screen Texture
@@ -276,6 +275,9 @@ Nodes:
                 vec3 mappedColor = mapColor(ScreenTexture) * BaseColor.rgb;
             	Result = vec4(mix(ScreenTexture, mappedColor, factor), 1.0);
             }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
         Description:
           ClassType1: TEXT
           String: ""
@@ -300,6 +302,8 @@ Nodes:
           ItemList: "Vertex : Pixel"
         Title:
           String: Legacy 512 Texture Mapping
+        UseExternalFile:
+          Variable: false
         factor:
           Connection0:
             NodeLevelID: 44
@@ -484,14 +488,11 @@ Nodes:
       NodeCount: 0
       NodeType: 1
       Ports:
-        CustomRays:
-          Variable: false
         Depth:
           Variable: 1.0
         DepthMode:
           ItemIndex: 0
-          ItemList: |2-
-            		Non-Linear - Normalized [0 to 1] ) :		Linear - Normalized [-1 to 1] :		View Space - Non-Normalized [-near to -far]	
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
         DontFreezeSpec:
           Variable: false
         FinalColor:
@@ -509,18 +510,31 @@ Nodes:
         FinalColor3:
           ClassType1: COLOR
           Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
         Negative:
           Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
         RayDirection:
           Variable: [0.0, 1.0, 0.0]
         RayOrigin:
           Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
         Targets:
           ItemIndex: 0
           ItemList: "1 : 2 : 3 : 4"
         Type:
           ItemIndex: 1
-          ItemList: "3D : Post Effect : Hair"
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
         WorldNormal:
           Variable: [0.0, 1.0, 0.0]
         WorldPosition:
@@ -851,13 +865,4 @@ Nodes:
   PositionY: 0
   TemplateID: nodes_main_subgraph
   Title1: ""
-  ViewOffsetX0: -951
-  ViewOffsetX1: -2175
-  ViewOffsetX2: -2175
-  ViewOffsetX3: -2175
-  ViewOffsetY0: 497
-  ViewOffsetY1: 271
-  ViewOffsetY2: 271
-  ViewOffsetY3: 271
-  ViewScale0: 0.8009999
 SystemID: dev.snap.shaders
