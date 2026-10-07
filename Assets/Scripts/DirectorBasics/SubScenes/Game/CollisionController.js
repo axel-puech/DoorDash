@@ -154,6 +154,7 @@ function OnCollide(e) {
 }
 
 function GetEffectsCollider(typeCollider) {
+  print("type collider: " + typeCollider);
   // collectObject();
   switch (typeCollider) {
     case "Pizza":
@@ -174,6 +175,9 @@ function GetEffectsCollider(typeCollider) {
       break;
 
     case "SpawnObstacle":
+
+    Cage_Hokey
+
       global.SetSpeed(global.GetDefaultSpeed() * script.obstacleSpeedIncrement);
       callerOnSpeedChange.Call({ speedIncrement: script.obstacleSpeedIncrement });
 

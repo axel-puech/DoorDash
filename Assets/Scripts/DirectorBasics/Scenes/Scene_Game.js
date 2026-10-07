@@ -4,7 +4,7 @@
 //@ui {"widget":"separator"}
 //@ui {"widget":"group_start", "label":"Ground"}
 //@input int nbrLanes
-//@input float distanceBetweenLanes  {"widget":"slider", "min":0.1, "max":5, "step":0.1}
+//@input float distanceBetweenLanes  {"widget":"slider", "min":0.1, "max":10, "step":0.1}
 //@input float defaultSpeed
 //@ui {"widget":"group_end"}
 script.scene = new global.Scene(script, script.subScenes);
