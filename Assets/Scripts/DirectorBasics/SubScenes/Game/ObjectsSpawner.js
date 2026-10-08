@@ -24,56 +24,19 @@
 //@input int prefabType {"widget":"combobox","values":[{"label":"Order","value":0},{"label":"Random","value":1}]}
 //@ui {"widget":"group_end"}
 
+//_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
+script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
-
-//////////////////
-/////// Listeners/Callers
-//////////////////
-let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
-let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
-let listenerStartSpeed = script.subScene.CreateListener("OnStartSpeed", OnStartSpeed, function () {});
-
-function OnEndIntro() {
-  if (hasSpawnedFirstRow || !canSpawn) {
-    return;
-  }
-
-  hasSpawnedFirstRow = true;
-  OnInstantiateElement();
-}
-
-function OnStartSpeed() {
-  if (hasStartedSpawnLoop || !canSpawn) {
-    return;
-  }
-
-  hasStartedSpawnLoop = true;
-  StartInstantiation();
-}
-
-//////////////////
-/////// Variables
-//////////////////
+//__________________________Variables_____________________________//
 let pools = [];
-
-global.GetObjectPoolById = function (id) {
-  if (pools.lenght >= id) {
-    print("ERROR : wrong id " + id);
-  }
-  return pools[id];
-};
-
 let hasStartedInstantiation = false;
 let canSpawn = false;
 let hasSpawnedFirstRow = false;
 let hasStartedSpawnLoop = false;
 
-//////////////////
-/////// INIT
-//////////////////
 if (script.objectPrefabs.length != script.objectProbabilities.length) {
   print("ERROR : the objectPrefabs and the objectProbabilities array must have the same length");
 }
@@ -89,7 +52,14 @@ for (let i = 0; i < script.objectPrefabs.length; i++) {
   );
   pools.push(pool);
 }
+//________Caller________//
+//________Listener________//
+let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
+let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
+let listenerStartSpeed = script.subScene.CreateListener("OnStartSpeed", OnStartSpeed, function () {});
+//________DelayEvent________//
 
+//_________________________Director_Functions_____________________//
 function Start() {
   hasStartedInstantiation = false;
   hasSpawnedFirstRow = false;
@@ -97,6 +67,20 @@ function Start() {
 
   ClearObjects();
 }
+function OnLateStart() {}
+function Update() {}
+function Stop() {
+  canSpawn = false;
+  ClearObjects();
+}
+
+//___________________________Functions__________________________//
+global.GetObjectPoolById = function (id) {
+  if (pools.lenght >= id) {
+    print("ERROR : wrong id " + id);
+  }
+  return pools[id];
+};
 
 function OnStartRun() {
   if (hasStartedInstantiation) {
@@ -116,16 +100,24 @@ function OnStartRun() {
   delayedEvent.reset(script.delayFirstSpawn);
 }
 
-function Stop() {
-  canSpawn = false;
-  ClearObjects();
+function OnEndIntro() {
+  if (hasSpawnedFirstRow || !canSpawn) {
+    return;
+  }
+
+  hasSpawnedFirstRow = true;
+  OnInstantiateElement();
 }
 
-function Update() {}
+function OnStartSpeed() {
+  if (hasStartedSpawnLoop || !canSpawn) {
+    return;
+  }
 
-//////////////////
-/////// Instantiation
-//////////////////
+  hasStartedSpawnLoop = true;
+  StartInstantiation();
+}
+
 function StartInstantiation() {
   let delayedEvent = script.createEvent("DelayedCallbackEvent");
   delayedEvent.bind(function (eventData) {
@@ -205,9 +197,6 @@ function SetRandomPosition(element, forbiddenLane) {
   return randomLane;
 }
 
-//////////////////
-/////// Other
-//////////////////
 function ClearObjects() {
   if (script.poolParent == null || script.poolParent == undefined) {
     return;
@@ -229,9 +218,6 @@ function ClearObjects() {
 //   }
 // }
 
-//////////////////
-/////// Helper
-//////////////////
 /* minInt = minimum integer
  * maxInt = maximum integer
  * forbiddenInt = value that can't be picked
@@ -248,3 +234,5 @@ function RandomInteger(minInt, maxInt, forbidenInt) {
     return randInt;
   }
 }
+
+//___________________________Animations_________________________//

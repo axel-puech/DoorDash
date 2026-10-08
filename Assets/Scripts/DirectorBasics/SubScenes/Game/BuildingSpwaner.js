@@ -22,29 +22,13 @@
 //@input int prefabType {"widget":"combobox","values":[{"label":"Order","value":0},{"label":"Random","value":1}]}
 //@input float initialSpawnFrontZ
 
+//_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
+script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
-
-//////////////////
-/////// Public methods
-//////////////////
-global.GetBuildingPoolById = function (id) {
-  if (pools.length >= id) {
-    print("ERROR : wrong id " + id);
-  }
-  return pools[id];
-};
-
-//////////////////
-/////// Listeners/Callers
-//////////////////
-let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
-
-//////////////////
-/////// Variables
-//////////////////
+//__________________________Variables_____________________________//
 let pools = [];
 
 let hasStartedInstantiation = false;
@@ -54,11 +38,12 @@ let lastBuildingObjsRight = null;
 let finishedInitialSpawn = false;
 
 const poolOffsetZ = script.poolParent.getTransform().getWorldPosition().z;
+//________Caller________//
+//________Listener________//
+let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
+//________DelayEvent________//
 
-//////////////////
-/////// INIT
-//////////////////
-
+//_________________________Director_Functions_____________________//
 function Start() {
   hasStartedInstantiation = false;
   finishedInitialSpawn = false;
@@ -82,22 +67,7 @@ function Start() {
 
   ClearBuildings();
 }
-
-function OnStartRun() {
-  if (hasStartedInstantiation) {
-    return;
-  }
-  hasStartedInstantiation = true;
-
-  StartBuildingInstantiationBeginning();
-}
-
-function Stop() {}
-
-//////////////////
-/////// UPDATE
-//////////////////
-
+function OnLateStart() {}
 function Update() {
   if (global.IsGameHasStopped()) {
     return;
@@ -121,6 +91,24 @@ function Update() {
   if (lastPositionLeft.z + Math.abs(poolOffsetZ) >= offsetFutureNewBuildingLeft) {
     OnInstantiateElement(lastPositionLeft.z - offsetFutureNewBuilding, true);
   }
+}
+function Stop() {}
+
+//___________________________Functions__________________________//
+global.GetBuildingPoolById = function (id) {
+  if (pools.length >= id) {
+    print("ERROR : wrong id " + id);
+  }
+  return pools[id];
+};
+
+function OnStartRun() {
+  if (hasStartedInstantiation) {
+    return;
+  }
+  hasStartedInstantiation = true;
+
+  StartBuildingInstantiationBeginning();
 }
 
 function GetPositionLastBuilding(isOnLeftSide) {
@@ -150,9 +138,6 @@ function GetSlotsLastBuilding(isOnLeftSide) {
   return slots;
 }
 
-//////////////////
-/////// Start Instantiation
-//////////////////
 //Start instantiation to fill the road with buildings
 function StartBuildingInstantiationBeginning() {
   if (script.offsetBetweenBuildingZ === 0) {
@@ -176,9 +161,6 @@ function StartBuildingInstantiationBeginning() {
   finishedInitialSpawn = true;
 }
 
-//////////////////
-/////// Instantiation
-//////////////////
 function OnInstantiateElement(offsetPositionZ, isOnLeftSide) {
   if (!isSpawning()) {
     return;
@@ -254,9 +236,6 @@ function GetSlotsByElement(element) {
   return slots;
 }
 
-//////////////////
-/////// Other
-//////////////////
 function ClearBuildings() {
   if (script.poolParent == null || script.poolParent == undefined) {
     return;
@@ -271,3 +250,5 @@ function ClearBuildings() {
     scriptToDelete.OnHit(false);
   }
 }
+
+//___________________________Animations_________________________//

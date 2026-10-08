@@ -28,27 +28,23 @@
 //@input float positionPhoneThreshold {"widget":"slider", "min":0, "max":10, "step":0.1, "showIf":"isCharacterFloating", "showIfValue": true}
 //@ui {"widget":"group_end", "showIf":"inputMode", "showIfValue":"TiltPhone"}
 
+//_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
+script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
-
-//////////////////
-/////// Listeners/Callers
-//////////////////
+//__________________________Variables_____________________________//
+let enableHeadMovement = false;
+let isFaceFound = false;
+let timerHeadMvt = 0;
+let timerPhoneMvt = 0;
+//________Caller________//
 let callerGoRight = script.subScene.CreateCaller("OnGoRight");
 let callerGoLeft = script.subScene.CreateCaller("OnGoLeft");
 let callerUserHeadMovement = script.subScene.CreateCaller("OnUserHeadMovement", 0);
+//________Listener________//
 let enableHeadMovementListener = script.subScene.CreateListener("OnEnableHeadMovement", OnEnableHeadMovement);
-
-function OnEnableHeadMovement(toggle) {
-  enableHeadMovement = toggle;
-}
-
-//////////////////
-/////// Variables
-//////////////////
-let enableHeadMovement = false;
 
 let tapEvent = script.createEvent("TapEvent");
 tapEvent.bind(onTapped);
@@ -59,23 +55,15 @@ faceFoundEvent.bind(OnFaceFound);
 let faceLostEvent = script.createEvent("FaceLostEvent");
 faceLostEvent.faceIndex = 0;
 faceLostEvent.bind(OnFaceLost);
-let isFaceFound = false;
+//________DelayEvent________//
 
-let timerHeadMvt = 0;
-let timerPhoneMvt = 0;
-
-//////////////////
-/////// INIT
-//////////////////
-
+//_________________________Director_Functions_____________________//
 function Start() {
   isFaceFound = true;
   timerHeadMvt = 0;
   timerPhoneMvt = 0;
 }
-
-function Stop() {}
-
+function OnLateStart() {}
 function Update() {
   if (!global.IsGameHasStarted()) {
     return;
@@ -91,10 +79,13 @@ function Update() {
     UpdatePhoneMovement();
   }
 }
+function Stop() {}
 
-//////////////////
-/////// Phone Movement
-//////////////////
+//___________________________Functions__________________________//
+function OnEnableHeadMovement(toggle) {
+  enableHeadMovement = toggle;
+}
+
 function UpdatePhoneMovement() {
   //Camera right vector
   let cameraRight = script.gyroTracking.getTransform().right;
@@ -125,9 +116,6 @@ function UpdatePhoneMovement() {
     }
   }
 }
-//////////////////
-/////// HeadMovements
-//////////////////
 function OnFaceFound() {
   isFaceFound = true;
 }
@@ -204,9 +192,6 @@ function CheckHeadPosition() {
   }
 }
 
-//////////////////
-/////// TapOnEdges
-//////////////////
 function onTapped(eventData) {
   if (!(script.inputMode === "TapOnEdges")) {
     return;
@@ -224,3 +209,5 @@ function onTapped(eventData) {
     global.IsGameFrontToBack() ? callerGoRight.Call() : callerGoLeft.Call();
   }
 }
+
+//___________________________Animations_________________________//

@@ -31,15 +31,73 @@
 //@input int startLifeValue {"widget":"slider", "min":0, "max":10, "step":1, "showIf":"hasLifeEnd"}
 //@ui {"widget":"group_end"}
 
+//_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
+script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
 script.subScene.SetUpdate(Update);
+//__________________________Variables_____________________________//
+const textPizza = script.textPizza;
+const textBurger = script.textBurger;
+const textNoodles = script.textNoodles;
 
-//////////////////
-/////// Globals
-//////////////////
-//TIME
+//Timer = the time displayed on the game that can be changed by malus/bonus
+let timer = 0;
+//Actual timer = the real time since the end of start of the run
+let actualTimer = 0;
+
+//point obtained
+let points_pizza = 0;
+let points_burger = 0;
+let points_noodle = 0;
+
+// if the intro ended
+let introEnded = false;
+//________Caller________//
+// true = win, false = loose
+let callerOnStopRun = script.subScene.CreateCaller("OnStopRun", false);
+const enableHeadMovementCaller = script.subScene.CreateCaller("OnEnableHeadMovement", null);
+//________Listener________//
+let listenerOnStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
+let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
+let listenerCollectObject = script.subScene.CreateListener("OnCollectObject", OnCollectObject);
+//________DelayEvent________//
+
+//_________________________Director_Functions_____________________//
+function Start() {
+  timer = 0;
+  distance = 0;
+  actualTimer = 0;
+  points = 0;
+  points_pizza = 0;
+  points_burger = 0;
+  points_noodle = 0;
+  life = script.startLifeValue;
+  script.textTime.text = FormatTime(script.isTimerAscending ? 0 : script.endTimeValue);
+  UpdatePoints(textPizza, points_pizza);
+  UpdatePoints(textBurger, points_burger);
+  UpdatePoints(textNoodles, points_noodle);
+}
+function OnLateStart() {}
+function Update() {
+  if (!global.IsGameHasStarted()) {
+    return;
+  }
+  if (global.IsGameHasStopped()) {
+    return;
+  }
+
+  if (!introEnded) return;
+
+  UpdateTime();
+}
+function Stop() {
+  introEnded = false;
+}
+
+//___________________________Functions__________________________//
+// TIME
 global.GetHasTimeEnd = function () {
   return script.hasTimeEnd;
 };
@@ -59,7 +117,7 @@ global.AddTime = function (timeToAdd) {
   AddTime(timeToAdd);
 };
 
-//DISTANCE
+// DISTANCE
 global.GetHasDistanceEnd = function () {
   return script.hasDistanceEnd;
 };
@@ -70,7 +128,7 @@ global.GetDistance = function () {
   return distance;
 };
 
-//POINT
+// POINT
 global.GetHasPointEnd = function () {
   return script.hasPointEnd;
 };
@@ -87,7 +145,7 @@ global.AddPoints = function (pointToAdd) {
   AddPoints(pointToAdd);
 };
 
-//LIFE
+// LIFE
 global.GetHasLifeEnd = function () {
   return script.hasLifeEnd;
 };
@@ -101,85 +159,13 @@ global.AddLifes = function (lifeToAdd) {
   AddLifes(lifeToAdd);
 };
 
-//////////////////
-/////// Listeners/Callers
-//////////////////
-let listenerOnStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
-let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
+function OnStartRun() {}
 
 function OnEndIntro() {
   introEnded = true;
   print("Start counter");
 }
 
-let listenerCollectObject = script.subScene.CreateListener("OnCollectObject", OnCollectObject);
-
-//Param:
-//true = win
-//false = loose
-let callerOnStopRun = script.subScene.CreateCaller("OnStopRun", false);
-const enableHeadMovementCaller = script.subScene.CreateCaller("OnEnableHeadMovement", null);
-
-//////////////////
-/////// Variables
-//////////////////
-
-const textPizza = script.textPizza;
-const textBurger = script.textBurger;
-const textNoodles = script.textNoodles;
-
-//Timer = the time displayed on the game that can be changed by malus/bonus
-let timer = 0;
-//Actual timer = the real time since the end of start of the run
-let actualTimer = 0;
-
-//point obtained
-let points_pizza = 0;
-let points_burger = 0;
-let points_noodle = 0;
-
-// if the intro ended
-let introEnded = false;
-
-//////////////////
-/////// INIT
-//////////////////
-function Start() {
-  timer = 0;
-  distance = 0;
-  actualTimer = 0;
-  points = 0;
-  points_pizza = 0;
-  points_burger = 0;
-  points_noodle = 0;
-  life = script.startLifeValue;
-  script.textTime.text = FormatTime(script.isTimerAscending ? 0 : script.endTimeValue);
-  UpdatePoints(textPizza, points_pizza);
-  UpdatePoints(textBurger, points_burger);
-  UpdatePoints(textNoodles, points_noodle);
-}
-
-function OnStartRun() {}
-
-function Stop() {
-  introEnded = false;
-}
-
-function Update() {
-  if (!global.IsGameHasStarted()) {
-    return;
-  }
-  if (global.IsGameHasStopped()) {
-    return;
-  }
-
-  if (!introEnded) return;
-
-  UpdateTime();
-}
-//////////////////
-/////// FUNCTION
-//////////////////
 function OnCollectObject(id) {
   if (id === "Pizza") {
     points_pizza += 1;
@@ -193,9 +179,6 @@ function OnCollectObject(id) {
   }
 }
 
-//////////////////
-/////// TIME
-//////////////////
 function UpdateTime() {
   timer += getDeltaTime();
   actualTimer += getDeltaTime();
@@ -234,10 +217,9 @@ function AddTime(timeToAdd) {
   }
 }
 
-//////////////////
-/////// POINTS
-//////////////////
 function UpdatePoints(typeText, typePoints) {
   typeText.text = typePoints.toString();
   // script.textPoint.text = points.toString();
 }
+
+//___________________________Animations_________________________//

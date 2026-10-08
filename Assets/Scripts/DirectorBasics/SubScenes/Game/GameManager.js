@@ -19,14 +19,53 @@
 //@input Asset.Material timeMaterial
 //@input Component.Text textTime
 
+//_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
-script.subScene.OnLateStart = LateStart;
+script.subScene.OnLateStart = OnLateStart;
 script.subScene.OnStop = Stop;
+script.subScene.SetUpdate(Update);
+//__________________________Variables_____________________________//
+let isGameHasStarted = false;
+let isGameHasStopped = false;
+let isGameWon = null;
+//________Caller________//
+let callerStartRun = script.subScene.CreateCaller("OnStartRun");
+//________Listener________//
+let listenerStopRun = script.subScene.CreateListener("OnStopRun", OnStopRun, function () {});
+let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
+let listenerStartCountdown = script.subScene.CreateListener("OnStartCountdown", function () {
+  fadeTimeElements.Reset();
+  fadeTimeElements.GoTo(1);
+});
+//________DelayEvent________//
 
-//////////////////
-/////// Globals
-//////////////////
+//_________________________Director_Functions_____________________//
+function Start() {
+  global.properties.resetScores();
+  isGameHasStarted = false;
+  isGameHasStopped = false;
+  isGameWon = null;
+
+  if (global.properties.firstTime === false) {
+    animFadeBG.JumpTo(1);
+    animFadeBG.GoTo(0);
+  }
+}
+
+function OnLateStart() {
+  if (script.startOnAwake) {
+    // start run only after delay
+    global.StartRun();
+  }
+}
+function Update() {}
+function Stop() {
+  fadeGameUIElements.Reset();
+  fadeTimeElements.Reset();
+}
+
+//___________________________Functions__________________________//
 global.IsGameHasStarted = function () {
   return isGameHasStarted;
 };
@@ -49,53 +88,8 @@ global.IsGameFrontToBack = function () {
   return script.gameDirection === 0;
 };
 
-//////////////////
-/////// Listeners/Callers
-//////////////////
-let callerStartRun = script.subScene.CreateCaller("OnStartRun");
-let listenerStopRun = script.subScene.CreateListener("OnStopRun", OnStopRun, function () {});
-let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
-let listenerStartCountdown = script.subScene.CreateListener("OnStartCountdown", function () {
-  fadeTimeElements.Reset();
-  fadeTimeElements.GoTo(1);
-});
-
 function OnEndIntro() {
   fadeGameUIElements.GoTo(1);
-}
-
-//////////////////
-/////// Variables
-//////////////////
-let isGameHasStarted = false;
-let isGameHasStopped = false;
-let isGameWon = null;
-
-//////////////////
-/////// INIT
-//////////////////
-function Start() {
-  global.properties.resetScores();
-  isGameHasStarted = false;
-  isGameHasStopped = false;
-  isGameWon = null;
-
-  if (global.properties.firstTime === false) {
-    animFadeBG.JumpTo(1);
-    animFadeBG.GoTo(0);
-  }
-}
-
-function LateStart() {
-  if (script.startOnAwake) {
-    // start run only after delay
-    global.StartRun();
-  }
-}
-
-function Stop() {
-  fadeGameUIElements.Reset();
-  fadeTimeElements.Reset();
 }
 
 function OnStopRun(hasWin) {
@@ -106,9 +100,7 @@ function OnStopRun(hasWin) {
   animFadeBG.GoTo(1);
 }
 
-//////////////////
-/////// Animation
-//////////////////
+//___________________________Animations_________________________//
 let animFadeBG = new Animation(script.getSceneObject(), script.durationFade, UpdateFadeBG);
 function UpdateFadeBG(ratio) {
   script.transitionBG.mainPass.baseColor = new vec4(1, 1, 1, ratio);

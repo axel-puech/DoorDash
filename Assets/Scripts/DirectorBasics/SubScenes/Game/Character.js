@@ -10,34 +10,40 @@
 //@input float dampingMovementIfFloating  {"widget":"slider", "min":0.1, "max":1, "step":0.1}
 //@ui {"widget":"group_end"}
 
+//_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
-
-//////////////////
-/////// Listeners/Callers
-//////////////////
-let listenerGoRight = script.subScene.CreateListener("OnGoRight", OnGoRight, function () {});
-let listenerGoLeft = script.subScene.CreateListener("OnGoLeft", OnGoLeft, function () {});
-let callerOnCollider = script.subScene.CreateCaller("OnCollide", 0);
-let listenerUserHeadMovement = script.subScene.CreateListener("OnUserHeadMovement", OnUserHeadMovement, function () {});
-
-//////////////////
-/////// Variables
-//////////////////
+script.subScene.OnLateStart = OnLateStart;
+script.subScene.OnStop = Stop;
+script.subScene.SetUpdate(Update);
+//__________________________Variables_____________________________//
 let characTransform = script.charactedObj.getTransform();
 let characCollider = script.charactedObj.getComponent("Physics.ColliderComponent");
 let currentLane = 0;
 let nextLane = 0;
+//________Caller________//
+let callerOnCollider = script.subScene.CreateCaller("OnCollide", 0);
+//________Listener________//
+let listenerGoRight = script.subScene.CreateListener("OnGoRight", OnGoRight, function () {});
+let listenerGoLeft = script.subScene.CreateListener("OnGoLeft", OnGoLeft, function () {});
+let listenerUserHeadMovement = script.subScene.CreateListener("OnUserHeadMovement", OnUserHeadMovement, function () {});
 
-//////////////////
-/////// INIT
-//////////////////
+characCollider.onOverlapEnter.add(function (e) {
+  callerOnCollider.Call(e);
+});
+//________DelayEvent________//
+
+//_________________________Director_Functions_____________________//
 function Start() {
   currentLane = 0;
   nextLane = 0;
   SetUpDefaultPosition();
 }
+function OnLateStart() {}
+function Update() {}
+function Stop() {}
 
+//___________________________Functions__________________________//
 //Center the character depending on the number of lanes
 function SetUpDefaultPosition() {
   let newPosX = 0;
@@ -50,9 +56,6 @@ function SetUpDefaultPosition() {
   characTransform.setLocalPosition(new vec3(newPosX, currentPos.y, currentPos.z));
 }
 
-//////////////////
-/////// Other
-//////////////////
 function OnGoRight() {
   if (!CanMove("right")) {
     return;
@@ -102,9 +105,11 @@ function OnUserHeadMovement(newPositionX) {
   );
 }
 
-//////////////////
-/////// Animations
-//////////////////
+function Lerp(a, b, t) {
+  return (b - a) * t + a;
+}
+
+//___________________________Animations_________________________//
 let animMoveCharacter = new Animation(
   script.getSceneObject(),
   script.durationToChangeLane,
@@ -132,17 +137,3 @@ animMoveCharacter.OnEnd = function (ratio) {
     currentLane = nextLane;
   }
 };
-
-//////////////////
-/////// Collision
-//////////////////
-characCollider.onOverlapEnter.add(function (e) {
-  callerOnCollider.Call(e);
-});
-
-//////////////////
-/////// Helper
-//////////////////
-function Lerp(a, b, t) {
-  return (b - a) * t + a;
-}
