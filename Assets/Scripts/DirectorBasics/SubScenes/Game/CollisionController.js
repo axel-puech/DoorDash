@@ -38,6 +38,10 @@
 //@input float bonusSpeedIncrement
 //@input float obstacleSpeedIncrement
 //@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"Obstacle Vibration"}
+//@input bool obstacleVibrationEnabled = true
+//@input int obstacleVibrationType = 1 {"widget":"combobox", "values":[{"label":"Taptic Engine", "value":0}, {"label":"Vibration", "value":1}]}
+//@ui {"widget":"separator"}
 //@ui {"widget":"label", "label":"UI animations"}
 //@input vec2 offsetFrame
 
@@ -177,6 +181,7 @@ function GetEffectsCollider(typeCollider) {
     case "SpawnObstacle":
     case "Cage_Hokey":
     case "Plot_01":
+      PlayObstacleVibration();
       global.SetSpeed(global.GetDefaultSpeed() * script.obstacleSpeedIncrement);
       callerOnSpeedChange.Call({ speedIncrement: script.obstacleSpeedIncrement });
 
@@ -227,6 +232,19 @@ function GetEffectsCollider(typeCollider) {
       print("Wrong typeCollider : " + typeCollider);
       return null;
   }
+}
+
+function PlayObstacleVibration() {
+  if (!script.obstacleVibrationEnabled || !global.hapticFeedbackSystem) {
+    return;
+  }
+
+  let hapticType = HapticFeedbackType.Vibration;
+  if (script.obstacleVibrationType === 0) {
+    hapticType = HapticFeedbackType.TapticEngine;
+  }
+
+  global.hapticFeedbackSystem.hapticFeedback(hapticType);
 }
 
 function PlayCollectableFlare() {

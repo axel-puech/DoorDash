@@ -53,12 +53,17 @@ function Stop() {}
 // grossir les collectables et bonus v
 
 
-// Vibration quand on prend un obstacle
+
+// Vibration quand on prend un obstacle : a tester
+
 // remonter timer et camera
 // hitbox des objets
 // collectables sont strechs
 // assombrir la scene
-// grandir sac a dos
+// grandir sac a dos v 
 // grossir ingrédient et palais
-// premiere instance d'objet se fait deux fois
-// sac en derniere frame
+// premiere instance d'objet se fait deux fois v 
+// sac en derniere frame 
+// apparition des batiments plus tot. V
+// animer le sac a dos v
+

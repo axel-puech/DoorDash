@@ -30,6 +30,7 @@
     buildingsPrefabs: false
     buildingsProbabilities: false
     fullBehavior: false
+    initialSpawnFrontZ: false
     instantiateOnStart: false
     maxElements: false
     offsetBetweenBuildingZ: false
@@ -60,6 +61,7 @@
       instantiateOnStart: false
       fullBehavior: 0
       prefabType: 0
+      initialSpawnFrontZ: !<float> 0.000000
   ScriptTypes:
     -
       {}

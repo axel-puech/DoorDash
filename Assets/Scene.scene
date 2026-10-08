@@ -7,6 +7,7 @@
     - !<own> b8b57e1a-5043-47f0-9fbf-1d4a89d24599
     - !<own> b34df1a6-3010-4a98-b60a-cd35ebe0de12
     - !<own> 01e9f6e7-a0cd-4bcb-a238-b812ddf72e8b
+    - !<own> 3c024fc7-6f3f-4c8d-847d-479a9f9409c0
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -130,7 +131,7 @@
   Enabled: true
   Shape: !<Sphere>
     FitVisual: false
-    Radius: 1.500000
+    Radius: 2.000000
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -798,7 +799,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -25.459045, y: 12.187374, z: 26.655075}
+    Position: {x: -19.785904, y: 4.013733, z: 14.913334}
     Rotation: {x: 159.999908, y: -85.906914, z: -179.999924}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -1124,9 +1125,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -2.500000, z: 1.200000}
+    Position: {x: 0.000000, y: -3.500000, z: 1.200000}
     Rotation: {x: -90.000023, y: 180.000000, z: 0.000000}
-    Scale: {x: 3.000000, y: 3.000001, z: 3.000001}
+    Scale: {x: 4.000000, y: 4.000001, z: 4.000001}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> b54ae7a5-a647-4037-b416-6bb209a73f02
@@ -1531,7 +1532,7 @@
   Enabled: true
   Shape: !<Box>
     FitVisual: false
-    Size: {x: 40.000000, y: 70.000000, z: 15.000000}
+    Size: {x: 60.000000, y: 70.000000, z: 15.000000}
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1615,7 +1616,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -2383,7 +2384,7 @@
       parent: !<reference.SceneObject> e79ede26-dd11-4aba-8071-3bdc716a0f9c
       groundObj: !<reference.SceneObject> 3770df1f-f9ba-455a-9b2e-c2a0eba00127
       durationToReachSpeed: !<float> 1.000000
-      speedMultiplier: 1.500000
+      speedMultiplier: !<float> 3.000000
   ScriptTypes:
     "":
       {}
@@ -2451,7 +2452,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    Scale: {x: 5.000000, y: 5.000000, z: 5.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2501,7 +2502,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.325702}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2514,9 +2515,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 20.299999, y: 0.000000, z: -15.852917}
+    Position: {x: 20.299999, y: 0.000000, z: -21.991547}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.650000, y: 10.000000, z: 1.000000}
+    Scale: {x: 0.650000, y: 10.000000, z: 1.158531}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2529,13 +2530,13 @@
   Enabled: true
   ScriptAsset: !<reference> 7dea3518-0042-42dd-a7e8-6888952b0477
   ScriptInputsDefault:
-    {}
+    beforeStartDelay: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       parent: !<reference.SceneObject> 3e6751ad-ee5c-43f9-b783-0751d0f77b8b
-      beforeStartDelay: 2
+      beforeStartDelay: 0
       introMaterials: !<reference.Material[]>
         - !<reference> 430e7e4c-7769-4f0d-95ab-764fdd970f50
         - !<reference> f92ceffd-ac76-45aa-8ab1-611f81041ccf
@@ -2550,7 +2551,7 @@
         - !<reference> 9ff8cc1d-8dc1-4d56-9e7c-ee387b794b9e
         - !<reference> 1e24b745-1f36-442c-8e6b-628ef40b3c6d
       scaleFactor: !<float> 3.000000
-      changeNumberDelay: !<float> 1.000000
+      changeNumberDelay: 0.100000
       parentBitmoji: !<reference.SceneObject> e054ecec-5da6-4f5a-8bf7-6de996ab2b0f
       offsetPositionBitmoji: !<Vec3> {x: 0.000000, y: 0.000000, z: 10.000000}
   ScriptTypes:
@@ -2713,6 +2714,21 @@
     bottom: -10.000000
     right: 2.625000
     top: 10.000000
+- !<SceneObject/3c024fc7-6f3f-4c8d-847d-479a9f9409c0>
+  PrefabRemaps:
+    []
+  Name: AiPreviewAgent Handler
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b69c3e07-3813-4c84-85e8-2d65173e27b0
 - !<SceneObject/3d9a131e-f315-470e-9615-776862e690de>
   PrefabRemaps:
     []
@@ -2885,7 +2901,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.693405, y: 0.000000, z: -0.190749}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -3131,7 +3147,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    Scale: {x: 0.700000, y: 0.700000, z: 0.700000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 359dc57e-16fb-42c7-b937-2eb89a0ae2e4
@@ -3275,7 +3291,7 @@
   Enabled: true
   Shape: !<Sphere>
     FitVisual: false
-    Radius: 1.500000
+    Radius: 2.000000
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4123,7 +4139,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -6005,7 +6021,7 @@
   Enabled: true
   Shape: !<Sphere>
     FitVisual: false
-    Radius: 1.500000
+    Radius: 2.000000
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6110,8 +6126,9 @@
         - !<reference> 37fff58a-25ef-45b0-b192-4440c9595cc5
         - !<reference> 48387711-19af-4493-b99e-17f7839a8441
         - !<reference> 10efa264-e42c-4430-a48c-9693e9e840ab
+        - !<reference> 8c0259a7-89f9-4303-af9f-8b4e052ae36d
       nbrLanes: 3
-      distanceBetweenLanes: !<float> 8.000000
+      distanceBetweenLanes: !<float> 7.000000
       defaultSpeed: 0.300000
   ScriptTypes:
     "":
@@ -6183,7 +6200,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    Scale: {x: 0.700000, y: 0.700000, z: 0.700000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 57d6fdf2-fa0d-4e21-bc63-226d61e66715
@@ -6549,6 +6566,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> b41ccc8c-e3ee-4be5-a2f4-3db5a7473b2a
+    - !<own> d743aa9e-9533-4f7e-b82d-9dfdd2b3543d
     - !<own> 00c92c40-63b4-43f5-92ed-260ff210bd2e
     - !<own> c9910149-d4ff-4399-a0cd-e449328c55de
     - !<own> bb96c9b8-c200-4286-ab00-d5eb409d0bd5
@@ -7101,6 +7119,26 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/8c0259a7-89f9-4303-af9f-8b4e052ae36d>
+  PrefabRemaps:
+    []
+  Name: BackpackManager
+  Enabled: true
+  ScriptAsset: !<reference> 94634087-f6ba-481b-8bcc-deceb1cca4fb
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      parent: !<reference.SceneObject> 9f17dfdc-3ed0-4f1e-9c81-2f52023ac3f3
+      backpack: !<reference.SceneObject> 1b30e9b1-cbc5-4811-8299-cdb914a632e2
+      verticalAmplitude: !<float> 0.000000
+      oscillationFrequency: 1.700000
+      rotationAmplitude: !<float> 8.000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/8c06261f-fc32-405f-883e-526dad2abe22>
   PrefabRemaps:
     []
@@ -7312,7 +7350,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    Scale: {x: 0.700000, y: 0.700000, z: 0.700000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> bcce03bd-1205-43e4-8014-5e22e8ce4d17
@@ -7508,7 +7546,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -7951,7 +7989,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -8736,6 +8774,22 @@
     []
   Components:
     - !<own> a0432035-a752-432c-998c-585ab8e65f9c
+- !<ScriptComponent/b69c3e07-3813-4c84-85e8-2d65173e27b0>
+  PrefabRemaps:
+    []
+  Name: AgentInspectScript
+  Enabled: true
+  ScriptAsset: !<reference> 0b25079c-f5bf-4c6d-96c4-f43b89dfa213
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/b6fe5568-2fe6-484d-83e3-b8890d0f2440>
   PrefabRemaps:
     []
@@ -9604,7 +9658,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.600000, y: 0.600000, z: 0.600000}
+    Scale: {x: 0.700000, y: 0.700000, z: 0.700000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 5f8b06a1-4a4f-42c4-8191-1d1b27b9a057
@@ -10184,6 +10238,21 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/d743aa9e-9533-4f7e-b82d-9dfdd2b3543d>
+  PrefabRemaps:
+    []
+  Name: BackpackManager
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8c0259a7-89f9-4303-af9f-8b4e052ae36d
 - !<SceneObject/d75dfdc3-e37f-4a2f-86d8-cb9437764747>
   PrefabRemaps:
     []
@@ -10240,7 +10309,7 @@
       isCharacterFloating: true
       mvtHeadType: rotationZ
       rotationThreshold: !<float> 20.000000
-      positionThreshold: !<float> 7.000000
+      positionThreshold: 7.500000
       delayBetweenHeadMvts: 0.250000
       multiplierMovementHead: 0.400000
       gyroTracking: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -10489,6 +10558,8 @@
     collectableFlareDuration: true
     bonusFlareIntensity: true
     bonusFlareMultiply: true
+    obstacleVibrationEnabled: true
+    obstacleVibrationType: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -10515,6 +10586,8 @@
       zoomBlur: !<reference.PostEffectVisual> 6ead5900-6701-4fa1-a002-c2e0466d5753
       bonusSpeedIncrement: 1.200000
       obstacleSpeedIncrement: 0.700000
+      obstacleVibrationEnabled: true
+      obstacleVibrationType: 1
       offsetFrame: !<Vec2> {x: 0.100000, y: 0.000000}
   ScriptTypes:
     "":
@@ -11328,6 +11401,7 @@
       instantiateOnStart: false
       fullBehavior: 2
       prefabType: 0
+      initialSpawnFrontZ: !<float> 30.000000
   ScriptTypes:
     "":
       {}
@@ -11938,7 +12012,7 @@
   Enabled: true
   Shape: !<Sphere>
     FitVisual: false
-    Radius: 1.500000
+    Radius: 2.000000
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000

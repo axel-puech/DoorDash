@@ -20,6 +20,7 @@
 //@input bool instantiateOnStart
 //@input int fullBehavior {"widget":"combobox","values":[{"label":"Error","value":0},{"label":"Repick","value":1},{"label":"Increase","value":2}]}
 //@input int prefabType {"widget":"combobox","values":[{"label":"Order","value":0},{"label":"Random","value":1}]}
+//@input float initialSpawnFrontZ
 
 script.subScene = new global.SubScene(script, script.parent);
 script.subScene.OnStart = Start;
@@ -158,14 +159,14 @@ function StartBuildingInstantiationBeginning() {
     return;
   }
 
-  let currentZOffsetRight = 0;
+  let currentZOffsetRight = script.initialSpawnFrontZ;
   while (currentZOffsetRight > poolOffsetZ) {
     OnInstantiateElement(currentZOffsetRight, false);
     let nbrSlotRight = GetSlotsLastBuilding(false);
     currentZOffsetRight -= script.offsetBetweenBuildingZ * nbrSlotRight;
   }
 
-  let currentZOffsetLeft = 0;
+  let currentZOffsetLeft = script.initialSpawnFrontZ;
   while (currentZOffsetLeft > poolOffsetZ) {
     OnInstantiateElement(currentZOffsetLeft, true);
     let nbrSlotLeft = GetSlotsLastBuilding(true);

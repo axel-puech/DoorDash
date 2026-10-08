@@ -33,18 +33,26 @@ script.subScene.SetUpdate(Update);
 /////// Listeners/Callers
 //////////////////
 let listenerStartRun = script.subScene.CreateListener("OnStartRun", OnStartRun, function () {});
-
-
-
 let listenerEndIntro = script.subScene.CreateListener("OnEndIntro", OnEndIntro, function () {});
+let listenerStartSpeed = script.subScene.CreateListener("OnStartSpeed", OnStartSpeed, function () {});
 
 function OnEndIntro() {
+  if (hasSpawnedFirstRow || !canSpawn) {
+    return;
+  }
+
+  hasSpawnedFirstRow = true;
   OnInstantiateElement();
-  StartInstantiation();
-  print("Start instantiation");
 }
 
+function OnStartSpeed() {
+  if (hasStartedSpawnLoop || !canSpawn) {
+    return;
+  }
 
+  hasStartedSpawnLoop = true;
+  StartInstantiation();
+}
 
 //////////////////
 /////// Variables
@@ -60,6 +68,8 @@ global.GetObjectPoolById = function (id) {
 
 let hasStartedInstantiation = false;
 let canSpawn = false;
+let hasSpawnedFirstRow = false;
+let hasStartedSpawnLoop = false;
 
 //////////////////
 /////// INIT
@@ -82,6 +92,8 @@ for (let i = 0; i < script.objectPrefabs.length; i++) {
 
 function Start() {
   hasStartedInstantiation = false;
+  hasSpawnedFirstRow = false;
+  hasStartedSpawnLoop = false;
 
   ClearObjects();
 }

@@ -114,7 +114,7 @@
   Enabled: true
   Shape: !<Sphere>
     FitVisual: false
-    Radius: 1.500000
+    Radius: 2.000000
   Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000

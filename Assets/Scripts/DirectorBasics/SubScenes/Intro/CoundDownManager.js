@@ -79,8 +79,8 @@ function Update() {
         translateAnimInit.GoTo(1);
       }
     } else {
-      isCountingDown = false;
       startSpeedCaller.Call();
+      isCountingDown = false;
     }
     currentNumberDisplayed += 1;
   }

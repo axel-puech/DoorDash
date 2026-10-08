@@ -4,6 +4,7 @@
     - !<own> ba32610c-2b18-4e48-821a-920a99651962
   LazyLoading: false
   RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScriptComponent/12920258-8030-4d47-84f7-ca0cef2616fd>
   PrefabRemaps:
     []
@@ -11,6 +12,8 @@
   Enabled: true
   ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
   ScriptInputsDefault:
+    effectsObstacle: true
+    effectObstaclePower: true
     scaleZ: true
     AudioToPlayOnStart: true
     AudioToPlayOnHit: true
@@ -20,17 +23,14 @@
     "":
       typeSpawn: obstacle
       effectsObstacle:
-        - effect: setLifes
-          effectPower: !<float> -1.000000
-        - effect: setPoints
-          effectPower: !<float> -1.000000
+        []
       effectsBonus:
         - effect: setLifes
           effectPower: !<float> 1.000000
         - effect: setPoints
           effectPower: !<float> 1.000000
       effectObstacle: setTime
-      effectObstaclePower: !<float> 5.000000
+      effectObstaclePower: !<float> 0.000000
       effectBonus: setSpeed
       effectBonusPower: 0.100000
       offsetBaseY: !<float> 2.000000
@@ -43,7 +43,10 @@
       {}
 - !<SceneObject/ba32610c-2b18-4e48-821a-920a99651962>
   PrefabRemaps:
-    []
+    - 12920258-8030-4d47-84f7-ca0cef2616fd: 12920258-8030-4d47-7b08-35f310d9e902
+    - ba32610c-2b18-4e48-821a-920a99651962: ba32610c-2b18-4e48-7de5-6df5669ae69d
+    - c0f50d97-4522-4329-b57d-f8ef4933c106: c0f50d97-4522-4329-4a82-0710b6cc3ef9
+    - c24d3ebd-73bf-48e9-bb34-1b18d81c90ec: c24d3ebd-73bf-48e9-44cb-e4e727e36f13
   Name: SpawnObstacle
   Enabled: true
   Layers: 1

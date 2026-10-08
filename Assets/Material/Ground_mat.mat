@@ -220,5 +220,5 @@
       value: {x: 1.000000, y: 1.000000}
     uv2Scale:
       typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
+      value: {x: 1.000000, y: 2.000000}
   Pass: !<reference> 20d8627e-d647-4b9d-9e30-7a9aabc108fa

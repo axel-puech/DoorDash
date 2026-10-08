@@ -26,6 +26,8 @@
   Enabled: true
   ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
   ScriptInputsDefault:
+    effectsObstacle: true
+    effectObstaclePower: true
     scaleZ: true
     AudioToPlayOnStart: true
     AudioToPlayOnHit: true
@@ -35,17 +37,14 @@
     "":
       typeSpawn: obstacle
       effectsObstacle:
-        - effect: setLifes
-          effectPower: !<float> -1.000000
-        - effect: setPoints
-          effectPower: !<float> -1.000000
+        []
       effectsBonus:
         - effect: setLifes
           effectPower: !<float> 1.000000
         - effect: setPoints
           effectPower: !<float> 1.000000
       effectObstacle: setTime
-      effectObstaclePower: !<float> 5.000000
+      effectObstaclePower: !<float> 0.000000
       effectBonus: setSpeed
       effectBonusPower: 0.100000
       offsetBaseY: !<float> 2.000000

@@ -25,9 +25,48 @@
     - Port_GSplatScale_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Import_N019:
+        typeIdx: 1
+        value: 0.000000
     - Port_Import_N073:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N020:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N023:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input0_N026:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N027:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N028:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input1_N020:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input1_N023:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N026:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N027:
+        typeIdx: 1
+        value: 2.000000
+    - Port_Input1_N028:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input_N024:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input_N029:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
     - Port_LODValue_N001:
         typeIdx: 1
         value: 0.000000
@@ -55,7 +94,19 @@
     - Port_UVCoord_N010:
         typeIdx: 3
         value: {x: 0.000000, y: 0.000000}
+    - Port_Value1_N025:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value2_N025:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N025:
+        typeIdx: 1
+        value: 0.000000
     - Port_Value3_N070:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N025:
         typeIdx: 1
         value: 0.000000
     - Port_Value4_N070:
@@ -64,6 +115,12 @@
     - Port_Value4_N089:
         typeIdx: 1
         value: 0.000000
+    - Port_Value_N027:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value_N030:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
     - Port_WorldNormal_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -73,6 +130,9 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N22:
+        typeIdx: 1
+        value: 0.000000
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -170,10 +230,13 @@
       value: 1.000000
     zFactor:
       typeIdx: 1
-      value: 0.040000
+      value: 0.000000
     zOffset:
       typeIdx: 1
-      value: 39.139996
+      value: 0.000000
+    zOffsetTest:
+      typeIdx: 1
+      value: 0.000000
     zThreshold:
       typeIdx: 1
       value: 1.000000
