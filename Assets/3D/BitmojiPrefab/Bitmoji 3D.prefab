@@ -5,6 +5,62 @@
   LazyLoading: false
   RetainAssets: true
   PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/673b88fa-e339-4b01-bd25-84cc8b8bdd5d>
+  PrefabRemaps:
+    []
+  Name: Bitmoji Face Animator
+  Enabled: true
+  ScriptAsset: !<reference> 75e2605f-b602-4245-b239-233c6089f07a
+  ScriptInputsDefault:
+    mode: true
+    alwaysReturnToIdle: true
+    defaultTransitionLength: true
+    minMaxTime: true
+    duration: true
+    loopSequence: true
+    timestamps: true
+    probAmused: true
+    probAngry: true
+    probConfused: true
+    probCrying: true
+    probCurious: true
+    probHappy: true
+    probIdle: true
+    probLaughing: true
+    probSad: true
+    probScared: true
+    remoteAnimations: true
+    debug: true
+    textComponent: true
+  ScriptTypesDefault:
+    AnimationStateManagerComponent: true
+  ScriptInputs:
+    "":
+      mode: 0
+      defaultAnimation: Happy
+      alwaysReturnToIdle: true
+      defaultTransitionLength: 0.200000
+      minMaxTime: !<Vec2> {x: 0.000000, y: 0.000000}
+      duration: !<float> 10.000000
+      loopSequence: true
+      timestamps:
+        []
+      probAmused: !<float> 1.000000
+      probAngry: !<float> 1.000000
+      probConfused: !<float> 0.000000
+      probCrying: !<float> 0.000000
+      probCurious: !<float> 1.000000
+      probHappy: !<float> 1.000000
+      probIdle: !<float> 1.000000
+      probLaughing: !<float> 1.000000
+      probSad: !<float> 0.000000
+      probScared: !<float> 0.000000
+      remoteAnimations: !<reference.RemoteReferenceAsset> 0d031571-53d0-4343-b75f-797b95958ac2
+      debug: false
+      textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      AnimationStateManagerComponent: !<reference.ScriptAsset> a1ec4f6f-aa2a-406a-9aa2-6b603e952862
 - !<AnimationPlayer/74e466d8-e710-4daa-b90f-c8437256d376>
   PrefabRemaps:
     []
@@ -15,11 +71,11 @@
   AnimationClips:
     - !<AnimationClip>
       AnimationAsset: !<reference> 9bb85f4e-ac71-4d8c-9a50-9a89dce5cc38
-      Name: Layer0
+      Name: Clip 0
       Weight: 1.000000
       PlaybackSpeed: 1.000000
       Begin: 0.000000
-      End: 6.000000
+      End: 5.466667
       Offset: 0.000000
       Reversed: false
       Disabled: false
@@ -74,6 +130,7 @@
       {}
 - !<SceneObject/f4e415e2-ab5a-430e-b233-04298c0a9c10>
   PrefabRemaps:
+    - 673b88fa-e339-4b01-bd25-84cc8b8bdd5d: 59cf2676-a973-4b72-84b9-99a4aecb2753
     - 74e466d8-e710-4daa-b90f-c8437256d376: a3bf10c7-c569-4fa4-bb4b-1354f4ba5596
     - 8cc8bc63-7d28-49cc-809f-dd9a11228de3: 8cc8bc63-7d28-49cc-7f60-2265eedd721c
     - f4e415e2-ab5a-430e-b233-04298c0a9c10: f4e415e2-ab5a-430e-4dcc-fbd673f563ef
@@ -90,3 +147,4 @@
   Components:
     - !<own> 8cc8bc63-7d28-49cc-809f-dd9a11228de3
     - !<own> 74e466d8-e710-4daa-b90f-c8437256d376
+    - !<own> 673b88fa-e339-4b01-bd25-84cc8b8bdd5d

@@ -8,6 +8,7 @@
     - !<own> b34df1a6-3010-4a98-b60a-cd35ebe0de12
     - !<own> 01e9f6e7-a0cd-4bcb-a238-b812ddf72e8b
     - !<own> 3c024fc7-6f3f-4c8d-847d-479a9f9409c0
+    - !<own> 3fc83e3e-0696-429d-9759-01f0286466ff
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -937,14 +938,14 @@
   Enabled: true
   ScriptAsset: !<reference> dc5fb865-cdc9-4208-9245-916066a217c2
   ScriptInputsDefault:
-    {}
+    sceneObjectToDeactivate: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       parent: !<reference.SceneObject> 4cd7f418-5027-4521-8ec8-c496e97932a7
       sceneObjectToDeactivate: !<reference.SceneObject[]>
-        - !<reference> fba74a34-f8a9-4369-a06f-a553b3f9e8dc
+        []
   ScriptTypes:
     "":
       {}
@@ -1219,26 +1220,6 @@
   Enabled: true
   ScreenRegionType: SafeRender
   ResizeWithKeyboard: false
-- !<SceneObject/1d586d13-faf0-464c-93fb-b35bc62ad79e>
-  PrefabRemaps:
-    - 1d586d13-faf0-464c-93fb-b35bc62ad79e: ba32610c-2b18-4e48-7de5-6df5669ae69d
-    - 6b53a6f8-b256-4b5f-8d4f-2d3fa41c06f3: 12920258-8030-4d47-7b08-35f310d9e902
-    - dbdc9c38-cb3f-4220-a971-077308f4482e: c24d3ebd-73bf-48e9-44cb-e4e727e36f13
-    - e022ab56-3446-414b-b035-b5bd056a5465: c0f50d97-4522-4329-4a82-0710b6cc3ef9
-  Name: SpawnObstacle
-  Enabled: false
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 2.000000, y: 2.000000, z: 2.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> e022ab56-3446-414b-b035-b5bd056a5465
-    - !<own> dbdc9c38-cb3f-4220-a971-077308f4482e
-    - !<own> 6b53a6f8-b256-4b5f-8d4f-2d3fa41c06f3
 - !<SceneObject/1d5b5a7b-fc8e-4425-9af9-37181b496b0a>
   PrefabRemaps:
     []
@@ -2640,6 +2621,62 @@
     bottom: -10.000000
     right: 1.125000
     top: 10.000000
+- !<ScriptComponent/397743a6-2996-4ab8-b868-bda62d890d2c>
+  PrefabRemaps:
+    []
+  Name: Bitmoji Face Animator
+  Enabled: true
+  ScriptAsset: !<reference> 75e2605f-b602-4245-b239-233c6089f07a
+  ScriptInputsDefault:
+    mode: true
+    alwaysReturnToIdle: true
+    defaultTransitionLength: true
+    minMaxTime: true
+    duration: true
+    loopSequence: true
+    timestamps: true
+    probAmused: true
+    probAngry: true
+    probConfused: true
+    probCrying: true
+    probCurious: true
+    probHappy: true
+    probIdle: true
+    probLaughing: true
+    probSad: true
+    probScared: true
+    remoteAnimations: true
+    debug: true
+    textComponent: true
+  ScriptTypesDefault:
+    AnimationStateManagerComponent: true
+  ScriptInputs:
+    "":
+      mode: 0
+      defaultAnimation: Happy
+      alwaysReturnToIdle: true
+      defaultTransitionLength: 0.200000
+      minMaxTime: !<Vec2> {x: 0.000000, y: 0.000000}
+      duration: !<float> 10.000000
+      loopSequence: true
+      timestamps:
+        []
+      probAmused: !<float> 1.000000
+      probAngry: !<float> 1.000000
+      probConfused: !<float> 0.000000
+      probCrying: !<float> 0.000000
+      probCurious: !<float> 1.000000
+      probHappy: !<float> 1.000000
+      probIdle: !<float> 1.000000
+      probLaughing: !<float> 1.000000
+      probSad: !<float> 0.000000
+      probScared: !<float> 0.000000
+      remoteAnimations: !<reference.RemoteReferenceAsset> 0d031571-53d0-4343-b75f-797b95958ac2
+      debug: false
+      textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      AnimationStateManagerComponent: !<reference.ScriptAsset> a1ec4f6f-aa2a-406a-9aa2-6b603e952862
 - !<ScriptComponent/3aba9ae2-4c5f-4ef8-9d80-44989d62308d>
   PrefabRemaps:
     []
@@ -2887,6 +2924,21 @@
     - !<own> ee6ff1c5-58e5-4a30-9cb5-a33f3a838040
   Components:
     []
+- !<SceneObject/3fc83e3e-0696-429d-9759-01f0286466ff>
+  PrefabRemaps:
+    []
+  Name: Bitmoji Face Animator
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d94149bc-74c8-4f76-b531-251ac7f7b503
 - !<RenderMeshVisual/40127567-bf1b-4fca-b2c3-969f35684b50>
   PrefabRemaps:
     []
@@ -3590,40 +3642,6 @@
     - !<own> 241a2730-1479-4109-8c05-a038945c66c1
   Components:
     []
-- !<ScreenTransform/5098dc04-2827-49fb-98fd-3b2795befc6f>
-  PrefabRemaps:
-    []
-  Name: Screen Transform
-  Enabled: true
-  IsAdvanced: false
-  Constraints:
-    pinToLeft: false
-    pinToTop: false
-    pinToRight: false
-    pinToBottom: false
-    fixedWidth: false
-    fixedHeight: false
-    deactivatedFixedSprite: false
-    deactivatedFixedPivot: false
-  Pivot: {x: 0.000000, y: 0.000000}
-  Transform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  RawMode: true
-  ForceBasic: true
-  EnableDebugRender: false
-  Anchor:
-    left: -1.000000
-    bottom: -1.000000
-    right: 1.000000
-    top: 1.000000
-  Offset:
-    left: 0.000000
-    bottom: 0.000000
-    right: 0.000000
-    top: 0.000000
 - !<SceneObject/511e4dde-b361-4f8c-83e6-04ebf720c706>
   PrefabRemaps:
     []
@@ -3636,8 +3654,8 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 64d20f27-3db1-4f5f-ba7c-c5f4fcaeb7a9
     - !<own> 940539fa-bff0-4769-9c37-6928034f7917
+    - !<own> 64d20f27-3db1-4f5f-ba7c-c5f4fcaeb7a9
   Components:
     []
 - !<SceneObject/51394ee9-d717-4654-90ce-990590a1ab8b>
@@ -4077,11 +4095,11 @@
   AnimationClips:
     - !<AnimationClip>
       AnimationAsset: !<reference> 9bb85f4e-ac71-4d8c-9a50-9a89dce5cc38
-      Name: Layer0
+      Name: Clip 0
       Weight: 1.000000
       PlaybackSpeed: 1.000000
       Begin: 0.000000
-      End: 6.000000
+      End: 5.466667
       Offset: 0.000000
       Reversed: false
       Disabled: false
@@ -5215,42 +5233,6 @@
     bottom: -10.000000
     right: 2.625000
     top: 10.000000
-- !<ScriptComponent/6b53a6f8-b256-4b5f-8d4f-2d3fa41c06f3>
-  PrefabRemaps:
-    []
-  Name: ObjectsSpawned
-  Enabled: true
-  ScriptAsset: !<reference> cacee3a1-45dd-4e76-be37-a8e3645813f9
-  ScriptInputsDefault:
-    effectsObstacle: true
-    effectObstaclePower: true
-    scaleZ: true
-    AudioToPlayOnStart: true
-    AudioToPlayOnHit: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      typeSpawn: obstacle
-      effectsObstacle:
-        []
-      effectsBonus:
-        - effect: setLifes
-          effectPower: !<float> 1.000000
-        - effect: setPoints
-          effectPower: !<float> 1.000000
-      effectObstacle: setTime
-      effectObstaclePower: !<float> 0.000000
-      effectBonus: setSpeed
-      effectBonusPower: 0.100000
-      offsetBaseY: !<float> 2.000000
-      maximumZBeforeDeletion: !<float> 50.000000
-      scaleZ: !<float> 0.000000
-      AudioToPlayOnStart: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
-      AudioToPlayOnHit: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
-  ScriptTypes:
-    "":
-      {}
 - !<ScriptComponent/6bf4421e-2bf5-4d5d-bec5-620717d7e4f9>
   PrefabRemaps:
     []
@@ -6968,6 +6950,25 @@
     - !<own> 649f72de-5d2e-4724-81f3-1a7f526ac27d
   Components:
     []
+- !<Image/875980b3-34d4-41d2-9647-32f6a716453d>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 20
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 36ad0907-bf78-4061-a202-b6866fcdfe0f
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/875e0282-f474-45f4-802c-d7e057099f65>
   PrefabRemaps:
     []
@@ -7713,7 +7714,7 @@
   ScriptInputs:
     "":
       parent: !<reference.SceneObject> cc886568-548e-4e90-a60f-5beb5113fbc3
-      transitionBG: !<reference.Image> f232c269-caa3-4e65-9140-b2aa04c09994
+      transitionBG: !<reference.Image> 875980b3-34d4-41d2-9647-32f6a716453d
       textTotalScore: !<reference.Text> 7384adbc-1829-4dce-8b35-a03d7607404d
       textPizzaScore: !<reference.Text> 5640064d-03d0-4a78-b37a-d5a27c7b353e
       textBurgerScore: !<reference.Text> 51497821-c9fb-494d-8013-9fe693173abb
@@ -7874,7 +7875,6 @@
     - !<own> e6366ad5-2664-4cd5-8366-77a9edd2ffc2
     - !<own> 19c23868-7850-43ac-bb2e-b59176292ec7
     - !<own> 527b42f7-afaa-4564-bd5f-9f39a95f13e3
-    - !<own> 1d586d13-faf0-464c-93fb-b35bc62ad79e
     - !<own> 7427a405-6b12-42cf-9d16-0a3018b5f81c
     - !<own> 7bbcf240-c942-456b-a6bb-636c9fd83a1e
     - !<own> 467090ee-29b7-42c0-9545-e613b6f5bbb8
@@ -10295,7 +10295,7 @@
       textNoodles: !<reference.Text> be98d223-1d5a-42ba-980e-1e5c94c6ca0a
       hasTimeEnd: true
       isTimerAscending: false
-      endTimeValue: !<float> 40.000000
+      endTimeValue: !<float> 9.000000
       hasDistanceEnd: false
       endDistanceValue: !<float> 0.000000
       hasPointEnd: false
@@ -10552,6 +10552,63 @@
     - !<own> 65dc7f8d-1583-44e3-8fac-8b74fb2b0f9f
   Components:
     - !<own> 078d2e40-89f1-4c1a-9f1c-bc3390acc0ff
+- !<ScriptComponent/d94149bc-74c8-4f76-b531-251ac7f7b503>
+  PrefabRemaps:
+    []
+  Name: Bitmoji Face Animator
+  Enabled: true
+  ScriptAsset: !<reference> 75e2605f-b602-4245-b239-233c6089f07a
+  ScriptInputsDefault:
+    mode: true
+    defaultAnimation: true
+    alwaysReturnToIdle: true
+    defaultTransitionLength: true
+    minMaxTime: true
+    duration: true
+    loopSequence: true
+    timestamps: true
+    probAmused: true
+    probAngry: true
+    probConfused: true
+    probCrying: true
+    probCurious: true
+    probHappy: true
+    probIdle: true
+    probLaughing: true
+    probSad: true
+    probScared: true
+    remoteAnimations: true
+    debug: true
+    textComponent: true
+  ScriptTypesDefault:
+    AnimationStateManagerComponent: true
+  ScriptInputs:
+    "":
+      mode: 0
+      defaultAnimation: Idle
+      alwaysReturnToIdle: true
+      defaultTransitionLength: 0.200000
+      minMaxTime: !<Vec2> {x: 0.000000, y: 0.000000}
+      duration: !<float> 10.000000
+      loopSequence: true
+      timestamps:
+        []
+      probAmused: !<float> 1.000000
+      probAngry: !<float> 1.000000
+      probConfused: !<float> 0.000000
+      probCrying: !<float> 0.000000
+      probCurious: !<float> 1.000000
+      probHappy: !<float> 1.000000
+      probIdle: !<float> 1.000000
+      probLaughing: !<float> 1.000000
+      probSad: !<float> 0.000000
+      probScared: !<float> 0.000000
+      remoteAnimations: !<reference.RemoteReferenceAsset> 0d031571-53d0-4343-b75f-797b95958ac2
+      debug: false
+      textComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      AnimationStateManagerComponent: !<reference.ScriptAsset> a1ec4f6f-aa2a-406a-9aa2-6b603e952862
 - !<SceneObject/da2e428b-2949-4edd-9a93-e70ba2a2eb2b>
   PrefabRemaps:
     []
@@ -10641,24 +10698,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ColliderComponent/dbdc9c38-cb3f-4220-a971-077308f4482e>
-  PrefabRemaps:
-    []
-  Name: Physics Collider
-  Enabled: true
-  Shape: !<Sphere>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> ca74c07f-a721-4b21-8b40-990c968678ad
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 096d2a27-ea0c-44db-b44f-dfde52abd014
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
 - !<SceneObject/dbe4e456-8d55-42b8-bfbd-8189245024bc>
   PrefabRemaps:
     []
@@ -10894,26 +10933,6 @@
   ScriptTypes:
     "":
       {}
-- !<RenderMeshVisual/e022ab56-3446-414b-b035-b5bd056a5465>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 10
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> b44027a2-b2e0-4011-810a-792963840240
-  Mesh: !<reference> fa320dc0-1496-4065-9db1-daf85c6e2369
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/e054ecec-5da6-4f5a-8bf7-6de996ab2b0f>
   PrefabRemaps:
     []
@@ -10997,6 +11016,40 @@
     - !<own> f4af56be-dcd1-4663-83bb-ee9cc454dd1f
   Components:
     []
+- !<ScreenTransform/e36c4c36-dfb8-4dc5-88bf-4c0db5494cc9>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  EnableDebugRender: false
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<SceneObject/e371d95a-1b11-44bc-97f6-1c62e9e786a8>
   PrefabRemaps:
     []
@@ -11148,6 +11201,22 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/e79ed966-cc88-434a-990b-42c1ebe56f40>
+  PrefabRemaps:
+    []
+  Name: TransitionBG
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e36c4c36-dfb8-4dc5-88bf-4c0db5494cc9
+    - !<own> 875980b3-34d4-41d2-9647-32f6a716453d
 - !<SceneObject/e79ede26-dd11-4aba-8071-3bdc716a0f9c>
   PrefabRemaps:
     []
@@ -11622,25 +11691,6 @@
   ScriptTypes:
     "":
       {}
-- !<Image/f232c269-caa3-4e65-9140-b2aa04c09994>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 4
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> e1bda007-eade-4d0a-947b-22e63a34b7ec
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/f24b58c9-bd4b-4847-87d9-4089bbb011c4>
   PrefabRemaps:
     []
@@ -11778,6 +11828,7 @@
 - !<SceneObject/f4451406-b0bd-4264-8489-ceeafa311d5d>
   PrefabRemaps:
     - 26af9cd9-73b6-4f75-bf89-b79197c5e359: 8cc8bc63-7d28-49cc-7f60-2265eedd721c
+    - 397743a6-2996-4ab8-b868-bda62d890d2c: 59cf2676-a973-4b72-84b9-99a4aecb2753
     - 5508ff78-a6d7-4a37-8be2-549494473395: a3bf10c7-c569-4fa4-bb4b-1354f4ba5596
     - f4451406-b0bd-4264-8489-ceeafa311d5d: f4e415e2-ab5a-430e-4dcc-fbd673f563ef
   Name: Bitmoji 3D
@@ -11793,6 +11844,7 @@
   Components:
     - !<own> 26af9cd9-73b6-4f75-bf89-b79197c5e359
     - !<own> 5508ff78-a6d7-4a37-8be2-549494473395
+    - !<own> 397743a6-2996-4ab8-b868-bda62d890d2c
 - !<SceneObject/f47f432b-9770-4d23-8486-2242f3908194>
   PrefabRemaps:
     []
@@ -11937,7 +11989,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> fba74a34-f8a9-4369-a06f-a553b3f9e8dc
+    - !<own> e79ed966-cc88-434a-990b-42c1ebe56f40
   Components:
     - !<own> 8d3f0def-a30e-4319-b1c8-f7f57e34728e
     - !<own> 72e6f1d3-2261-477e-a141-605262181d05
@@ -12154,22 +12206,6 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/fba74a34-f8a9-4369-a06f-a553b3f9e8dc>
-  PrefabRemaps:
-    []
-  Name: TransitionBG
-  Enabled: false
-  Layers: 1048576
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 5098dc04-2827-49fb-98fd-3b2795befc6f
-    - !<own> f232c269-caa3-4e65-9140-b2aa04c09994
 - !<ScriptComponent/fba93bda-eb4f-4eed-9bc0-1a4dec6aae19>
   PrefabRemaps:
     []
@@ -12352,7 +12388,7 @@
     "":
       parent: !<reference.SceneObject> d7976aee-2009-4f51-8f89-643301037550
       startOnAwake: true
-      transitionBG: !<reference.Image> f232c269-caa3-4e65-9140-b2aa04c09994
+      transitionBG: !<reference.Image> 875980b3-34d4-41d2-9647-32f6a716453d
       durationFade: !<float> 1.000000
       gameDirection: 0
       gameUIMaterials: !<reference.Material[]>
