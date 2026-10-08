@@ -1,8 +1,8 @@
-- !<Material/d31e6521-33a1-44da-973b-00c90356f535>
+- !<Material/d11821cc-1830-4fe5-835d-192c1ef5f623>
   PackagePath: ""
   PassesInfo:
-    - !<own> ebc8b118-319a-413b-8831-b2ca58c0d951
-- !<PassInfo/ebc8b118-319a-413b-8831-b2ca58c0d951>
+    - !<own> 93c4b84e-17c1-47cb-b2cc-a19a545de10a
+- !<PassInfo/93c4b84e-17c1-47cb-b2cc-a19a545de10a>
   CachedProperties:
     - Port_Depth_N004:
         typeIdx: 1
@@ -25,48 +25,12 @@
     - Port_GSplatScale_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_Import_N019:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Import_N073:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N020:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N023:
+    - Port_Input0_N082:
         typeIdx: 1
         value: 1.000000
-    - Port_Input0_N026:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_Input0_N027:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input0_N028:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input1_N020:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Input1_N023:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_Input1_N026:
+    - Port_Input1_N046:
         typeIdx: 1
         value: 1.000000
-    - Port_Input1_N027:
-        typeIdx: 1
-        value: 2.000000
-    - Port_Input1_N028:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Input_N024:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    - Port_Input_N029:
-        typeIdx: 3
-        value: {x: 0.000000, y: 0.000000}
     - Port_LODValue_N001:
         typeIdx: 1
         value: 0.000000
@@ -94,19 +58,7 @@
     - Port_UVCoord_N010:
         typeIdx: 3
         value: {x: 0.000000, y: 0.000000}
-    - Port_Value1_N025:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Value2_N025:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Value3_N025:
-        typeIdx: 1
-        value: 0.000000
     - Port_Value3_N070:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Value4_N025:
         typeIdx: 1
         value: 0.000000
     - Port_Value4_N070:
@@ -115,12 +67,6 @@
     - Port_Value4_N089:
         typeIdx: 1
         value: 0.000000
-    - Port_Value_N027:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Value_N030:
-        typeIdx: 5
-        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
     - Port_WorldNormal_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -130,9 +76,21 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
-    - Tweak_N22:
+    - coefInclinaison:
         typeIdx: 1
-        value: 0.000000
+        value: 1.000000
+    - fadeSize:
+        typeIdx: 1
+        value: 1.000000
+    - zFactor:
+        typeIdx: 1
+        value: 0.040000
+    - zOffset:
+        typeIdx: 1
+        value: 39.139996
+    - zThreshold:
+        typeIdx: 1
+        value: 1.000000
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -153,12 +111,6 @@
     Port_Emissive_N006:
       typeIdx: 4
       value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_Input0_N082:
-      typeIdx: 1
-      value: 1.000000
-    Port_Input1_N046:
-      typeIdx: 1
-      value: 1.000000
     Port_SpecularAO_N006:
       typeIdx: 4
       value: {x: 1.000000, y: 1.000000, z: 1.000000}
@@ -168,7 +120,7 @@
     Tweak_N10:
       typeIdx: 9
       value:
-        id: 0feb029f-e722-49cc-baa0-518a63152338
+        id: 7c6846d7-137c-4dd3-87c7-24b34c6529e5
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
@@ -186,7 +138,7 @@
     Tweak_N9:
       typeIdx: 9
       value:
-        id: 7a5180b7-e2ca-424e-917e-f4fca0267c9b
+        id: 1ff63965-7cc7-4aee-818d-171c50d4ad9a
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
@@ -207,7 +159,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: bfb91986-20ec-4fb6-ba98-69a8636a0b2d
+        id: 42353ff5-e9f8-4360-9c69-b8bc5eabae36
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -222,22 +174,4 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    coefInclinaison:
-      typeIdx: 1
-      value: 1.000000
-    fadeSize:
-      typeIdx: 1
-      value: 1.000000
-    zFactor:
-      typeIdx: 1
-      value: 0.010000
-    zOffset:
-      typeIdx: 1
-      value: 0.000000
-    zOffsetTest:
-      typeIdx: 1
-      value: 4.000000
-    zThreshold:
-      typeIdx: 1
-      value: 1.000000
-  Pass: !<reference> 162ede30-2e69-403f-b238-efcf43e21c35
+  Pass: !<reference> 363ffd68-f199-4959-8874-27f0ffe0e8e9

@@ -118,6 +118,7 @@ let listenerCollectObject = script.subScene.CreateListener("OnCollectObject", On
 //true = win
 //false = loose
 let callerOnStopRun = script.subScene.CreateCaller("OnStopRun", false);
+const enableHeadMovementCaller = script.subScene.CreateCaller("OnEnableHeadMovement", null);
 
 //////////////////
 /////// Variables
@@ -211,6 +212,7 @@ function UpdateTime() {
     global.properties.setPizzaScore(points_pizza);
 
     callerOnStopRun.Call(false);
+    enableHeadMovementCaller.Call(false);
   }
 }
 

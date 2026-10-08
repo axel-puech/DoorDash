@@ -54,14 +54,14 @@ function Stop() {}
 
 
 
-// Vibration quand on prend un obstacle : a tester
+// Vibration quand on prend un obstacle : v
 
-// remonter timer et camera
-// hitbox des objets
-// collectables sont strechs
+// remonter timer et camera v
+// hitbox des objets v
+// collectables sont strechs v
 // assombrir la scene
 // grandir sac a dos v 
-// grossir ingrédient et palais
+// grossir ingrédient et palais v
 // premiere instance d'objet se fait deux fois v 
 // sac en derniere frame 
 // apparition des batiments plus tot. V

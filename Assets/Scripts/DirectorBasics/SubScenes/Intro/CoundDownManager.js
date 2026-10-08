@@ -11,6 +11,7 @@
 //@ui {"widget":"label", "label":"Start animation bitmoji"}
 //@input SceneObject parentBitmoji
 //@input vec3 offsetPositionBitmoji
+//@input float tanslationBitmojiDuration
 
 //_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
@@ -32,6 +33,7 @@ const transformBitmoji = script.parentBitmoji.getTransform();
 const endIntroCaller = script.subScene.CreateCaller("OnEndIntro");
 const startCountdown = script.subScene.CreateCaller("OnStartCountdown");
 const startSpeedCaller = script.subScene.CreateCaller("OnStartSpeed");
+const enableHeadMovementCaller = script.subScene.CreateCaller("OnEnableHeadMovement", null);
 
 //________Listener________//
 
@@ -77,6 +79,7 @@ function Update() {
         // calling a bit before to have obstacles spawn earlier
         endIntroCaller.Call();
         translateAnimInit.GoTo(1);
+        enableHeadMovementCaller.Call(true);
       }
     } else {
       startSpeedCaller.Call();
@@ -139,12 +142,12 @@ var offsetPosition = new vec3(
   basePos.z + script.offsetPositionBitmoji.z,
 );
 
-const translateAnimInit = new Animation(script.getSceneObject(), 1.5, (ratio) => {
+const translateAnimInit = new Animation(script.getSceneObject(), script.tanslationBitmojiDuration, (ratio) => {
   var positionUpdate = vec3.lerp(basePos, offsetPosition, 1 - ratio);
   transformBitmoji.setLocalPosition(positionUpdate);
 });
 
-translateAnimInit.Easing = QuadraticInOut;
+// translateAnimInit.Easing = QuadraticInOut;
 
 //___________________________Classes_________________________//
 

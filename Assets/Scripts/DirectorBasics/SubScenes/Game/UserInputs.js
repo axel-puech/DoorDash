@@ -39,10 +39,17 @@ script.subScene.SetUpdate(Update);
 let callerGoRight = script.subScene.CreateCaller("OnGoRight");
 let callerGoLeft = script.subScene.CreateCaller("OnGoLeft");
 let callerUserHeadMovement = script.subScene.CreateCaller("OnUserHeadMovement", 0);
+let enableHeadMovementListener = script.subScene.CreateListener("OnEnableHeadMovement", OnEnableHeadMovement);
+
+function OnEnableHeadMovement(toggle) {
+  enableHeadMovement = toggle;
+}
 
 //////////////////
 /////// Variables
 //////////////////
+let enableHeadMovement = false;
+
 let tapEvent = script.createEvent("TapEvent");
 tapEvent.bind(onTapped);
 
@@ -78,6 +85,7 @@ function Update() {
   }
 
   if (script.inputMode === "HeadMovements") {
+    if (!enableHeadMovement) return;
     UpdateHeadMovement();
   } else if (script.inputMode === "TiltPhone") {
     UpdatePhoneMovement();
