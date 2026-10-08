@@ -4,6 +4,42 @@
     - !<own> 29e3725e-4875-4605-a7e6-d64c25b0fe99
 - !<PassInfo/29e3725e-4875-4605-a7e6-d64c25b0fe99>
   CachedProperties:
+    - Port_AO_N014:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_Default_N167:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Emissive_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N004:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Input0_N181:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N183:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     - Port_Input1_N068:
         typeIdx: 1
         value: 2.000000
@@ -28,6 +64,51 @@
     - Port_Input1_N144:
         typeIdx: 3
         value: {x: 0.000000, y: 0.000000}
+    - Port_Input1_N154:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N183:
+        typeIdx: 1
+        value: 1.000000
+    - Port_LODValue_N166:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Output_N187:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Output_N188:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_PrevWorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_SpecularAO_N014:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_Value1_N185:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value2_N185:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N185:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N185:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value_N186:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
     - alphaDissolveMult:
         typeIdx: 1
         value: 0.000000
@@ -197,6 +278,8 @@
     - SIZEMINMAX
     - SPHERESPAWN
     - COLORRAMP
+    - MESHTYPE 0
+    - rotationSpace 0
   BlendMode: Screen
   Properties:
     ALIGNTOX:
@@ -208,6 +291,9 @@
     ALIGNTOZ:
       typeIdx: 2
       value: false
+    Port_Input1_N181:
+      typeIdx: 1
+      value: 1.000000
     PreviewEnabled:
       typeIdx: 0
       value: 0
@@ -326,9 +412,15 @@
       typeIdx: 4
       value: {x: 1.500000, y: 1.000000, z: 1.500000}
     velocityMax:
-      typeIdx: 4
-      value: {x: -5.000000, y: -35.000000, z: 50.000000}
+      typeIdx: 3
+      value: {x: -5.000000, y: 50.000000}
     velocityMin:
       typeIdx: 4
       value: {x: -5.000000, y: -15.000000, z: 5.000000}
+    velocityRatio:
+      typeIdx: 1
+      value: 0.000000
+    velocityYMax:
+      typeIdx: 1
+      value: -35.000000
   Pass: !<reference> 56637248-ce2e-4b1f-bd51-af84911c32d0

@@ -12,6 +12,9 @@
 //@input SceneObject parentBitmoji
 //@input vec3 offsetPositionBitmoji
 //@input float tanslationBitmojiDuration
+//@ui {"widget":"separator"}
+//@ui {"widget":"label", "label":"Snow Material"}
+//@input Asset.Material snowMaterial
 
 //_________________________Director Setup_________________________//
 script.subScene = new global.SubScene(script, script.parent);
@@ -81,6 +84,7 @@ function Update() {
         translateAnimInit.GoTo(1);
       }
     } else {
+      snowAnim.GoTo(1);
       startSpeedCaller.Call();
       enableHeadMovementCaller.Call(true);
       isCountingDown = false;
@@ -106,6 +110,8 @@ function Stop() {
   countdownStarted = false;
 
   translateAnimInit.Reset();
+
+  snowAnim.Reset();
 }
 //___________________________Functions__________________________//
 
@@ -145,6 +151,10 @@ var offsetPosition = new vec3(
 const translateAnimInit = new Animation(script.getSceneObject(), script.tanslationBitmojiDuration, (ratio) => {
   var positionUpdate = vec3.lerp(basePos, offsetPosition, 1 - ratio);
   transformBitmoji.setLocalPosition(positionUpdate);
+});
+
+const snowAnim = new Animation(script.getSceneObject(), script.tanslationBitmojiDuration, (ratio) => {
+  script.snowMaterial.mainPass.velocityRatio = ratio;
 });
 
 // translateAnimInit.Easing = QuadraticInOut;

@@ -101,6 +101,207 @@ Nodes:
       Title2: Color Max End
     Node100:
       DependencyIndex: 100
+      LevelID: 188
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 119
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3530
+      PositionY: 2530
+      RedirectClassTypeA1: FLOAT
+      RedirectClassTypeB1: FLOAT
+      TemplateID: nodes_math_passthrough
+      Title1: Passthrough
+    Node101:
+      DependencyIndex: 101
+      LevelID: 136
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 188
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Wireless: true
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3649
+      PositionY: 6059
+      RedirectClassTypeA1: FLOAT
+      RedirectClassTypeB1: FLOAT
+      TemplateID: nodes_math_passthrough
+      Title1: Passthrough
+    Node102:
+      DependencyIndex: 102
+      LevelID: 142
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Rotation
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rotationRandomX
+        SortIndex:
+          Variable: 97
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Initial Rotation X
+        Tooltip:
+          String: (3D Mesh only) The min and max rotations in radians about its X axis each particle will have at birth.\n\nThis rotation will be overridden if any Alignment settings are enabled.
+      PositionX: -3540
+      PositionY: 5540
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Initial Rotation X
+    Node103:
+      DependencyIndex: 103
+      LevelID: 138
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 136
+            PortID: Output
+          Variable: 1.0
+        Input1:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        Input2:
+          Connection0:
+            NodeLevelID: 142
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type1:
+          ItemIndex: 5
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type2:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -3214
+      PositionY: 5497
+      TemplateID: nodes_math_conditional
+      Title1: Conditional
+    Node104:
+      DependencyIndex: 104
+      LevelID: 152
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 138
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -2875
+      PositionY: 5548
+      RedirectClassTypeA1: FLOAT
+      RedirectClassTypeB1: FLOAT
+      TemplateID: nodes_math_passthrough
+      Title1: Passthrough
+    Node105:
+      DependencyIndex: 105
+      LevelID: 146
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Rotation
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rotationRateX
+        SortIndex:
+          Variable: 96
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Rotation Rate X
+        Tooltip:
+          String: (3D Mesh only) The min and max number of complete rotations a particle will complete about its X axis during its lifetime.\n\nThis rotation will be overridden if any Alignment settings are enabled.
+      PositionX: -3530
+      PositionY: 5620
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Rotation Rate X
+    Node106:
+      DependencyIndex: 106
+      LevelID: 139
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 136
+            PortID: Output
+          Variable: 1.0
+        Input1:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        Input2:
+          Connection0:
+            NodeLevelID: 146
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type1:
+          ItemIndex: 5
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type2:
+          ItemIndex: 5
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -3012
+      PositionY: 5569
+      TemplateID: nodes_math_conditional
+      Title1: Conditional
+    Node107:
+      DependencyIndex: 107
       LevelID: 143
       NodeCount: 0
       NodeType: 1
@@ -132,14 +333,14 @@ Nodes:
         Title:
           String: Initial Rotation Y
         Tooltip:
-          String: "(3D Mesh only) The min and max rotations in radians about its Y axis each particle will have at birth.\\n\\nThis rotation will be overridden if any Alignment settings are enabled."
+          String: (3D Mesh only) The min and max rotations in radians about its Y axis each particle will have at birth.\n\nThis rotation will be overridden if any Alignment settings are enabled.
       PositionX: -3530
       PositionY: 5710
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Initial Rotation Y
-    Node101:
-      DependencyIndex: 101
+    Node108:
+      DependencyIndex: 108
       LevelID: 140
       NodeCount: 0
       NodeType: 1
@@ -169,8 +370,8 @@ Nodes:
       PositionY: 5689
       TemplateID: nodes_math_conditional
       Title1: Conditional
-    Node102:
-      DependencyIndex: 102
+    Node109:
+      DependencyIndex: 109
       LevelID: 150
       NodeCount: 0
       NodeType: 1
@@ -189,8 +390,40 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node103:
-      DependencyIndex: 103
+    Node11:
+      DependencyIndex: 11
+      LevelID: 106
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: Color / Alpha
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: COLORMONOMIN
+        SortIndex:
+          Variable: 59
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: ""
+        UniqueID:
+          String: Mono Color Random
+      PositionX: -630
+      PositionY: -1513
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Mono Color Random
+    Node110:
+      DependencyIndex: 110
       LevelID: 151
       NodeCount: 0
       NodeType: 1
@@ -209,8 +442,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node104:
-      DependencyIndex: 104
+    Node111:
+      DependencyIndex: 111
       LevelID: 147
       NodeCount: 0
       NodeType: 1
@@ -242,14 +475,14 @@ Nodes:
         Title:
           String: Rotation Rate Y
         Tooltip:
-          String: "(3D Mesh only) The min and max number of complete rotations a particle will complete about its Y axis during its lifetime.\\n\\nThis rotation will be overridden if any Alignment settings are enabled."
+          String: (3D Mesh only) The min and max number of complete rotations a particle will complete about its Y axis during its lifetime.\n\nThis rotation will be overridden if any Alignment settings are enabled.
       PositionX: -3530
       PositionY: 5790
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Rotation Rate Y
-    Node105:
-      DependencyIndex: 105
+    Node112:
+      DependencyIndex: 112
       LevelID: 144
       NodeCount: 0
       NodeType: 1
@@ -279,8 +512,8 @@ Nodes:
       PositionY: 5736
       TemplateID: nodes_math_conditional
       Title1: Conditional
-    Node106:
-      DependencyIndex: 106
+    Node113:
+      DependencyIndex: 113
       LevelID: 52
       NodeCount: 0
       NodeType: 1
@@ -318,8 +551,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Initial Rotation
-    Node107:
-      DependencyIndex: 107
+    Node114:
+      DependencyIndex: 114
       LevelID: 145
       NodeCount: 0
       NodeType: 1
@@ -351,14 +584,14 @@ Nodes:
         Title:
           String: Initial Rotation Z
         Tooltip:
-          String: "(3D Mesh only) The min and max rotations in radians about its Z axis each particle will have at birth.\\n\\nThis rotation can be applied with Alignment settings enabled."
+          String: (3D Mesh only) The min and max rotations in radians about its Z axis each particle will have at birth.\n\nThis rotation can be applied with Alignment settings enabled.
       PositionX: -3530
       PositionY: 5930
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Initial Rotation Z
-    Node108:
-      DependencyIndex: 108
+    Node115:
+      DependencyIndex: 115
       LevelID: 135
       NodeCount: 0
       NodeType: 1
@@ -391,8 +624,8 @@ Nodes:
       PositionY: 5879
       TemplateID: nodes_math_conditional
       Title1: Conditional
-    Node109:
-      DependencyIndex: 109
+    Node116:
+      DependencyIndex: 116
       LevelID: 53
       NodeCount: 0
       NodeType: 1
@@ -430,40 +663,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Rotation Rate
-    Node11:
-      DependencyIndex: 11
-      LevelID: 106
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: false
-        Group:
-          String: Color / Alpha
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: COLORMONOMIN
-        SortIndex:
-          Variable: 59
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: ""
-        UniqueID:
-          String: Mono Color Random
-      PositionX: -630
-      PositionY: -1513
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Mono Color Random
-    Node110:
-      DependencyIndex: 110
+    Node117:
+      DependencyIndex: 117
       LevelID: 148
       NodeCount: 0
       NodeType: 1
@@ -495,14 +696,14 @@ Nodes:
         Title:
           String: Rotation Rate Z
         Tooltip:
-          String: "(3D Mesh only) The min and max number of complete rotations a particle will complete about its Z axis during its lifetime.\\n\\nThis rotation can be applied with Alignment settings enabled."
+          String: (3D Mesh only) The min and max number of complete rotations a particle will complete about its Z axis during its lifetime.\n\nThis rotation can be applied with Alignment settings enabled.
       PositionX: -3531
       PositionY: 6069
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Rotation Rate Z
-    Node111:
-      DependencyIndex: 111
+    Node118:
+      DependencyIndex: 118
       LevelID: 137
       NodeCount: 0
       NodeType: 1
@@ -535,8 +736,8 @@ Nodes:
       PositionY: 6018
       TemplateID: nodes_math_conditional
       Title1: Conditional
-    Node112:
-      DependencyIndex: 112
+    Node119:
+      DependencyIndex: 119
       LevelID: 54
       NodeCount: 0
       NodeType: 1
@@ -574,233 +775,6 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Rotation Drag
-    Node113:
-      DependencyIndex: 113
-      LevelID: 67
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Group:
-          String: ""
-        ItemCount:
-          Variable: 3
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: rotationSpace
-        SortIndex:
-          Variable: 0
-        SpecifySpecConst:
-          Variable: true
-        Title:
-          String: World / Local Space
-        Title0:
-          String: Local Space
-        Title1:
-          String: World Space - Ignore Emitter Rotation
-        Title2:
-          String: World Force - Gravity Ingores Emitter Rotation
-        Tooltip:
-          String: Specifies the purpose for which Rotation will be used.
-      PositionX: -3247
-      PositionY: 6344
-      TemplateID: nodes_inputs_parameters_droplist
-      Title1: DropList Parameter
-      Title2: World / Local Space
-    Node114:
-      DependencyIndex: 114
-      LevelID: 69
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 67
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Input1:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Type0:
-          ItemIndex: 0
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-        Type1:
-          ItemIndex: 0
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-      PositionX: -2993
-      PositionY: 6256
-      TemplateID: nodes_math_equal
-      Title1: Is Equal
-    Node115:
-      DependencyIndex: 115
-      LevelID: 68
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 67
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Input1:
-          Variable: [2.0, 1.0, 1.0, 1.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Type0:
-          ItemIndex: 0
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-        Type1:
-          ItemIndex: 0
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-      PositionX: -2993
-      PositionY: 6374
-      TemplateID: nodes_math_equal
-      Title1: Is Equal
-    Node116:
-      DependencyIndex: 116
-      LevelID: 61
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: false
-        Group:
-          String: Rotation
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: CENTER_BBOX
-        SortIndex:
-          Variable: 95
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: false
-        Tooltip:
-          String: "When enabled, particles will be centered about their local origin before being rotated."
-        UniqueID:
-          String: Center BBox
-      PositionX: -3233
-      PositionY: 6550
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Center BBox
-    Node117:
-      DependencyIndex: 117
-      LevelID: 110
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 136
-            PortID: Output
-          Variable: 1.0
-        Input1:
-          Variable: [0.0, 1.0, 1.0, 1.0]
-        Input2:
-          Connection0:
-            NodeLevelID: 61
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Type1:
-          ItemIndex: 6
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-        Type2:
-          ItemIndex: 6
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-      PositionX: -3015
-      PositionY: 6500
-      TemplateID: nodes_math_conditional
-      Title1: Conditional
-    Node118:
-      DependencyIndex: 118
-      LevelID: 176
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [50.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: true
-        EnableMin:
-          Variable: true
-        Group:
-          String: Color / Alpha.Fade Close to Camera
-        Max:
-          Variable: 1000.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: fadeDistanceVisible
-        SortIndex:
-          Variable: 60
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Fade Dist Visible
-        Tooltip:
-          String: "Particles will be fully visible at this distance, and fade out towards Fade Dist Invisible."
-      PositionX: -3020
-      PositionY: 6920
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Fade Dist Visible
-    Node119:
-      DependencyIndex: 119
-      LevelID: 178
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [25.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: true
-        EnableMin:
-          Variable: true
-        Group:
-          String: Color / Alpha.Fade Close to Camera
-        Max:
-          Variable: 1000.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: fadeDistanceInvisible
-        SortIndex:
-          Variable: 60
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Fade Dist Invisible
-        Tooltip:
-          String: "Particles will be fully invisible at this distance, and will in towards Fade Dist Visible."
-      PositionX: -3020
-      PositionY: 7020
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Fade Dist Invisible
     Node12:
       DependencyIndex: 12
       LevelID: 89
@@ -842,6 +816,233 @@ Nodes:
       Title2: Alpha Start
     Node120:
       DependencyIndex: 120
+      LevelID: 67
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Group:
+          String: ""
+        ItemCount:
+          Variable: 3
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: rotationSpace
+        SortIndex:
+          Variable: 0
+        SpecifySpecConst:
+          Variable: true
+        Title:
+          String: World / Local Space
+        Title0:
+          String: Local Space
+        Title1:
+          String: World Space - Ignore Emitter Rotation
+        Title2:
+          String: World Force - Gravity Ingores Emitter Rotation
+        Tooltip:
+          String: Specifies the purpose for which Rotation will be used.
+      PositionX: -3247
+      PositionY: 6344
+      TemplateID: nodes_inputs_parameters_droplist
+      Title1: DropList Parameter
+      Title2: World / Local Space
+    Node121:
+      DependencyIndex: 121
+      LevelID: 69
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 67
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Input1:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type0:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type1:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -2993
+      PositionY: 6256
+      TemplateID: nodes_math_equal
+      Title1: Is Equal
+    Node122:
+      DependencyIndex: 122
+      LevelID: 68
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 67
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Input1:
+          Variable: [2.0, 1.0, 1.0, 1.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type0:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type1:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -2993
+      PositionY: 6374
+      TemplateID: nodes_math_equal
+      Title1: Is Equal
+    Node123:
+      DependencyIndex: 123
+      LevelID: 61
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: Rotation
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: CENTER_BBOX
+        SortIndex:
+          Variable: 95
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: false
+        Tooltip:
+          String: "When enabled, particles will be centered about their local origin before being rotated."
+        UniqueID:
+          String: Center BBox
+      PositionX: -3233
+      PositionY: 6550
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Center BBox
+    Node124:
+      DependencyIndex: 124
+      LevelID: 110
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 136
+            PortID: Output
+          Variable: 1.0
+        Input1:
+          Variable: [0.0, 1.0, 1.0, 1.0]
+        Input2:
+          Connection0:
+            NodeLevelID: 61
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type1:
+          ItemIndex: 6
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type2:
+          ItemIndex: 6
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -3015
+      PositionY: 6500
+      TemplateID: nodes_math_conditional
+      Title1: Conditional
+    Node125:
+      DependencyIndex: 125
+      LevelID: 176
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [50.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: true
+        EnableMin:
+          Variable: true
+        Group:
+          String: Color / Alpha.Fade Close to Camera
+        Max:
+          Variable: 1000.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeDistanceVisible
+        SortIndex:
+          Variable: 60
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Dist Visible
+        Tooltip:
+          String: "Particles will be fully visible at this distance, and fade out towards Fade Dist Invisible."
+      PositionX: -3020
+      PositionY: 6920
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Dist Visible
+    Node126:
+      DependencyIndex: 126
+      LevelID: 178
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [25.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: true
+        EnableMin:
+          Variable: true
+        Group:
+          String: Color / Alpha.Fade Close to Camera
+        Max:
+          Variable: 1000.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeDistanceInvisible
+        SortIndex:
+          Variable: 60
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Fade Dist Invisible
+        Tooltip:
+          String: "Particles will be fully invisible at this distance, and will in towards Fade Dist Visible."
+      PositionX: -3020
+      PositionY: 7020
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Fade Dist Invisible
+    Node127:
+      DependencyIndex: 127
       LevelID: 111
       NodeCount: 0
       NodeType: 1
@@ -1471,6 +1672,9 @@ Nodes:
                 // package output variables
                 timeValues = vec4(realLifeTimeMinMax, localTime, normTime);
             }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
         Description:
           ClassType1: TEXT
           String: ""
@@ -1576,6 +1780,8 @@ Nodes:
           ItemList: "Vertex : Pixel"
         Title:
           String: Vertex Shader Particles
+        UseExternalFile:
+          Variable: false
         WORLDFORCE:
           Connection0:
             NodeLevelID: 68
@@ -1785,8 +1991,8 @@ Nodes:
           Variable: [0.0, 0.0, 0.0]
         velocityMax:
           Connection0:
-            NodeLevelID: 35
-            PortID: Output
+            NodeLevelID: 185
+            PortID: Value
           Variable: [0.0, 0.0, 0.0]
         velocityMin:
           Connection0:
@@ -1798,9 +2004,8 @@ Nodes:
       TemplateID: node_util_custom
       TemplateVersionMinor: 1
       Title1: Vertex Shader Particles
-    Node120LockForPublic: true
-    Node121:
-      DependencyIndex: 121
+    Node128:
+      DependencyIndex: 128
       LevelID: 179
       NodeCount: 0
       NodeType: 1
@@ -1822,8 +2027,8 @@ Nodes:
       PositionY: 1980
       TemplateID: nodes_main_interpolate
       Title1: Interpolate
-    Node122:
-      DependencyIndex: 122
+    Node129:
+      DependencyIndex: 129
       LevelID: 62
       NodeCount: 0
       NodeType: 1
@@ -1854,258 +2059,6 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Flipbook
-    Node123:
-      DependencyIndex: 123
-      LevelID: 63
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Textures.Flipbook
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: numValidFrames
-        SortIndex:
-          Variable: 24
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Num Valid Frames
-        Tooltip:
-          String: Number of valid animation frames. May be set to at most columns*rows. May be set to less if there are unused frames at the end of the grid.
-      PositionX: -644
-      PositionY: 407
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Num Valid Frames
-    Node124:
-      DependencyIndex: 124
-      LevelID: 64
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 4
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Textures.Flipbook
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: gridSize
-        SortIndex:
-          Variable: 23
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: "Num Columns, Rows"
-        Tooltip:
-          String: "Sets the flipbook texture atlas grid size. x is the number of columns, y is the number of rows in the atlas."
-      PositionX: -644
-      PositionY: 497
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: "Num Columns, Rows"
-    Node125:
-      DependencyIndex: 125
-      LevelID: 65
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [0.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Textures.Flipbook
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: flipBookSpeedMult
-        SortIndex:
-          Variable: 25
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Flipbook Speed
-        Tooltip:
-          String: Flipbook Play Speed Per/S. example 10 will play 10 flipbooks in second.
-      PositionX: -644
-      PositionY: 587
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Flipbook Speed
-    Node126:
-      DependencyIndex: 126
-      LevelID: 66
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [0.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Textures.Flipbook
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: flipBookRandomStart
-        SortIndex:
-          Variable: 26
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Flipbook Random
-        Tooltip:
-          String: Ramdomly Pick Initial Flipbook Start Frame.
-      PositionX: -644
-      PositionY: 677
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Flipbook Random
-    Node127:
-      DependencyIndex: 127
-      LevelID: 92
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: false
-        Group:
-          String: Textures.Flipbook
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: FLIPBOOKBLEND
-        SortIndex:
-          Variable: 27
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: Blend Flipbook between frames.
-        UniqueID:
-          String: Frame Blend
-      PositionX: -644
-      PositionY: 767
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Frame Blend
-    Node128:
-      DependencyIndex: 128
-      LevelID: 91
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: false
-        Group:
-          String: Textures.Flipbook
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: FLIPBOOKBYLIFE
-        SortIndex:
-          Variable: 40
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: Flipbook speed normalized by particle life.
-        UniqueID:
-          String: By Life
-      PositionX: -644
-      PositionY: 857
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: By Life
-    Node129:
-      DependencyIndex: 129
-      LevelID: 29
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: true
-        Group:
-          String: Textures
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: COLORRAMP
-        SortIndex:
-          Variable: 36
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: This can animate color/alpha over lifetime by ramp texture. size need to be 128x1.
-        UniqueID:
-          String: Color Ramp Texture
-      PositionX: -610
-      PositionY: 1096
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Color Ramp Texture
     Node13:
       DependencyIndex: 13
       LevelID: 90
@@ -2147,6 +2100,258 @@ Nodes:
       Title2: Alpha End
     Node130:
       DependencyIndex: 130
+      LevelID: 63
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Textures.Flipbook
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: numValidFrames
+        SortIndex:
+          Variable: 24
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Num Valid Frames
+        Tooltip:
+          String: Number of valid animation frames. May be set to at most columns*rows. May be set to less if there are unused frames at the end of the grid.
+      PositionX: -644
+      PositionY: 407
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Num Valid Frames
+    Node131:
+      DependencyIndex: 131
+      LevelID: 64
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Textures.Flipbook
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: gridSize
+        SortIndex:
+          Variable: 23
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: "Num Columns, Rows"
+        Tooltip:
+          String: "Sets the flipbook texture atlas grid size. x is the number of columns, y is the number of rows in the atlas."
+      PositionX: -644
+      PositionY: 497
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: "Num Columns, Rows"
+    Node132:
+      DependencyIndex: 132
+      LevelID: 65
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Textures.Flipbook
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: flipBookSpeedMult
+        SortIndex:
+          Variable: 25
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Flipbook Speed
+        Tooltip:
+          String: Flipbook Play Speed Per/S. example 10 will play 10 flipbooks in second.
+      PositionX: -644
+      PositionY: 587
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Flipbook Speed
+    Node133:
+      DependencyIndex: 133
+      LevelID: 66
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Textures.Flipbook
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: flipBookRandomStart
+        SortIndex:
+          Variable: 26
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Flipbook Random
+        Tooltip:
+          String: Ramdomly Pick Initial Flipbook Start Frame.
+      PositionX: -644
+      PositionY: 677
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Flipbook Random
+    Node134:
+      DependencyIndex: 134
+      LevelID: 92
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: Textures.Flipbook
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: FLIPBOOKBLEND
+        SortIndex:
+          Variable: 27
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: Blend Flipbook between frames.
+        UniqueID:
+          String: Frame Blend
+      PositionX: -644
+      PositionY: 767
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Frame Blend
+    Node135:
+      DependencyIndex: 135
+      LevelID: 91
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: Textures.Flipbook
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: FLIPBOOKBYLIFE
+        SortIndex:
+          Variable: 40
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: Flipbook speed normalized by particle life.
+        UniqueID:
+          String: By Life
+      PositionX: -644
+      PositionY: 857
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: By Life
+    Node136:
+      DependencyIndex: 136
+      LevelID: 29
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: true
+        Group:
+          String: Textures
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: COLORRAMP
+        SortIndex:
+          Variable: 36
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: This can animate color/alpha over lifetime by ramp texture. size need to be 128x1.
+        UniqueID:
+          String: Color Ramp Texture
+      PositionX: -610
+      PositionY: 1096
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Color Ramp Texture
+    Node137:
+      DependencyIndex: 137
       LevelID: 21
       NodeCount: 0
       NodeType: 1
@@ -2179,8 +2384,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_texture2d_object
       Title1: Texture 2D Object Parameter
       Title2: Texture
-    Node131:
-      DependencyIndex: 131
+    Node138:
+      DependencyIndex: 138
       LevelID: 30
       NodeCount: 0
       NodeType: 1
@@ -2218,8 +2423,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Color Ramp Mult
-    Node132:
-      DependencyIndex: 132
+    Node139:
+      DependencyIndex: 139
       LevelID: 60
       NodeCount: 0
       NodeType: 1
@@ -2250,8 +2455,40 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: No Random Offset
-    Node133:
-      DependencyIndex: 133
+    Node14:
+      DependencyIndex: 14
+      LevelID: 84
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: true
+        Group:
+          String: Color / Alpha
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: ALPHAMINMAX
+        SortIndex:
+          Variable: 42
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: ""
+        UniqueID:
+          String: Alpha Random
+      PositionX: -633
+      PositionY: -1074
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Alpha Random
+    Node140:
+      DependencyIndex: 140
       LevelID: 28
       NodeCount: 0
       NodeType: 1
@@ -2282,8 +2519,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Base Texture
-    Node134:
-      DependencyIndex: 134
+    Node141:
+      DependencyIndex: 141
       LevelID: 59
       NodeCount: 0
       NodeType: 1
@@ -2316,8 +2553,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_texture2d_object
       Title1: Texture 2D Object Parameter
       Title2: Texture
-    Node135:
-      DependencyIndex: 135
+    Node142:
+      DependencyIndex: 142
       LevelID: 169
       NodeCount: 0
       NodeType: 1
@@ -2339,8 +2576,8 @@ Nodes:
       PositionY: 1880
       TemplateID: nodes_main_interpolate
       Title1: Interpolate
-    Node136:
-      DependencyIndex: 136
+    Node143:
+      DependencyIndex: 143
       LevelID: 2
       NodeCount: 0
       NodeType: 1
@@ -2587,6 +2824,9 @@ Nodes:
                 // output time values
                 timeValues = timeValuesIn;
             }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
         Description:
           ClassType1: TEXT
           String: ""
@@ -2674,6 +2914,8 @@ Nodes:
           ItemList: "Vertex : Pixel"
         Title:
           String: Pixel Shader Particles
+        UseExternalFile:
+          Variable: false
         alphaDissolveMult:
           Connection0:
             NodeLevelID: 73
@@ -2818,13 +3060,11 @@ Nodes:
           Variable: [0.0, 0.0]
       PositionX: 310
       PositionY: -380
-      Selected: true
       TemplateID: node_util_custom
       TemplateVersionMinor: 1
       Title1: Pixel Shader Particles
-    Node136LockForPublic: true
-    Node137:
-      DependencyIndex: 137
+    Node144:
+      DependencyIndex: 144
       LevelID: 158
       NodeCount: 0
       NodeType: 1
@@ -2844,8 +3084,8 @@ Nodes:
       RedirectClassTypeB1: COLOR
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node138:
-      DependencyIndex: 138
+    Node145:
+      DependencyIndex: 145
       LevelID: 155
       NodeCount: 0
       NodeType: 1
@@ -2864,8 +3104,8 @@ Nodes:
       PositionY: -564
       TemplateID: node_channels_swizzle
       Title1: Swizzle
-    Node139:
-      DependencyIndex: 139
+    Node146:
+      DependencyIndex: 146
       LevelID: 165
       NodeCount: 0
       NodeType: 1
@@ -2896,40 +3136,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Normal Map
-    Node14:
-      DependencyIndex: 14
-      LevelID: 84
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: true
-        Group:
-          String: Color / Alpha
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: ALPHAMINMAX
-        SortIndex:
-          Variable: 42
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: ""
-        UniqueID:
-          String: Alpha Random
-      PositionX: -633
-      PositionY: -1074
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Alpha Random
-    Node140:
-      DependencyIndex: 140
+    Node147:
+      DependencyIndex: 147
       LevelID: 166
       NodeCount: 0
       NodeType: 1
@@ -2980,8 +3188,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_image
       Title1: Texture 2D Parameter
       Title2: Texture
-    Node141:
-      DependencyIndex: 141
+    Node148:
+      DependencyIndex: 148
       LevelID: 167
       NodeCount: 0
       NodeType: 1
@@ -3011,8 +3219,8 @@ Nodes:
       PositionY: -402
       TemplateID: nodes_main_if_else
       Title1: If / else
-    Node142:
-      DependencyIndex: 142
+    Node149:
+      DependencyIndex: 149
       LevelID: 163
       NodeCount: 0
       NodeType: 1
@@ -3050,8 +3258,47 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Metallic
-    Node143:
-      DependencyIndex: 143
+    Node15:
+      DependencyIndex: 15
+      LevelID: 85
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Color / Alpha.Alpha Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: alphaMinStart
+        SortIndex:
+          Variable: 43
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Alpha Min Start
+        Tooltip:
+          String: ""
+      PositionX: -633
+      PositionY: -984
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Alpha Min Start
+    Node150:
+      DependencyIndex: 150
       LevelID: 164
       NodeCount: 0
       NodeType: 1
@@ -3089,8 +3336,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Roughness
-    Node144:
-      DependencyIndex: 144
+    Node151:
+      DependencyIndex: 151
       LevelID: 14
       NodeCount: 0
       NodeType: 1
@@ -3104,6 +3351,8 @@ Nodes:
             NodeLevelID: 158
             PortID: Output
           Variable: [1.0, 1.0, 1.0, 1.0]
+        BitmojiShading:
+          Variable: false
         Emissive:
           ClassType1: COLOR
           Variable: [0.0, 0.0, 0.0, 1.0]
@@ -3148,8 +3397,8 @@ Nodes:
       TemplateID: nodes_main_material_brdf
       Title1: PBR ( Lighting )
       Title2: Diffuse and Specular
-    Node145:
-      DependencyIndex: 145
+    Node152:
+      DependencyIndex: 152
       LevelID: 160
       NodeCount: 0
       NodeType: 1
@@ -3168,8 +3417,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node146:
-      DependencyIndex: 146
+    Node153:
+      DependencyIndex: 153
       LevelID: 161
       NodeCount: 0
       NodeType: 1
@@ -3188,8 +3437,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node147:
-      DependencyIndex: 147
+    Node154:
+      DependencyIndex: 154
       LevelID: 168
       NodeCount: 0
       NodeType: 1
@@ -3208,8 +3457,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node148:
-      DependencyIndex: 148
+    Node155:
+      DependencyIndex: 155
       LevelID: 153
       NodeCount: 0
       NodeType: 1
@@ -3242,8 +3491,8 @@ Nodes:
       PositionY: -503
       TemplateID: nodes_main_if_else
       Title1: If / else
-    Node149:
-      DependencyIndex: 149
+    Node156:
+      DependencyIndex: 156
       LevelID: 23
       NodeCount: 0
       NodeType: 1
@@ -3262,47 +3511,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node15:
-      DependencyIndex: 15
-      LevelID: 85
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Color / Alpha.Alpha Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: alphaMinStart
-        SortIndex:
-          Variable: 43
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Alpha Min Start
-        Tooltip:
-          String: ""
-      PositionX: -633
-      PositionY: -984
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Alpha Min Start
-    Node150:
-      DependencyIndex: 150
+    Node157:
+      DependencyIndex: 157
       LevelID: 76
       NodeCount: 0
       NodeType: 1
@@ -3321,10 +3531,10 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node151:
+    Node158:
       CommentSizeX: 0
       CommentSizeY: 0
-      DependencyIndex: 151
+      DependencyIndex: 158
       LevelID: 4
       NodeCount: 0
       NodeType: 1
@@ -3333,8 +3543,7 @@ Nodes:
           Variable: 1.0
         DepthMode:
           ItemIndex: 0
-          ItemList: |2-
-            		Non-Linear - Normalized [0 to 1] ) :		Linear - Normalized [-1 to 1] :		View Space - Non-Normalized [-near to -far]	
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
         DontFreezeSpec:
           Variable: false
         FinalColor:
@@ -3354,12 +3563,23 @@ Nodes:
           Variable: [1.0, 1.0, 1.0, 1.0]
         GSplatPointSize:
           Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
         Negative:
           Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
         RayDirection:
           Variable: [0.0, 1.0, 0.0]
         RayOrigin:
           Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
         Targets:
           ItemIndex: 0
           ItemList: "1 : 2 : 3 : 4"
@@ -3385,10 +3605,10 @@ Nodes:
       TemplateID: nodes_main_graph
       Title1: Shader
       Title2: 3D
-    Node152:
+    Node159:
       CommentSizeX: 243
       CommentSizeY: 791
-      DependencyIndex: 152
+      DependencyIndex: 159
       LevelID: 22
       NodeCount: 0
       NodeType: 1
@@ -3410,199 +3630,6 @@ Nodes:
           Variable: true
       PositionX: -670
       PositionY: -2220
-      TemplateID: node_util_comment
-      Title1: ""
-    Node153:
-      CommentSizeX: 290
-      CommentSizeY: 745
-      DependencyIndex: 153
-      LevelID: 45
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Flipbook
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -690
-      PositionY: 200
-      TemplateID: node_util_comment
-      Title1: ""
-    Node154:
-      CommentSizeX: 306
-      CommentSizeY: 479
-      DependencyIndex: 154
-      LevelID: 56
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Color Ramp
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -700
-      PositionY: 1030
-      TemplateID: node_util_comment
-      Title1: ""
-    Node155:
-      CommentSizeX: 280
-      CommentSizeY: 210
-      DependencyIndex: 155
-      LevelID: 57
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Base Tex
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -710
-      PositionY: 1610
-      TemplateID: node_util_comment
-      Title1: ""
-    Node156:
-      CommentSizeX: 265
-      CommentSizeY: 618
-      DependencyIndex: 156
-      LevelID: 93
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Noise
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3065
-      PositionY: 1815
-      TemplateID: node_util_comment
-      Title1: ""
-    Node157:
-      CommentSizeX: 1114
-      CommentSizeY: 1140
-      DependencyIndex: 157
-      LevelID: 94
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.6980392336845398, 1.0, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: |-
-            Particle
-            Size
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3909
-      PositionY: 3145
-      TemplateID: node_util_comment
-      Title1: ""
-    Node158:
-      CommentSizeX: 294
-      CommentSizeY: 540
-      DependencyIndex: 158
-      LevelID: 95
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Velocity
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3089
-      PositionY: 2575
-      TemplateID: node_util_comment
-      Title1: ""
-    Node159:
-      CommentSizeX: 282
-      CommentSizeY: 609
-      DependencyIndex: 159
-      LevelID: 96
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: |-
-            Spawn Shape
-            / Location
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3055
-      PositionY: 1055
       TemplateID: node_util_comment
       Title1: ""
     Node16:
@@ -3645,9 +3672,202 @@ Nodes:
       Title1: Float Parameter
       Title2: Alpha Min End
     Node160:
+      CommentSizeX: 290
+      CommentSizeY: 745
+      DependencyIndex: 160
+      LevelID: 45
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Flipbook
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -690
+      PositionY: 200
+      TemplateID: node_util_comment
+      Title1: ""
+    Node161:
+      CommentSizeX: 306
+      CommentSizeY: 479
+      DependencyIndex: 161
+      LevelID: 56
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Color Ramp
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -700
+      PositionY: 1030
+      TemplateID: node_util_comment
+      Title1: ""
+    Node162:
+      CommentSizeX: 280
+      CommentSizeY: 210
+      DependencyIndex: 162
+      LevelID: 57
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Base Tex
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -710
+      PositionY: 1610
+      TemplateID: node_util_comment
+      Title1: ""
+    Node163:
+      CommentSizeX: 265
+      CommentSizeY: 618
+      DependencyIndex: 163
+      LevelID: 93
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Noise
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3065
+      PositionY: 1815
+      TemplateID: node_util_comment
+      Title1: ""
+    Node164:
+      CommentSizeX: 1114
+      CommentSizeY: 1140
+      DependencyIndex: 164
+      LevelID: 94
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.6980392336845398, 1.0, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: |-
+            Particle
+            Size
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3909
+      PositionY: 3145
+      TemplateID: node_util_comment
+      Title1: ""
+    Node165:
+      CommentSizeX: 294
+      CommentSizeY: 540
+      DependencyIndex: 165
+      LevelID: 95
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Velocity
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3089
+      PositionY: 2575
+      TemplateID: node_util_comment
+      Title1: ""
+    Node166:
+      CommentSizeX: 282
+      CommentSizeY: 609
+      DependencyIndex: 166
+      LevelID: 96
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: |-
+            Spawn Shape
+            / Location
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3055
+      PositionY: 1055
+      TemplateID: node_util_comment
+      Title1: ""
+    Node167:
       CommentSizeX: 254
       CommentSizeY: 332
-      DependencyIndex: 160
+      DependencyIndex: 167
       LevelID: 104
       NodeCount: 0
       NodeType: 1
@@ -3671,10 +3891,10 @@ Nodes:
       PositionY: 4368
       TemplateID: node_util_comment
       Title1: ""
-    Node161:
+    Node168:
       CommentSizeX: 359
       CommentSizeY: 1283
-      DependencyIndex: 161
+      DependencyIndex: 168
       LevelID: 105
       NodeCount: 0
       NodeType: 1
@@ -3698,8 +3918,8 @@ Nodes:
       PositionY: 1900
       TemplateID: node_util_comment
       Title1: ""
-    Node162:
-      DependencyIndex: 162
+    Node169:
+      DependencyIndex: 169
       LevelID: 33
       NodeCount: 0
       NodeType: 1
@@ -3729,199 +3949,6 @@ Nodes:
       PositionX: 1350
       PositionY: 720
       TemplateID: node_util_sticky
-      Title1: ""
-    Node163:
-      CommentSizeX: 326
-      CommentSizeY: 948
-      DependencyIndex: 163
-      LevelID: 1
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.9440757036209106, 0.6064698100090027, 0.9693903923034668, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Pixel Shader
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: 250
-      PositionY: -440
-      TemplateID: node_util_comment
-      Title1: ""
-    Node164:
-      CommentSizeX: 276
-      CommentSizeY: 623
-      DependencyIndex: 164
-      LevelID: 25
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Alignment
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3065
-      PositionY: 4764
-      TemplateID: node_util_comment
-      Title1: ""
-    Node165:
-      CommentSizeX: 725
-      CommentSizeY: 939
-      DependencyIndex: 165
-      LevelID: 31
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.6936904191970825, 0.41953155398368835, 1.0, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Seed / Time / Spawn
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3127
-      PositionY: -441
-      TemplateID: node_util_comment
-      Title1: ""
-    Node166:
-      CommentSizeX: 924
-      CommentSizeY: 1256
-      DependencyIndex: 166
-      LevelID: 32
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.6999923586845398, 1.0, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Rotation
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3747
-      PositionY: 5436
-      TemplateID: node_util_comment
-      Title1: ""
-    Node167:
-      CommentSizeX: 214
-      CommentSizeY: 1068
-      DependencyIndex: 167
-      LevelID: 58
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Alpha
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -663
-      PositionY: -1321
-      TemplateID: node_util_comment
-      Title1: ""
-    Node168:
-      CommentSizeX: 397
-      CommentSizeY: 269
-      DependencyIndex: 168
-      LevelID: 120
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.8666666746139526, 0.6999923586845398, 0.11885251849889755, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: |
-            Mesh Type
-
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3707
-      PositionY: -1748
-      TemplateID: node_util_comment
-      Title1: ""
-    Node169:
-      CommentSizeX: 224
-      CommentSizeY: 954
-      DependencyIndex: 169
-      LevelID: 127
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.221957728266716, 0.9145494699478149, 0.6016021966934204, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: |-
-            Quad
-            Settings
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3513
-      PositionY: 3240
-      TemplateID: node_util_comment
       Title1: ""
     Node17:
       DependencyIndex: 17
@@ -3963,9 +3990,202 @@ Nodes:
       Title1: Float Parameter
       Title2: Alpha Max Start
     Node170:
+      CommentSizeX: 326
+      CommentSizeY: 948
+      DependencyIndex: 170
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.9440757036209106, 0.6064698100090027, 0.9693903923034668, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Pixel Shader
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: 250
+      PositionY: -440
+      TemplateID: node_util_comment
+      Title1: ""
+    Node171:
+      CommentSizeX: 276
+      CommentSizeY: 623
+      DependencyIndex: 171
+      LevelID: 25
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Alignment
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3065
+      PositionY: 4764
+      TemplateID: node_util_comment
+      Title1: ""
+    Node172:
+      CommentSizeX: 725
+      CommentSizeY: 939
+      DependencyIndex: 172
+      LevelID: 31
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.6936904191970825, 0.41953155398368835, 1.0, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Seed / Time / Spawn
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3127
+      PositionY: -441
+      TemplateID: node_util_comment
+      Title1: ""
+    Node173:
+      CommentSizeX: 924
+      CommentSizeY: 1256
+      DependencyIndex: 173
+      LevelID: 32
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.6999923586845398, 1.0, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Rotation
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3747
+      PositionY: 5436
+      TemplateID: node_util_comment
+      Title1: ""
+    Node174:
+      CommentSizeX: 214
+      CommentSizeY: 1068
+      DependencyIndex: 174
+      LevelID: 58
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Alpha
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -663
+      PositionY: -1321
+      TemplateID: node_util_comment
+      Title1: ""
+    Node175:
+      CommentSizeX: 397
+      CommentSizeY: 269
+      DependencyIndex: 175
+      LevelID: 120
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.8666666746139526, 0.6999923586845398, 0.11885251849889755, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: |
+            Mesh Type
+
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3707
+      PositionY: -1748
+      TemplateID: node_util_comment
+      Title1: ""
+    Node176:
+      CommentSizeX: 224
+      CommentSizeY: 954
+      DependencyIndex: 176
+      LevelID: 127
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.221957728266716, 0.9145494699478149, 0.6016021966934204, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: |-
+            Quad
+            Settings
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3513
+      PositionY: 3240
+      TemplateID: node_util_comment
+      Title1: ""
+    Node177:
       CommentSizeX: 220
       CommentSizeY: 953
-      DependencyIndex: 170
+      DependencyIndex: 177
       LevelID: 128
       NodeCount: 0
       NodeType: 1
@@ -3991,10 +4211,10 @@ Nodes:
       PositionY: 3290
       TemplateID: node_util_comment
       Title1: ""
-    Node171:
+    Node178:
       CommentSizeX: 216
       CommentSizeY: 232
-      DependencyIndex: 171
+      DependencyIndex: 178
       LevelID: 141
       NodeCount: 0
       NodeType: 1
@@ -4018,10 +4238,10 @@ Nodes:
       PositionY: 5877
       TemplateID: node_util_comment
       Title1: ""
-    Node172:
+    Node179:
       CommentSizeX: 221
       CommentSizeY: 665
-      DependencyIndex: 172
+      DependencyIndex: 179
       LevelID: 149
       NodeCount: 0
       NodeType: 1
@@ -4043,216 +4263,6 @@ Nodes:
           Variable: true
       PositionX: -3565
       PositionY: 5506
-      TemplateID: node_util_comment
-      Title1: ""
-    Node173:
-      CommentSizeX: 854
-      CommentSizeY: 625
-      DependencyIndex: 173
-      LevelID: 159
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.9529411792755127, 0.30605021119117737, 0.033951323479413986, 0.10000763088464737]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: |-
-            Simple PBR
-            (3D Mesh Particles Only)
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: 762
-      PositionY: -631
-      TemplateID: node_util_comment
-      Title1: ""
-    Node174:
-      DependencyIndex: 174
-      LevelID: 170
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        ArrowBottom:
-          Variable: false
-        ArrowLeft:
-          Variable: false
-        ArrowRight:
-          Variable: true
-        ArrowTop:
-          Variable: false
-        BackgroundColor:
-          ClassType1: COLOR
-          Variable: [0.8147707581520081, 0.4934615194797516, 0.9439231157302856, 1.0]
-        Text:
-          ClassType1: TEXT
-          String: To Pixel Shader
-        TextColor:
-          ClassType1: COLOR
-          Variable: [0.0, 0.0, 0.0, 1.0]
-        TextSize:
-          ItemIndex: 0
-          ItemList: "Medium : Large"
-      PositionX: -1169
-      PositionY: 1816
-      TemplateID: node_util_sticky
-      Title1: ""
-    Node175:
-      DependencyIndex: 175
-      LevelID: 112
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        ArrowBottom:
-          Variable: true
-        ArrowLeft:
-          Variable: false
-        ArrowRight:
-          Variable: false
-        ArrowTop:
-          Variable: false
-        BackgroundColor:
-          ClassType1: COLOR
-          Variable: [0.9193865656852722, 0.6276646256446838, 0.0473487451672554, 1.0]
-        Text:
-          ClassType1: TEXT
-          String: Mesh Type
-        TextColor:
-          ClassType1: COLOR
-          Variable: [0.0, 0.0, 0.0, 1.0]
-        TextSize:
-          ItemIndex: 0
-          ItemList: "Medium : Large"
-      PositionX: -3689
-      PositionY: 5983
-      TemplateID: node_util_sticky
-      Title1: ""
-    Node176:
-      DependencyIndex: 176
-      LevelID: 113
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        ArrowBottom:
-          Variable: true
-        ArrowLeft:
-          Variable: false
-        ArrowRight:
-          Variable: false
-        ArrowTop:
-          Variable: false
-        BackgroundColor:
-          ClassType1: COLOR
-          Variable: [0.9193865656852722, 0.6276646256446838, 0.0473487451672554, 1.0]
-        Text:
-          ClassType1: TEXT
-          String: Mesh Type
-        TextColor:
-          ClassType1: COLOR
-          Variable: [0.0, 0.0, 0.0, 1.0]
-        TextSize:
-          ItemIndex: 0
-          ItemList: "Medium : Large"
-      PositionX: -3855
-      PositionY: 3613
-      TemplateID: node_util_sticky
-      Title1: ""
-    Node177:
-      CommentSizeX: 540
-      CommentSizeY: 218
-      DependencyIndex: 177
-      LevelID: 162
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Vertex Data
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3111
-      PositionY: 608
-      TemplateID: node_util_comment
-      Title1: ""
-    Node178:
-      DependencyIndex: 178
-      LevelID: 171
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        ArrowBottom:
-          Variable: false
-        ArrowLeft:
-          Variable: false
-        ArrowRight:
-          Variable: true
-        ArrowTop:
-          Variable: false
-        BackgroundColor:
-          ClassType1: COLOR
-          Variable: [0.2539101243019104, 0.8999923467636108, 0.73992520570755, 1.0]
-        Text:
-          ClassType1: TEXT
-          String: |-
-            (3D MESH ONLY)
-            If you want to apply additional vertex to
-            the particles, replace the Position and Normal
-            inputs with the results of your vertex animation.
-            
-            Note that the data should be given in
-            Object Space.
-        TextColor:
-          ClassType1: COLOR
-          Variable: [0.0, 0.0, 0.0, 1.0]
-        TextSize:
-          ItemIndex: 0
-          ItemList: "Medium : Large"
-      PositionX: -3090
-      PositionY: 663
-      TemplateID: node_util_sticky
-      Title1: ""
-    Node179:
-      CommentSizeX: 259
-      CommentSizeY: 317
-      DependencyIndex: 179
-      LevelID: 177
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Color:
-          ClassType1: COLOR
-          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
-        Comment:
-          String: Group Comment
-        NewComment:
-          ClassType1: TEXT
-          String: Screen Fade
-        NewToolTip:
-          ClassType1: TEXT
-          String: ""
-        Tooltip:
-          String: ""
-        Upgraded:
-          Variable: true
-      PositionX: -3080
-      PositionY: 6800
       TemplateID: node_util_comment
       Title1: ""
     Node18:
@@ -4294,6 +4304,275 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Alpha Max End
+    Node180:
+      CommentSizeX: 854
+      CommentSizeY: 625
+      DependencyIndex: 180
+      LevelID: 159
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.9529411792755127, 0.30605021119117737, 0.033951323479413986, 0.10000763088464737]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: |-
+            Simple PBR
+            (3D Mesh Particles Only)
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: 762
+      PositionY: -631
+      TemplateID: node_util_comment
+      Title1: ""
+    Node181:
+      DependencyIndex: 181
+      LevelID: 170
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ArrowBottom:
+          Variable: false
+        ArrowLeft:
+          Variable: false
+        ArrowRight:
+          Variable: true
+        ArrowTop:
+          Variable: false
+        BackgroundColor:
+          ClassType1: COLOR
+          Variable: [0.8147707581520081, 0.4934615194797516, 0.9439231157302856, 1.0]
+        Text:
+          ClassType1: TEXT
+          String: To Pixel Shader
+        TextColor:
+          ClassType1: COLOR
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        TextSize:
+          ItemIndex: 0
+          ItemList: "Medium : Large"
+      PositionX: -1169
+      PositionY: 1816
+      TemplateID: node_util_sticky
+      Title1: ""
+    Node182:
+      DependencyIndex: 182
+      LevelID: 112
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ArrowBottom:
+          Variable: true
+        ArrowLeft:
+          Variable: false
+        ArrowRight:
+          Variable: false
+        ArrowTop:
+          Variable: false
+        BackgroundColor:
+          ClassType1: COLOR
+          Variable: [0.9193865656852722, 0.6276646256446838, 0.0473487451672554, 1.0]
+        Text:
+          ClassType1: TEXT
+          String: Mesh Type
+        TextColor:
+          ClassType1: COLOR
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        TextSize:
+          ItemIndex: 0
+          ItemList: "Medium : Large"
+      PositionX: -3689
+      PositionY: 5983
+      TemplateID: node_util_sticky
+      Title1: ""
+    Node183:
+      DependencyIndex: 183
+      LevelID: 113
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ArrowBottom:
+          Variable: true
+        ArrowLeft:
+          Variable: false
+        ArrowRight:
+          Variable: false
+        ArrowTop:
+          Variable: false
+        BackgroundColor:
+          ClassType1: COLOR
+          Variable: [0.9193865656852722, 0.6276646256446838, 0.0473487451672554, 1.0]
+        Text:
+          ClassType1: TEXT
+          String: Mesh Type
+        TextColor:
+          ClassType1: COLOR
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        TextSize:
+          ItemIndex: 0
+          ItemList: "Medium : Large"
+      PositionX: -3855
+      PositionY: 3613
+      TemplateID: node_util_sticky
+      Title1: ""
+    Node184:
+      CommentSizeX: 540
+      CommentSizeY: 218
+      DependencyIndex: 184
+      LevelID: 162
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Vertex Data
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3111
+      PositionY: 608
+      TemplateID: node_util_comment
+      Title1: ""
+    Node185:
+      DependencyIndex: 185
+      LevelID: 171
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ArrowBottom:
+          Variable: false
+        ArrowLeft:
+          Variable: false
+        ArrowRight:
+          Variable: true
+        ArrowTop:
+          Variable: false
+        BackgroundColor:
+          ClassType1: COLOR
+          Variable: [0.2539101243019104, 0.8999923467636108, 0.73992520570755, 1.0]
+        Text:
+          ClassType1: TEXT
+          String: |-
+            (3D MESH ONLY)
+            If you want to apply additional vertex to
+            the particles, replace the Position and Normal
+            inputs with the results of your vertex animation.
+            
+            Note that the data should be given in
+            Object Space.
+        TextColor:
+          ClassType1: COLOR
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        TextSize:
+          ItemIndex: 0
+          ItemList: "Medium : Large"
+      PositionX: -3090
+      PositionY: 663
+      TemplateID: node_util_sticky
+      Title1: ""
+    Node186:
+      CommentSizeX: 259
+      CommentSizeY: 317
+      DependencyIndex: 186
+      LevelID: 177
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Group Comment
+        NewComment:
+          ClassType1: TEXT
+          String: Screen Fade
+        NewToolTip:
+          ClassType1: TEXT
+          String: ""
+        Tooltip:
+          String: ""
+        Upgraded:
+          Variable: true
+      PositionX: -3080
+      PositionY: 6800
+      TemplateID: node_util_comment
+      Title1: ""
+    Node187:
+      DependencyIndex: 187
+      LevelID: 35
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Velocity
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: velocityMax
+        SortIndex:
+          Variable: 93
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Velocity Max
+        Tooltip:
+          String: ""
+      PositionX: -3747
+      PositionY: 2854
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Velocity Max
+    Node188:
+      DependencyIndex: 188
+      LevelID: 187
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 35
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3127
+      PositionY: 2825
+      RedirectClassTypeA1: FLOAT
+      RedirectClassTypeB1: FLOAT
+      TemplateID: nodes_math_passthrough
+      Title1: Passthrough
     Node19:
       DependencyIndex: 19
       LevelID: 72
@@ -5016,6 +5295,9 @@ Nodes:
             
                 timeValues = vec4(realLifeTimeMinMax, localTime, normTime);
             }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
         Description:
           ClassType1: TEXT
           String: |
@@ -5061,6 +5343,8 @@ Nodes:
           ItemList: "Vertex : Pixel"
         Title:
           String: "Particle Seed, Time, and Spawn"
+        UseExternalFile:
+          Variable: false
         dieTrigger:
           IOType: 1
           Variable: 0.0
@@ -5112,7 +5396,6 @@ Nodes:
       TemplateID: node_util_custom
       TemplateVersionMinor: 1
       Title1: "Particle Seed, Time, and Spawn"
-    Node35LockForPublic: true
     Node36:
       DependencyIndex: 36
       LevelID: 114
@@ -5730,12 +6013,12 @@ Nodes:
       Title2: Velocity Min
     Node52:
       DependencyIndex: 52
-      LevelID: 35
+      LevelID: 184
       NodeCount: 0
       NodeType: 1
       Ports:
         Channels:
-          ItemIndex: 2
+          ItemIndex: 4
           ItemList: "xyzw : rgba : xyz : rgb : xy : x"
         Default:
           Variable: [1.0, 1.0, 1.0, 1.0]
@@ -5762,13 +6045,235 @@ Nodes:
           String: Velocity Max
         Tooltip:
           String: ""
-      PositionX: -2997
-      PositionY: 2816
+      PositionX: -3615
+      PositionY: 2884
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Velocity Max
     Node53:
       DependencyIndex: 53
+      LevelID: 186
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Dimension1:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3"
+        Dimension2:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : disabled"
+        Dimension3:
+          ItemIndex: 2
+          ItemList: "1 : 2 : disabled"
+        Dimension4:
+          ItemIndex: 0
+          ItemList: "1 : 2 : disabled"
+        Value:
+          Connection0:
+            NodeLevelID: 184
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value1:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value2:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value3:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value4:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3402
+      PositionY: 2855
+      TemplateID: node_channels_split
+      Title1: Split Vector
+    Node54:
+      DependencyIndex: 54
+      LevelID: 182
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: true
+        EnableMin:
+          Variable: true
+        Group:
+          String: Velocity
+        Max:
+          Variable: -5.0
+        Min:
+          Variable: -35.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: velocityYMax
+        SortIndex:
+          Variable: 93
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: VelocityYMax
+        Tooltip:
+          String: ""
+      PositionX: -3800
+      PositionY: 2591
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: VelocityYMax
+    Node55:
+      DependencyIndex: 55
+      LevelID: 180
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: true
+        EnableMin:
+          Variable: true
+        Group:
+          String: Velocity
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: velocityRatio
+        SortIndex:
+          Variable: 93
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: VelocityRatio
+        Tooltip:
+          String: ""
+      PositionX: -3722
+      PositionY: 2712
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: VelocityRatio
+    Node56:
+      DependencyIndex: 56
+      LevelID: 183
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 182
+            PortID: Output
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        Input1:
+          Connection0:
+            NodeLevelID: 180
+            PortID: Output
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        Inputs:
+          ItemIndex: 0
+          ItemList: "2 : 3 : 4 : 5 : 6"
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type0:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type1:
+          ItemIndex: 0
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -3468
+      PositionY: 2650
+      TemplateID: nodes_math_multiply
+      Title1: Multiply
+    Node57:
+      DependencyIndex: 57
+      LevelID: 181
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 183
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Input1:
+          Variable: [1.0, 0.0, 0.0, 0.0]
+        Inputs:
+          ItemIndex: 0
+          ItemList: "2 : 3 : 4 : 5 : 6"
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Type0:
+          ItemIndex: 6
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+        Type1:
+          ItemIndex: 6
+          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
+      PositionX: -3282
+      PositionY: 2668
+      TemplateID: nodes_math_add
+      Title1: Add
+    Node58:
+      DependencyIndex: 58
+      LevelID: 185
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Dimension1:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3"
+        Dimension2:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : disabled"
+        Dimension3:
+          ItemIndex: 0
+          ItemList: "1 : 2 : disabled"
+        Dimension4:
+          ItemIndex: 1
+          ItemList: "1 : disabled"
+        IsColor:
+          Variable: false
+        Value:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value1:
+          Connection0:
+            NodeLevelID: 186
+            PortID: Value1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value2:
+          Connection0:
+            NodeLevelID: 181
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value3:
+          Connection0:
+            NodeLevelID: 186
+            PortID: Value2
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value4:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3202
+      PositionY: 2845
+      TemplateID: node_channels_combine
+      Title1: Construct Vector
+    Node59:
+      DependencyIndex: 59
       LevelID: 36
       NodeCount: 0
       NodeType: 1
@@ -5806,8 +6311,40 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Velocity Drag
-    Node54:
-      DependencyIndex: 54
+    Node6:
+      DependencyIndex: 6
+      LevelID: 77
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: true
+        Group:
+          String: Color / Alpha
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: COLORMINMAX
+        SortIndex:
+          Variable: 31
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: ""
+        UniqueID:
+          String: Color Random
+      PositionX: -630
+      PositionY: -1963
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Color Random
+    Node60:
+      DependencyIndex: 60
       LevelID: 37
       NodeCount: 0
       NodeType: 1
@@ -5840,8 +6377,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_texture2d_object
       Title1: Texture 2D Object Parameter
       Title2: Velocity Ramp Texture
-    Node55:
-      DependencyIndex: 55
+    Node61:
+      DependencyIndex: 61
       LevelID: 122
       NodeCount: 0
       NodeType: 1
@@ -5861,8 +6398,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node56:
-      DependencyIndex: 56
+    Node62:
+      DependencyIndex: 62
       LevelID: 24
       NodeCount: 0
       NodeType: 1
@@ -5900,8 +6437,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size Start
-    Node57:
-      DependencyIndex: 57
+    Node63:
+      DependencyIndex: 63
       LevelID: 71
       NodeCount: 0
       NodeType: 1
@@ -5939,8 +6476,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size Start
-    Node58:
-      DependencyIndex: 58
+    Node64:
+      DependencyIndex: 64
       LevelID: 70
       NodeCount: 0
       NodeType: 1
@@ -5973,8 +6510,8 @@ Nodes:
       PositionY: 3265
       TemplateID: nodes_main_if_else
       Title1: If / else
-    Node59:
-      DependencyIndex: 59
+    Node65:
+      DependencyIndex: 65
       LevelID: 129
       NodeCount: 0
       NodeType: 1
@@ -5993,40 +6530,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node6:
-      DependencyIndex: 6
-      LevelID: 77
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: true
-        Group:
-          String: Color / Alpha
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: COLORMINMAX
-        SortIndex:
-          Variable: 31
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: ""
-        UniqueID:
-          String: Color Random
-      PositionX: -630
-      PositionY: -1963
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Color Random
-    Node60:
-      DependencyIndex: 60
+    Node66:
+      DependencyIndex: 66
       LevelID: 26
       NodeCount: 0
       NodeType: 1
@@ -6064,8 +6569,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size End
-    Node61:
-      DependencyIndex: 61
+    Node67:
+      DependencyIndex: 67
       LevelID: 107
       NodeCount: 0
       NodeType: 1
@@ -6103,8 +6608,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size End
-    Node62:
-      DependencyIndex: 62
+    Node68:
+      DependencyIndex: 68
       LevelID: 121
       NodeCount: 0
       NodeType: 1
@@ -6137,8 +6642,8 @@ Nodes:
       PositionY: 3419
       TemplateID: nodes_main_if_else
       Title1: If / else
-    Node63:
-      DependencyIndex: 63
+    Node69:
+      DependencyIndex: 69
       LevelID: 130
       NodeCount: 0
       NodeType: 1
@@ -6157,209 +6662,6 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node64:
-      DependencyIndex: 64
-      LevelID: 99
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: true
-        Group:
-          String: Size
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: SIZEMINMAX
-        SortIndex:
-          Variable: 122
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: ""
-        UniqueID:
-          String: Size Random
-      PositionX: -3016
-      PositionY: 3541
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Size Random
-    Node65:
-      DependencyIndex: 65
-      LevelID: 98
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 4
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Size.Size Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeStartMin
-        SortIndex:
-          Variable: 123
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size Start Min
-        Tooltip:
-          String: ""
-      PositionX: -3473
-      PositionY: 3563
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size Start Min
-    Node66:
-      DependencyIndex: 66
-      LevelID: 115
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Size.Size Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeStartMin3D
-        SortIndex:
-          Variable: 123
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size Start Min
-        Tooltip:
-          String: ""
-      PositionX: -3718
-      PositionY: 3622
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size Start Min
-    Node67:
-      DependencyIndex: 67
-      LevelID: 124
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Bool1:
-          Connection0:
-            NodeLevelID: 122
-            PortID: Output
-          Variable: 0.0
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Count:
-          ItemIndex: 0
-          ItemList: "1 : 2 : 3 : 4 : 5 : 6"
-        Default:
-          Connection0:
-            NodeLevelID: 115
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Result:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Value1:
-          Connection0:
-            NodeLevelID: 98
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -3215
-      PositionY: 3562
-      TemplateID: nodes_main_if_else
-      Title1: If / else
-    Node68:
-      DependencyIndex: 68
-      LevelID: 131
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 124
-            PortID: Result
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -2947
-      PositionY: 3737
-      RedirectClassTypeA1: FLOAT
-      RedirectClassTypeB1: FLOAT
-      TemplateID: nodes_math_passthrough
-      Title1: Passthrough
-    Node69:
-      DependencyIndex: 69
-      LevelID: 101
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 4
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Size.Size Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeStartMax
-        SortIndex:
-          Variable: 124
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size Start Max
-        Tooltip:
-          String: ""
-      PositionX: -3482
-      PositionY: 3765
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size Start Max
     Node7:
       DependencyIndex: 7
       LevelID: 78
@@ -6401,6 +6703,209 @@ Nodes:
       Title2: Color Min Start
     Node70:
       DependencyIndex: 70
+      LevelID: 99
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: true
+        Group:
+          String: Size
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: SIZEMINMAX
+        SortIndex:
+          Variable: 122
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: ""
+        UniqueID:
+          String: Size Random
+      PositionX: -3016
+      PositionY: 3541
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Size Random
+    Node71:
+      DependencyIndex: 71
+      LevelID: 98
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Size.Size Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeStartMin
+        SortIndex:
+          Variable: 123
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size Start Min
+        Tooltip:
+          String: ""
+      PositionX: -3473
+      PositionY: 3563
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size Start Min
+    Node72:
+      DependencyIndex: 72
+      LevelID: 115
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Size.Size Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeStartMin3D
+        SortIndex:
+          Variable: 123
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size Start Min
+        Tooltip:
+          String: ""
+      PositionX: -3718
+      PositionY: 3622
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size Start Min
+    Node73:
+      DependencyIndex: 73
+      LevelID: 124
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Bool1:
+          Connection0:
+            NodeLevelID: 122
+            PortID: Output
+          Variable: 0.0
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Count:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4 : 5 : 6"
+        Default:
+          Connection0:
+            NodeLevelID: 115
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Result:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value1:
+          Connection0:
+            NodeLevelID: 98
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3215
+      PositionY: 3562
+      TemplateID: nodes_main_if_else
+      Title1: If / else
+    Node74:
+      DependencyIndex: 74
+      LevelID: 131
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 124
+            PortID: Result
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -2947
+      PositionY: 3737
+      RedirectClassTypeA1: FLOAT
+      RedirectClassTypeB1: FLOAT
+      TemplateID: nodes_math_passthrough
+      Title1: Passthrough
+    Node75:
+      DependencyIndex: 75
+      LevelID: 101
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Size.Size Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeStartMax
+        SortIndex:
+          Variable: 124
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size Start Max
+        Tooltip:
+          String: ""
+      PositionX: -3482
+      PositionY: 3765
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size Start Max
+    Node76:
+      DependencyIndex: 76
       LevelID: 116
       NodeCount: 0
       NodeType: 1
@@ -6438,8 +6943,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size Start Max
-    Node71:
-      DependencyIndex: 71
+    Node77:
+      DependencyIndex: 77
       LevelID: 123
       NodeCount: 0
       NodeType: 1
@@ -6472,8 +6977,8 @@ Nodes:
       PositionY: 3757
       TemplateID: nodes_main_if_else
       Title1: If / else
-    Node72:
-      DependencyIndex: 72
+    Node78:
+      DependencyIndex: 78
       LevelID: 132
       NodeCount: 0
       NodeType: 1
@@ -6492,8 +6997,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node73:
-      DependencyIndex: 73
+    Node79:
+      DependencyIndex: 79
       LevelID: 100
       NodeCount: 0
       NodeType: 1
@@ -6531,211 +7036,6 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size End Min
-    Node74:
-      DependencyIndex: 74
-      LevelID: 117
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Size.Size Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeEndMin3D
-        SortIndex:
-          Variable: 125
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size End Min
-        Tooltip:
-          String: ""
-      PositionX: -3720
-      PositionY: 3980
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size End Min
-    Node75:
-      DependencyIndex: 75
-      LevelID: 125
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Bool1:
-          Connection0:
-            NodeLevelID: 122
-            PortID: Output
-          Variable: 0.0
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Count:
-          ItemIndex: 0
-          ItemList: "1 : 2 : 3 : 4 : 5 : 6"
-        Default:
-          Connection0:
-            NodeLevelID: 117
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Result:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Value1:
-          Connection0:
-            NodeLevelID: 100
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -3217
-      PositionY: 3926
-      TemplateID: nodes_main_if_else
-      Title1: If / else
-    Node76:
-      DependencyIndex: 76
-      LevelID: 133
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 125
-            PortID: Result
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -2949
-      PositionY: 3817
-      RedirectClassTypeA1: FLOAT
-      RedirectClassTypeB1: FLOAT
-      TemplateID: nodes_math_passthrough
-      Title1: Passthrough
-    Node77:
-      DependencyIndex: 77
-      LevelID: 103
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 4
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Size.Size Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeEndMax
-        SortIndex:
-          Variable: 126
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size End Max
-        Tooltip:
-          String: ""
-      PositionX: -3481
-      PositionY: 4092
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size End Max
-    Node78:
-      DependencyIndex: 78
-      LevelID: 118
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Size.Size Random
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeEndMax3D
-        SortIndex:
-          Variable: 126
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size End Max
-        Tooltip:
-          String: ""
-      PositionX: -3720
-      PositionY: 4141
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size End Max
-    Node79:
-      DependencyIndex: 79
-      LevelID: 126
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Bool1:
-          Connection0:
-            NodeLevelID: 122
-            PortID: Output
-          Variable: 0.0
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Count:
-          ItemIndex: 0
-          ItemList: "1 : 2 : 3 : 4 : 5 : 6"
-        Default:
-          Connection0:
-            NodeLevelID: 118
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Result:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Value1:
-          Connection0:
-            NodeLevelID: 103
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -3217
-      PositionY: 4081
-      TemplateID: nodes_main_if_else
-      Title1: If / else
     Node8:
       DependencyIndex: 8
       LevelID: 80
@@ -6777,6 +7077,211 @@ Nodes:
       Title2: Color Min End
     Node80:
       DependencyIndex: 80
+      LevelID: 117
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Size.Size Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeEndMin3D
+        SortIndex:
+          Variable: 125
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size End Min
+        Tooltip:
+          String: ""
+      PositionX: -3720
+      PositionY: 3980
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size End Min
+    Node81:
+      DependencyIndex: 81
+      LevelID: 125
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Bool1:
+          Connection0:
+            NodeLevelID: 122
+            PortID: Output
+          Variable: 0.0
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Count:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4 : 5 : 6"
+        Default:
+          Connection0:
+            NodeLevelID: 117
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Result:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value1:
+          Connection0:
+            NodeLevelID: 100
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3217
+      PositionY: 3926
+      TemplateID: nodes_main_if_else
+      Title1: If / else
+    Node82:
+      DependencyIndex: 82
+      LevelID: 133
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Input0:
+          Connection0:
+            NodeLevelID: 125
+            PortID: Result
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -2949
+      PositionY: 3817
+      RedirectClassTypeA1: FLOAT
+      RedirectClassTypeB1: FLOAT
+      TemplateID: nodes_math_passthrough
+      Title1: Passthrough
+    Node83:
+      DependencyIndex: 83
+      LevelID: 103
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Size.Size Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeEndMax
+        SortIndex:
+          Variable: 126
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size End Max
+        Tooltip:
+          String: ""
+      PositionX: -3481
+      PositionY: 4092
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size End Max
+    Node84:
+      DependencyIndex: 84
+      LevelID: 118
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Size.Size Random
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeEndMax3D
+        SortIndex:
+          Variable: 126
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size End Max
+        Tooltip:
+          String: ""
+      PositionX: -3720
+      PositionY: 4141
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size End Max
+    Node85:
+      DependencyIndex: 85
+      LevelID: 126
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Bool1:
+          Connection0:
+            NodeLevelID: 122
+            PortID: Output
+          Variable: 0.0
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Count:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4 : 5 : 6"
+        Default:
+          Connection0:
+            NodeLevelID: 118
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Result:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value1:
+          Connection0:
+            NodeLevelID: 103
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: -3217
+      PositionY: 4081
+      TemplateID: nodes_main_if_else
+      Title1: If / else
+    Node86:
+      DependencyIndex: 86
       LevelID: 134
       NodeCount: 0
       NodeType: 1
@@ -6795,8 +7300,8 @@ Nodes:
       RedirectClassTypeB1: FLOAT
       TemplateID: nodes_math_passthrough
       Title1: Passthrough
-    Node81:
-      DependencyIndex: 81
+    Node87:
+      DependencyIndex: 87
       LevelID: 27
       NodeCount: 0
       NodeType: 1
@@ -6834,8 +7339,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_float
       Title1: Float Parameter
       Title2: Size Drag
-    Node82:
-      DependencyIndex: 82
+    Node88:
+      DependencyIndex: 88
       LevelID: 102
       NodeCount: 0
       NodeType: 1
@@ -6858,13 +7363,11 @@ Nodes:
         Static:
           Variable: true
         Tooltip:
-          String: "CAUTION! not supported by Low-End Mobile devices. for Low-End size will become 0.
+          String: |
+            CAUTION! not supported by Low-End Mobile devices. for Low-End size will become 0.
+            \nQuad: Uses R and G values from texture to apply X and Y scale, respectively.
+            \n3D Mesh: Uses R, G, and B values from texture to apply X, Y, and Z scale, respectively.
 
-            \\nQuad: Uses R and G values from texture to apply X and Y scale, respectively.
-
-            \\n3D Mesh: Uses R, G, and B values from texture to apply X, Y, and Z scale, respectively.
-
-"
         UniqueID:
           String: Size Ramp Texture
       PositionX: -3016
@@ -6872,8 +7375,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Size Ramp Texture
-    Node83:
-      DependencyIndex: 83
+    Node89:
+      DependencyIndex: 89
       LevelID: 97
       NodeCount: 0
       NodeType: 1
@@ -6906,223 +7409,6 @@ Nodes:
       TemplateID: nodes_inputs_parameters_texture2d_object
       Title1: Texture 2D Object Parameter
       Title2: Size Ramp Texture
-    Node84:
-      DependencyIndex: 84
-      LevelID: 55
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [-9.8, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Force / Gravity
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: gravity
-        SortIndex:
-          Variable: 149
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Gravity - cm/s
-        Tooltip:
-          String: ""
-      PositionX: -3010
-      PositionY: 4430
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Gravity - cm/s
-    Node85:
-      DependencyIndex: 85
-      LevelID: 108
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: true
-        Group:
-          String: Force / Gravity
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: FORCE
-        SortIndex:
-          Variable: 150
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: "Adding Local Force separate from Gravity, Can be used as Wind."
-        UniqueID:
-          String: Local Force
-      PositionX: -3008
-      PositionY: 4516
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Local Force
-    Node86:
-      DependencyIndex: 86
-      LevelID: 46
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 2
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Force / Gravity.Local Force
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: localForce
-        SortIndex:
-          Variable: 151
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Amount
-        Tooltip:
-          String: "Adding Local Force separate from Gravity, Can be used as Wind."
-      PositionX: -3009
-      PositionY: 4608
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Amount
-    Node87:
-      DependencyIndex: 87
-      LevelID: 47
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: true
-        Group:
-          String: Alignment
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: VELOCITYDIR
-        SortIndex:
-          Variable: 113
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: "Aligns each particle so it faces the direction that it is moving.
-
-            \\nFor 3D Mesh particles, the local positive Z direction of the original mesh is considered forward.
-
-"
-        UniqueID:
-          String: Align to Direction
-      PositionX: -3030
-      PositionY: 4780
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Align to Direction
-    Node88:
-      DependencyIndex: 88
-      LevelID: 51
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 5
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [1.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Alignment.Align to Direction
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: sizeVelScale
-        SortIndex:
-          Variable: 113
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Size Velocity Scale
-        Tooltip:
-          String: Multiplier for velocity stretch. Higher numbers result in more stretching.
-      PositionX: -3030
-      PositionY: 4870
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Size Velocity Scale
-    Node89:
-      DependencyIndex: 89
-      LevelID: 109
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        CreateGroup:
-          Variable: false
-        Group:
-          String: Alignment.Align to Direction
-        OptimizeOnExport:
-          Variable: true
-        Output:
-          IOType: 1
-          Variable: 0.0
-        ScriptName:
-          String: IGNOREVEL
-        SortIndex:
-          Variable: 114
-        SpecifySpecConst:
-          Variable: true
-        Static:
-          Variable: true
-        Tooltip:
-          String: Disables velocity stretching.
-        UniqueID:
-          String: Ignore Velocity Scale
-      PositionX: -3030
-      PositionY: 4950
-      TemplateID: nodes_inputs_parameters_bool
-      Title1: Bool Parameter
-      Title2: Ignore Velocity Scale
     Node9:
       DependencyIndex: 9
       LevelID: 79
@@ -7164,6 +7450,222 @@ Nodes:
       Title2: Color Max Start
     Node90:
       DependencyIndex: 90
+      LevelID: 55
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [-9.8, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Force / Gravity
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: gravity
+        SortIndex:
+          Variable: 149
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Gravity - cm/s
+        Tooltip:
+          String: ""
+      PositionX: -3010
+      PositionY: 4430
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Gravity - cm/s
+    Node91:
+      DependencyIndex: 91
+      LevelID: 108
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: true
+        Group:
+          String: Force / Gravity
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: FORCE
+        SortIndex:
+          Variable: 150
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: "Adding Local Force separate from Gravity, Can be used as Wind."
+        UniqueID:
+          String: Local Force
+      PositionX: -3008
+      PositionY: 4516
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Local Force
+    Node92:
+      DependencyIndex: 92
+      LevelID: 46
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Force / Gravity.Local Force
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: localForce
+        SortIndex:
+          Variable: 151
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Amount
+        Tooltip:
+          String: "Adding Local Force separate from Gravity, Can be used as Wind."
+      PositionX: -3009
+      PositionY: 4608
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Amount
+    Node93:
+      DependencyIndex: 93
+      LevelID: 47
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: true
+        Group:
+          String: Alignment
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: VELOCITYDIR
+        SortIndex:
+          Variable: 113
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: |
+            Aligns each particle so it faces the direction that it is moving.
+            \nFor 3D Mesh particles, the local positive Z direction of the original mesh is considered forward.
+
+        UniqueID:
+          String: Align to Direction
+      PositionX: -3030
+      PositionY: 4780
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Align to Direction
+    Node94:
+      DependencyIndex: 94
+      LevelID: 51
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: Alignment.Align to Direction
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sizeVelScale
+        SortIndex:
+          Variable: 113
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Size Velocity Scale
+        Tooltip:
+          String: Multiplier for velocity stretch. Higher numbers result in more stretching.
+      PositionX: -3030
+      PositionY: 4870
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Size Velocity Scale
+    Node95:
+      DependencyIndex: 95
+      LevelID: 109
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: Alignment.Align to Direction
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: IGNOREVEL
+        SortIndex:
+          Variable: 114
+        SpecifySpecConst:
+          Variable: true
+        Static:
+          Variable: true
+        Tooltip:
+          String: Disables velocity stretching.
+        UniqueID:
+          String: Ignore Velocity Scale
+      PositionX: -3030
+      PositionY: 4950
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: Ignore Velocity Scale
+    Node96:
+      DependencyIndex: 96
       LevelID: 174
       NodeCount: 0
       NodeType: 1
@@ -7194,8 +7696,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Ignore Transform Scale
-    Node91:
-      DependencyIndex: 91
+    Node97:
+      DependencyIndex: 97
       LevelID: 48
       NodeCount: 0
       NodeType: 1
@@ -7226,8 +7728,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Align to X
-    Node92:
-      DependencyIndex: 92
+    Node98:
+      DependencyIndex: 98
       LevelID: 49
       NodeCount: 0
       NodeType: 1
@@ -7258,8 +7760,8 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Align to Y
-    Node93:
-      DependencyIndex: 93
+    Node99:
+      DependencyIndex: 99
       LevelID: 50
       NodeCount: 0
       NodeType: 1
@@ -7290,187 +7792,6 @@ Nodes:
       TemplateID: nodes_inputs_parameters_bool
       Title1: Bool Parameter
       Title2: Align to Z
-    Node94:
-      DependencyIndex: 94
-      LevelID: 136
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 119
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Wireless: true
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -3649
-      PositionY: 6059
-      RedirectClassTypeA1: FLOAT
-      RedirectClassTypeB1: FLOAT
-      TemplateID: nodes_math_passthrough
-      Title1: Passthrough
-    Node95:
-      DependencyIndex: 95
-      LevelID: 142
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 4
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [0.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Rotation
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: rotationRandomX
-        SortIndex:
-          Variable: 97
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Initial Rotation X
-        Tooltip:
-          String: "(3D Mesh only) The min and max rotations in radians about its X axis each particle will have at birth.\\n\\nThis rotation will be overridden if any Alignment settings are enabled."
-      PositionX: -3540
-      PositionY: 5540
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Initial Rotation X
-    Node96:
-      DependencyIndex: 96
-      LevelID: 138
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 136
-            PortID: Output
-          Variable: 1.0
-        Input1:
-          Variable: [0.0, 0.0, 0.0, 1.0]
-        Input2:
-          Connection0:
-            NodeLevelID: 142
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Type1:
-          ItemIndex: 5
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-        Type2:
-          ItemIndex: 0
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-      PositionX: -3214
-      PositionY: 5497
-      TemplateID: nodes_math_conditional
-      Title1: Conditional
-    Node97:
-      DependencyIndex: 97
-      LevelID: 152
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 138
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-      PositionX: -2875
-      PositionY: 5548
-      RedirectClassTypeA1: FLOAT
-      RedirectClassTypeB1: FLOAT
-      TemplateID: nodes_math_passthrough
-      Title1: Passthrough
-    Node98:
-      DependencyIndex: 98
-      LevelID: 146
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Channels:
-          ItemIndex: 4
-          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
-        Default:
-          Variable: [0.0, 1.0, 1.0, 1.0]
-        EnableMax:
-          Variable: false
-        EnableMin:
-          Variable: false
-        Group:
-          String: Rotation
-        Max:
-          Variable: 1.0
-        Min:
-          Variable: 0.0
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        ScriptName:
-          String: rotationRateX
-        SortIndex:
-          Variable: 96
-        Step:
-          Variable: 0.009999999776482582
-        Title:
-          String: Rotation Rate X
-        Tooltip:
-          String: "(3D Mesh only) The min and max number of complete rotations a particle will complete about its X axis during its lifetime.\\n\\nThis rotation will be overridden if any Alignment settings are enabled."
-      PositionX: -3530
-      PositionY: 5620
-      TemplateID: nodes_inputs_parameters_float
-      Title1: Float Parameter
-      Title2: Rotation Rate X
-    Node99:
-      DependencyIndex: 99
-      LevelID: 139
-      NodeCount: 0
-      NodeType: 1
-      Ports:
-        Input0:
-          Connection0:
-            NodeLevelID: 136
-            PortID: Output
-          Variable: 1.0
-        Input1:
-          Variable: [0.0, 0.0, 0.0, 1.0]
-        Input2:
-          Connection0:
-            NodeLevelID: 146
-            PortID: Output
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Output:
-          IOType: 1
-          Variable: [0.0, 0.0, 0.0, 0.0]
-        Type1:
-          ItemIndex: 5
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-        Type2:
-          ItemIndex: 5
-          ItemList: "auto : xyzw : rgba : xyz : rgb : xy : x"
-      PositionX: -3012
-      PositionY: 5569
-      TemplateID: nodes_math_conditional
-      Title1: Conditional
   IsSubGraph0: true
   IsSubGraph1: true
   IsSubGraph2: true
@@ -7481,13 +7802,4 @@ Nodes:
   PositionY: 0
   TemplateID: nodes_main_subgraph
   Title1: ""
-  ViewOffsetX0: -546
-  ViewOffsetX1: 1146
-  ViewOffsetX2: 1146
-  ViewOffsetX3: 1146
-  ViewOffsetY0: 507
-  ViewOffsetY1: -2448
-  ViewOffsetY2: -2448
-  ViewOffsetY3: -2448
-  ViewScale0: 0.25833318
 SystemID: dev.snap.shaders

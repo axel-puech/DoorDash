@@ -79,7 +79,9 @@ function Update() {
     UpdatePhoneMovement();
   }
 }
-function Stop() {}
+function Stop() {
+  enableHeadMovement = false;
+}
 
 //___________________________Functions__________________________//
 function OnEnableHeadMovement(toggle) {

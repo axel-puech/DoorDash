@@ -36,6 +36,7 @@
     parent: false
     parentBitmoji: false
     scaleFactor: false
+    snowMaterial: false
     tanslationBitmojiDuration: false
     whiteScreenMaterial: false
   ScriptTypesHidden:
@@ -60,6 +61,7 @@
       parentBitmoji: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       offsetPositionBitmoji: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       tanslationBitmojiDuration: !<float> 0.000000
+      snowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
