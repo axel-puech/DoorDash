@@ -79,10 +79,10 @@ function Update() {
         // calling a bit before to have obstacles spawn earlier
         endIntroCaller.Call();
         translateAnimInit.GoTo(1);
-        enableHeadMovementCaller.Call(true);
       }
     } else {
       startSpeedCaller.Call();
+      enableHeadMovementCaller.Call(true);
       isCountingDown = false;
     }
     currentNumberDisplayed += 1;

@@ -56,7 +56,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/4a7d37ac-d306-4c94-7788-64d5add02bc8>
   PrefabRemaps:
     []

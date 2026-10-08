@@ -63,7 +63,7 @@ function Stop() {}
 // grandir sac a dos v 
 // grossir ingrédient et palais v
 // premiere instance d'objet se fait deux fois v 
-// sac en derniere frame 
+// sac en derniere frame v
 // apparition des batiments plus tot. V
 // animer le sac a dos v
 

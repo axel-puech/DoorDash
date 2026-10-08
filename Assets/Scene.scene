@@ -2577,13 +2577,13 @@
   Enabled: true
   ScriptAsset: !<reference> 7dea3518-0042-42dd-a7e8-6888952b0477
   ScriptInputsDefault:
-    beforeStartDelay: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       parent: !<reference.SceneObject> 3e6751ad-ee5c-43f9-b783-0751d0f77b8b
-      beforeStartDelay: 0
+      beforeStartDelay: 2
       introMaterials: !<reference.Material[]>
         - !<reference> 430e7e4c-7769-4f0d-95ab-764fdd970f50
         - !<reference> f92ceffd-ac76-45aa-8ab1-611f81041ccf
@@ -2598,7 +2598,7 @@
         - !<reference> 9ff8cc1d-8dc1-4d56-9e7c-ee387b794b9e
         - !<reference> 1e24b745-1f36-442c-8e6b-628ef40b3c6d
       scaleFactor: !<float> 3.000000
-      changeNumberDelay: 0.100000
+      changeNumberDelay: 0.900000
       parentBitmoji: !<reference.SceneObject> e054ecec-5da6-4f5a-8bf7-6de996ab2b0f
       offsetPositionBitmoji: !<Vec3> {x: 0.000000, y: 0.000000, z: 10.000000}
       tanslationBitmojiDuration: !<float> 2.000000
@@ -3635,8 +3635,8 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 940539fa-bff0-4769-9c37-6928034f7917
     - !<own> 64d20f27-3db1-4f5f-ba7c-c5f4fcaeb7a9
+    - !<own> 940539fa-bff0-4769-9c37-6928034f7917
   Components:
     []
 - !<SceneObject/51394ee9-d717-4654-90ce-990590a1ab8b>
@@ -10076,7 +10076,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/cd426534-33ef-409d-8f49-adeb99ea7146>
   PrefabRemaps:
     []
